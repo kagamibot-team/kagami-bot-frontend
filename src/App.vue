@@ -12,6 +12,7 @@ import { RouterView } from 'vue-router'
 body {
   font-family: var(--font-fallback);
 }
+
 #big_box {
   width: fit-content;
   border: 1px solid black;
