@@ -8,7 +8,7 @@ import { useRoute } from 'vue-router'
 const data = ref()
 
 const route = useRoute()
-axios.get(`./data/${route.query.uuid}.json`).then((response) => {
+axios.get(`../data/${route.query.uuid}/`).then((response) => {
   data.value = response.data
 })
 </script>
@@ -32,6 +32,7 @@ axios.get(`./data/${route.query.uuid}.json`).then((response) => {
   padding: 60px 80px 80px 80px;
   background-color: #eeebe3;
 }
+
 .top-title {
   color: #63605c;
   /* '荆南波波黑' */
@@ -40,6 +41,7 @@ axios.get(`./data/${route.query.uuid}.json`).then((response) => {
   font-weight: bolder;
   width: 800px;
 }
+
 .side-title {
   color: #9b9690;
   font-family: '阿里妈妈数黑体', var(--font-fallback);
