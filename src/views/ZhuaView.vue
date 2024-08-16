@@ -8,7 +8,7 @@ import { useRoute } from 'vue-router'
 const data = ref()
 
 const route = useRoute()
-axios.get(`http://localhost:${route.query.port}/data/${route.query.uuid}.json`).then((response) => {
+axios.get(`./data/${route.query.uuid}.json`).then((response) => {
   data.value = response.data
 })
 </script>
