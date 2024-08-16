@@ -1,4 +1,6 @@
 <script setup>
+import DisplayBox from './DisplayBox.vue'
+
 const props = defineProps({
   data: Object,
   is_opacity: Boolean || false
@@ -9,9 +11,12 @@ const color = props.is_opacity ? '#9B969099' : '#9b9690'
 
 <template>
   <div class="outbox">
-    <div class="displayBox" :style="{ backgroundColor: props.data.info.color }">
-      <img :src="props.data.info.image" />
-    </div>
+    <DisplayBox
+      :image="data.info.image"
+      :color="data.info.color"
+      :notation_down="'+' + data.count"
+      :new_overlay="data.is_new"
+    />
     <div class="textbox">
       <div class="rightTitle">{{ props.data.info.display_name }}</div>
       <div class="rightDescription">{{ props.data.info.description }}</div>
@@ -30,17 +35,6 @@ const color = props.is_opacity ? '#9B969099' : '#9b9690'
   padding: 18px;
   position: relative;
   margin-top: 25px;
-}
-.displayBox {
-  width: 176px;
-  height: 140px;
-  border-radius: 10px;
-  border: rgba(255, 255, 255, 0.35) 4px solid;
-  overflow: hidden;
-}
-
-.displayBox img {
-  height: 100%;
 }
 
 .textbox {

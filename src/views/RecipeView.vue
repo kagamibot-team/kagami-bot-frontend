@@ -29,7 +29,12 @@ axios
     <div class="top-title">{{ data.name }} 的合成材料</div>
     <div class="total">
       <div class="left-list">
-        <DisplayBox v-for="(item, index) in data.inputs" :data="item" :key="index" />
+        <DisplayBox
+          v-for="(item, index) in data.inputs"
+          :image="item.image"
+          :color="item.color"
+          :key="index"
+        />
       </div>
       <div class="right-list">
         <div class="merge-title">合成结果：{{ data.meta.status }}</div>

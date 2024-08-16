@@ -13,5 +13,17 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server: {
+    proxy: {
+      "/kagami/data": {
+        target: 'http://localhost:21333',
+        changeOrigin: true,
+      },
+      "/kagami/file": {
+        target: 'http://localhost:21333',
+        changeOrigin: true,
+      },
+    },
   }
 })
