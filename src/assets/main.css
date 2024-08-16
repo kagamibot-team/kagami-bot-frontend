@@ -1,0 +1,5 @@
+:root {
+  --font-fallback: /* 常规黑体 */ 'HarmonyOS Sans SC', 'Source Han Sans',
+    'Segoe UI Variable Display', sans-serif, /* MiSans 生僻字集 */ 'MiSans L3',
+    /* 天珩全字库 */ 'TH-Tshyn-P0', 'TH-Tshyn-P1', 'TH-Tshyn-P2', 'TH-Tshyn-P16';
+}

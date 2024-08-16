@@ -8,8 +8,12 @@ import { RouterView } from 'vue-router'
   </div>
 </template>
 
-<style scoped>
+<style>
+body {
+  font-family: var(--font-fallback);
+}
 #big_box {
+  width: fit-content;
   border: 1px solid black;
 }
 </style>
