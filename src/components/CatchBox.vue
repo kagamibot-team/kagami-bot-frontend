@@ -1,19 +1,22 @@
 <script setup>
-defineProps({
-  data: Object
+const props = defineProps({
+  data: Object,
+  is_opacity: Boolean || false
 })
+
+const color = props.is_opacity ? '#9B969099' : '#9b9690'
 </script>
 
 <template>
   <div class="outbox">
-    <div class="displayBox" :style="{ backgroundColor: data.info.color }">
-      <img :src="data.info.image" />
+    <div class="displayBox" :style="{ backgroundColor: props.data.info.color }">
+      <img :src="props.data.info.image" />
     </div>
     <div class="textbox">
-      <div class="rightTitle">{{ data.info.display_name }}</div>
-      <div class="rightDescription">{{ data.info.description }}</div>
-      <div class="rightStar" :style="{ color: data.info.level.color }">
-        {{ data.info.level.display_name }}
+      <div class="rightTitle">{{ props.data.info.display_name }}</div>
+      <div class="rightDescription">{{ props.data.info.description }}</div>
+      <div class="rightStar" :style="{ color: props.data.info.level.color }">
+        {{ props.data.info.level.display_name }}
       </div>
     </div>
   </div>
@@ -22,7 +25,7 @@ defineProps({
 <style scoped>
 .outbox {
   width: 800px;
-  background-color: #9b9690;
+  background-color: v-bind('color');
   display: flex;
   padding: 18px;
   position: relative;
@@ -33,6 +36,7 @@ defineProps({
   height: 140px;
   border-radius: 10px;
   border: rgba(255, 255, 255, 0.35) 4px solid;
+  overflow: hidden;
 }
 
 .displayBox img {
