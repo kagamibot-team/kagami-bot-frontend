@@ -4,13 +4,23 @@ import CatchBox from '../components/CatchBox.vue'
 
 import axios from 'axios'
 import { useRoute } from 'vue-router'
-
+import defaultData from '../pre_data/zhua.json'
 const data = ref()
 
 const route = useRoute()
-axios.get(`../data/${route.query.uuid}/`).then((response) => {
-  data.value = response.data
-})
+
+axios
+  .get(`../data/${route.query.uuid}/`)
+  .then((response) => {
+    if (response.status == 200) {
+      data.value = response.data
+    } else {
+      data.value = defaultData
+    }
+  })
+  .catch((error) => {
+    data.value = defaultData
+  })
 </script>
 
 <template>

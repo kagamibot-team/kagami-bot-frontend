@@ -1,0 +1,25 @@
+{
+  "name": "出错啦！",
+  "meta": { "get_chip": 0, "own_chip": 0, "remain_time": "0/0", "need_time": "10000年" },
+  "details": "",
+  "catchs": [
+    {
+      "info": {
+        "description": "如果持续遇到此问题，请联系开发组。",
+        "display_name": "你不该在这里。",
+        "color": "rgb(198, 193, 191)",
+        "image": "./resource/shit.png",
+        "level": { "display_name": "★★★★★", "color": "rgb(192, 232, 174)" }
+      }
+    },
+    {
+      "info": {
+        "description": "你不该在这里。",
+        "display_name": "你不该在这里。",
+        "color": "rgb(198, 193, 191)",
+        "image": "./resource/blank_placeholder.png",
+        "level": { "display_name": "★★★★★", "color": "rgb(192, 232, 174)" }
+      }
+    }
+  ]
+}
