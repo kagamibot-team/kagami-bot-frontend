@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import DisplayBox from './DisplayBox.vue';
 import ProgressBar from './ProgressBar.vue';
 
 const props = defineProps<{ data: SingleLiechang, selecting: boolean }>();
+const liechang_name = computed(() => ["废弃猎场", "荒野猎场", "未命名"][props.data.pack_id - 1]);
 
 const data_sum = props.data.award_count.map(p => p.sum_up).reduce((p, q) => p + q);
 </script>
@@ -10,6 +12,7 @@ const data_sum = props.data.award_count.map(p => p.sum_up).reduce((p, q) => p + 
 <template>
     <div class="liechang-box" :class="[selecting ? 'selecting' : '', data.unlocked ? 'unlocked' : 'locked']">
         <h1>{{ data.pack_id }} 号猎场</h1>
+        <h2>{{ liechang_name }}</h2>
         <DisplayBox :image="data.featured_award.image" :color="data.featured_award.color"
             :notation_down="'共' + data_sum + '小哥'" style="display: inline-block;" class="display-box" />
         <ProgressBar v-for="(item, index) in data.award_count" :key="index" :current="item.collected" :max="item.sum_up"
@@ -36,7 +39,7 @@ const data_sum = props.data.award_count.map(p => p.sum_up).reduce((p, q) => p + 
 <style scoped lang="scss">
 .liechang-box {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.489);
+    background-color: rgba(0, 0, 0, 0.41);
     border: solid 3px #00000000;
     color: white;
     width: 280px;
@@ -45,17 +48,19 @@ const data_sum = props.data.award_count.map(p => p.sum_up).reduce((p, q) => p + 
     box-sizing: border-box;
     position: relative;
     padding-top: 45px;
+    backdrop-filter: blur(10px);
 
     &.selecting {
-        background-color: rgba(87, 78, 60, 0.489);
-        border-color: rgba(217, 188, 93, 0.677);
+        background-color: rgba(110, 94, 62, 0.275);
+        box-shadow: 0 0 30px rgba(231, 192, 65, 0.677);
     }
 
-    &.locked{
-        background-color: rgba(0, 0, 0, 0.553);
+    &.locked {
+        background-color: rgba(0, 0, 0, 0.305);
     }
 
     &.locked>h1,
+    &.locked>h2,
     &.locked>.display-box,
     &.locked>.progress-bar {
         filter: saturate(0.5) brightness(0.5) blur(5px);
@@ -99,8 +104,19 @@ const data_sum = props.data.award_count.map(p => p.sum_up).reduce((p, q) => p + 
     &>h1 {
         font-family: '阿里妈妈数黑体', 'HarmonyOS Sans SC', var(--font-fallback);
         font-size: 48px;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         margin-top: 25px;
+    }
+
+    &>h2 {
+        font-family: '阿里妈妈数黑体', 'HarmonyOS Sans SC', var(--font-fallback);
+        font-size: 24px;
+        text-align: right;
+        padding-right: 40px;
+        color: #bdbdbd;
+        text-shadow: 2px 2px 0 #000;
+        margin-top: 0px;
+        margin-bottom: 20px;
     }
 
     &>.display-box {

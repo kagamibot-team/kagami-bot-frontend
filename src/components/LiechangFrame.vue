@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const props = defineProps<{ data: LiechangData }>();
+defineProps<{ data: LiechangData }>();
 </script>
 
 <template>
     <div class="liechang-interface">
-        <img class="background" :src="'./resource/猎场/背景 1.png'" />
+        <img class="background" :src="`./resource/猎场/背景 ${data.selecting}.png`" />
         <img class="chat" :src="'./resource/猎场/对话框.png'" />
         <div class="chat-text">
             <span>{{ data.expression.text }}</span>
