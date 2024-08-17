@@ -1,183 +1,183 @@
 {
-    "packs": [
+  "packs": [
+    {
+      "pack_id": 1,
+      "award_count": [
         {
-            "pack_id": 1,
-            "award_count": [
-                {
-                    "level": {
-                        "display_name": "★",
-                        "color": "#C6C1BF"
-                    },
-                    "collected": 10,
-                    "sum_up": 20
-                },
-                {
-                    "level": {
-                        "display_name": "★★",
-                        "color": "#C0E8AE"
-                    },
-                    "collected": 5,
-                    "sum_up": 20
-                },
-                {
-                    "level": {
-                        "display_name": "★★★",
-                        "color": "#BDDAF5"
-                    },
-                    "collected": 0,
-                    "sum_up": 20
-                },
-                {
-                    "level": {
-                        "display_name": "★★★★",
-                        "color": "#D4BCE3"
-                    },
-                    "collected": 5,
-                    "sum_up": 10
-                },
-                {
-                    "level": {
-                        "display_name": "★★★★★",
-                        "color": "#F1DD95"
-                    },
-                    "collected": 5,
-                    "sum_up": 5
-                }
-            ],
-            "featured_award": {
-                "description": "你不该在这里。",
-                "display_name": "你不该在这里。",
-                "color": "rgb(198, 193, 191)",
-                "image": "./resource/blank_placeholder.png",
-                "level": {
-                    "display_name": "★★★★★",
-                    "color": "rgb(192, 232, 174)"
-                }
-            },
-            "unlocked": true
+          "level": {
+            "display_name": "★",
+            "color": "#C6C1BF"
+          },
+          "collected": 10,
+          "sum_up": 20
         },
         {
-            "pack_id": 2,
-            "award_count": [
-                {
-                    "level": {
-                        "display_name": "★",
-                        "color": "#C6C1BF"
-                    },
-                    "collected": 10,
-                    "sum_up": 20
-                },
-                {
-                    "level": {
-                        "display_name": "★★",
-                        "color": "#C0E8AE"
-                    },
-                    "collected": 5,
-                    "sum_up": 20
-                },
-                {
-                    "level": {
-                        "display_name": "★★★",
-                        "color": "#BDDAF5"
-                    },
-                    "collected": 0,
-                    "sum_up": 20
-                },
-                {
-                    "level": {
-                        "display_name": "★★★★",
-                        "color": "#D4BCE3"
-                    },
-                    "collected": 5,
-                    "sum_up": 10
-                },
-                {
-                    "level": {
-                        "display_name": "★★★★★",
-                        "color": "#F1DD95"
-                    },
-                    "collected": 5,
-                    "sum_up": 5
-                }
-            ],
-            "featured_award": {
-                "description": "你不该在这里。",
-                "display_name": "你不该在这里。",
-                "color": "rgb(198, 193, 191)",
-                "image": "./resource/blank_placeholder.png",
-                "level": {
-                    "display_name": "★★★★★",
-                    "color": "rgb(192, 232, 174)"
-                }
-            },
-            "unlocked": false
+          "level": {
+            "display_name": "★★",
+            "color": "#C0E8AE"
+          },
+          "collected": 5,
+          "sum_up": 20
         },
         {
-            "pack_id": 3,
-            "award_count": [
-                {
-                    "level": {
-                        "display_name": "★",
-                        "color": "#C6C1BF"
-                    },
-                    "collected": 10,
-                    "sum_up": 20
-                },
-                {
-                    "level": {
-                        "display_name": "★★",
-                        "color": "#C0E8AE"
-                    },
-                    "collected": 5,
-                    "sum_up": 20
-                },
-                {
-                    "level": {
-                        "display_name": "★★★",
-                        "color": "#BDDAF5"
-                    },
-                    "collected": 0,
-                    "sum_up": 20
-                },
-                {
-                    "level": {
-                        "display_name": "★★★★",
-                        "color": "#D4BCE3"
-                    },
-                    "collected": 5,
-                    "sum_up": 10
-                },
-                {
-                    "level": {
-                        "display_name": "★★★★★",
-                        "color": "#F1DD95"
-                    },
-                    "collected": 5,
-                    "sum_up": 5
-                }
-            ],
-            "featured_award": {
-                "description": "你不该在这里。",
-                "display_name": "你不该在这里。",
-                "color": "rgb(198, 193, 191)",
-                "image": "./resource/blank_placeholder.png",
-                "level": {
-                    "display_name": "★★★★★",
-                    "color": "rgb(192, 232, 174)"
-                }
-            },
-            "unlocked": true
+          "level": {
+            "display_name": "★★★",
+            "color": "#BDDAF5"
+          },
+          "collected": 0,
+          "sum_up": 20
+        },
+        {
+          "level": {
+            "display_name": "★★★★",
+            "color": "#D4BCE3"
+          },
+          "collected": 5,
+          "sum_up": 10
+        },
+        {
+          "level": {
+            "display_name": "★★★★★",
+            "color": "#F1DD95"
+          },
+          "collected": 5,
+          "sum_up": 5
         }
-    ],
-    "user": {
-        "uid": 10000,
-        "qqid": "123123123",
-        "name": "小程序员哥"
+      ],
+      "featured_award": {
+        "description": "你不该在这里。",
+        "display_name": "你不该在这里。",
+        "color": "rgb(198, 193, 191)",
+        "image": "./resource/blank_placeholder.png",
+        "level": {
+          "display_name": "★★★★★",
+          "color": "rgb(192, 232, 174)"
+        }
+      },
+      "unlocked": true
     },
-    "selecting": 1,
-    "expression": {
-        "text": "不是，到底是干啥的啊，真的要一百句没关系的话吗！？",
-        "face": "正常"
+    {
+      "pack_id": 2,
+      "award_count": [
+        {
+          "level": {
+            "display_name": "★",
+            "color": "#C6C1BF"
+          },
+          "collected": 10,
+          "sum_up": 20
+        },
+        {
+          "level": {
+            "display_name": "★★",
+            "color": "#C0E8AE"
+          },
+          "collected": 5,
+          "sum_up": 20
+        },
+        {
+          "level": {
+            "display_name": "★★★",
+            "color": "#BDDAF5"
+          },
+          "collected": 0,
+          "sum_up": 20
+        },
+        {
+          "level": {
+            "display_name": "★★★★",
+            "color": "#D4BCE3"
+          },
+          "collected": 5,
+          "sum_up": 10
+        },
+        {
+          "level": {
+            "display_name": "★★★★★",
+            "color": "#F1DD95"
+          },
+          "collected": 5,
+          "sum_up": 5
+        }
+      ],
+      "featured_award": {
+        "description": "你不该在这里。",
+        "display_name": "你不该在这里。",
+        "color": "rgb(198, 193, 191)",
+        "image": "./resource/blank_placeholder.png",
+        "level": {
+          "display_name": "★★★★★",
+          "color": "rgb(192, 232, 174)"
+        }
+      },
+      "unlocked": false
     },
-    "chips": 5152200
+    {
+      "pack_id": 3,
+      "award_count": [
+        {
+          "level": {
+            "display_name": "★",
+            "color": "#C6C1BF"
+          },
+          "collected": 10,
+          "sum_up": 20
+        },
+        {
+          "level": {
+            "display_name": "★★",
+            "color": "#C0E8AE"
+          },
+          "collected": 5,
+          "sum_up": 20
+        },
+        {
+          "level": {
+            "display_name": "★★★",
+            "color": "#BDDAF5"
+          },
+          "collected": 0,
+          "sum_up": 20
+        },
+        {
+          "level": {
+            "display_name": "★★★★",
+            "color": "#D4BCE3"
+          },
+          "collected": 5,
+          "sum_up": 10
+        },
+        {
+          "level": {
+            "display_name": "★★★★★",
+            "color": "#F1DD95"
+          },
+          "collected": 5,
+          "sum_up": 5
+        }
+      ],
+      "featured_award": {
+        "description": "你不该在这里。",
+        "display_name": "你不该在这里。",
+        "color": "rgb(198, 193, 191)",
+        "image": "./resource/blank_placeholder.png",
+        "level": {
+          "display_name": "★★★★★",
+          "color": "rgb(192, 232, 174)"
+        }
+      },
+      "unlocked": true
+    }
+  ],
+  "user": {
+    "uid": 10000,
+    "qqid": "123123123",
+    "name": "小程序员哥"
+  },
+  "selecting": 1,
+  "expression": {
+    "text": "不是，到底是干啥的啊，真的要一百句没关系的话吗！？",
+    "face": "正常"
+  },
+  "chips": 5152200
 }
