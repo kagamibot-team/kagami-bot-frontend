@@ -24,8 +24,12 @@ type SingleLiechang = {
 
 type UserData = { uid: number, qqid: string, name: string };
 
+
+type LQRExpression = { text: string, face: string }
+
 type LiechangData = {
     packs: Array<SingleLiechang>,
     user: UserData,
     selecting: number,
+    expression: LQRExpression,
 };

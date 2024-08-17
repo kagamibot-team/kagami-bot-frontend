@@ -38,7 +38,7 @@ const props = defineProps({
 
 .display-box .notation-down,
 .display-box .notation-up {
-  font-family: 'x12y12pxMaruMinya', var(--font-fallback);
+  font-family: 'x12y16pxMaruMonica', var(--font-fallback);
   position: absolute;
   width: 175px;
   padding-left: 13px;
@@ -46,6 +46,7 @@ const props = defineProps({
   box-sizing: border-box;
   color: white;
   text-shadow: 3px 3px 0 #000;
+  text-align: left;
 }
 
 .display-box .notation-down {
@@ -60,6 +61,8 @@ const props = defineProps({
   width: 175px;
   height: 140px;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .display-box .new-notation {

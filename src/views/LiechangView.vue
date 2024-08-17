@@ -3,9 +3,11 @@ import axios from 'axios';
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 
+import LiechangFrame from '../components/LiechangFrame.vue';
+import LiechangBox from '../components/LiechangBox.vue';
 import default_data from '../pre_data/liechang.json';
 
-const data = ref<LiechangData>();
+const data = ref<LiechangData>(default_data);
 const route = useRoute();
 
 axios.get(`../data/${route.query.uuid}/`).then(response => {
@@ -21,9 +23,16 @@ axios.get(`../data/${route.query.uuid}/`).then(response => {
 </script>
 
 <template>
-    <div>
-        {{ JSON.stringify(data) }}
-    </div>
+    <LiechangFrame :data="data">
+        <div class="container">
+            <LiechangBox v-for="(item, index) in data?.packs" v-bind:key="index" :data="item"
+                :selecting="item.pack_id == data?.selecting" />
+        </div>
+    </LiechangFrame>
 </template>
 
-<style lang="scss"></style>
+<style scoped lang="scss">
+.container {
+    display: flex;
+}
+</style>
