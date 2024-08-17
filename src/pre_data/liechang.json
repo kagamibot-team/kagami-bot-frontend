@@ -8,8 +8,8 @@
             "display_name": "★",
             "color": "#C6C1BF"
           },
-          "collected": 10,
-          "sum_up": 20
+          "collected": 0,
+          "sum_up": 10
         },
         {
           "level": {
@@ -32,8 +32,8 @@
             "display_name": "★★★★",
             "color": "#D4BCE3"
           },
-          "collected": 5,
-          "sum_up": 10
+          "collected": 10,
+          "sum_up": 20
         },
         {
           "level": {
@@ -172,12 +172,12 @@
   "user": {
     "uid": 10000,
     "qqid": "123123123",
-    "name": "小程序员哥"
+    "name": "出错啦！"
   },
   "selecting": 1,
   "expression": {
-    "text": "不是，到底是干啥的啊，真的要一百句没关系的话吗！？",
+    "text": "你不应该在这里！如果持续遇到此问题，请联系开发组！",
     "face": "正常"
   },
-  "chips": 5152200
+  "chips": 114514
 }

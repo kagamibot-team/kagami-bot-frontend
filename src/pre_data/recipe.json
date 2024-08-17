@@ -3,7 +3,7 @@
   "meta": { "cost_chip": 0, "own_chip": 0, "is_strange": false, "status": "错误！" },
   "output": {
     "info": {
-      "description": "\\u5f0i\\u54h5\\u4h3d\\u4hf0\\u4h48\\u6fd1\\u60i3\\u5230\\u81hd\\u4i60\\u5gi1\\u3002\\u3002\\u7e2f\\u4h8f\\u6e21\\u4i1d\\u88de\\u6293\\u3002\\u5e83\\u4h00\\u751i\\u54hd\\u4h0g\\u4i1d\\u53g7\\u8if7\\u8ig9\\u518g\\u6f14\\u5440\\u6709\\u7684\\u3002\\uii01",
+      "description": "你不该在这里。",
       "display_name": "你不该在这里。",
       "color": "rgb(198, 193, 191)",
       "image": "./resource/shit.png",

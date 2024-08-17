@@ -34,7 +34,8 @@ defineProps<{ data: LiechangData }>()
 .liechang-interface {
   position: relative;
   padding-right: 590px;
-  height: 1200px;
+  padding-bottom: 20px;
+  width: fit-content;
 
   & > .background {
     position: absolute;
@@ -48,7 +49,7 @@ defineProps<{ data: LiechangData }>()
 
   .lqr-chat {
     position: absolute;
-    top: 130px;
+    bottom: 1070px;
     right: 1450px;
   }
 
@@ -63,6 +64,7 @@ defineProps<{ data: LiechangData }>()
     position: absolute;
     opacity: 80%;
     width: 1440px;
+    left: -110px;
   }
 
   .chat-text {
@@ -77,6 +79,7 @@ defineProps<{ data: LiechangData }>()
     padding-bottom: 110px;
     padding-left: 130px;
     padding-right: 130px;
+    left: -110px;
     align-items: center;
     box-sizing: border-box;
     justify-content: center;
@@ -92,11 +95,12 @@ defineProps<{ data: LiechangData }>()
     text-shadow:
       8px 8px 30px #1e1e2168,
       3px 3px 0 #000000;
+    max-width: 1500px;
   }
 
   & > .subject {
     display: flex;
-    min-width: 780px;
+    min-width: 850px;
     margin-top: 350px;
     margin-left: 100px;
   }
