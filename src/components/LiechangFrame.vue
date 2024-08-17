@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const props = defineProps<{ data: LiechangData }>();
-const data = props.data;
 </script>
 
 <template>

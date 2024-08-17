@@ -45,7 +45,7 @@ const props = defineProps({
   font-size: 36px;
   box-sizing: border-box;
   color: white;
-  text-shadow: 3px 3px 0 #000;
+  text-shadow: 2px 2px 0 #000;
   text-align: left;
 }
 
