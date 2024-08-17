@@ -19,6 +19,10 @@ const props = defineProps<{ current: number, max: number, color: string }>();
 </template>
 <style lang="scss" scoped>
 .container {
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    align-items: center;
+
     &>.rect {
         background-color: white;
         height: 10px;
@@ -54,9 +58,5 @@ const props = defineProps<{ current: number, max: number, color: string }>();
         text-align: right;
         font-family: 'x12y16pxMaruMonica', var(--font-fallback);
     }
-
-    display: grid;
-    grid-template-columns: 1fr 80px;
-    align-items: center;
 }
 </style>
