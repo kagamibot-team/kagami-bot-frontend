@@ -1,27 +1,30 @@
 <script setup lang="ts">
+import { PropType } from 'vue';
 import DisplayBox from './DisplayBox.vue'
 
-const props = withDefaults(defineProps<{
+type DataType = {
+  count?: number,
+  info: AwardInfo,
+  is_new?: boolean
+};
+
+const props = defineProps({
   data: {
-    count?: number,
-    info: AwardInfo,
-    is_new?: boolean
-  },
-  is_opacity?: boolean,
-}>(), {
-  data: () => {
-    return {
-      "info": {
+    type: Object as PropType<DataType>,
+    default: {
+      info: {
         "description": "如果持续遇到此问题，请联系开发组。",
         "display_name": "你不该在这里。",
         "color": "rgb(198, 193, 191)",
         "image": "./resource/shit.png",
         "level": { "display_name": "★★★★★", "color": "rgb(192, 232, 174)" }
-      },
-      "count": 2
-    }
+      }
+    },
   },
-  is_opacity: false
+  is_opacity: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const color = props.is_opacity ? '#9B969099' : '#9b9690'

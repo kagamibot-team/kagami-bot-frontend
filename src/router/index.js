@@ -26,7 +26,7 @@ const router = createRouter({
     {
       path: '/catch',
       name: '单独条目',
-      component: () => import('../components/CatchBox.vue')
+      component: () => import('../views/DisplayView.vue')
     }
   ]
 })
