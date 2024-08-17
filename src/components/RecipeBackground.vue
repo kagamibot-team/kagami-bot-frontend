@@ -7,10 +7,10 @@ const color = ['#000000', '#2a68bc', '#2a68bc', '#2a68bc', '#7E2FCE', '#7E2FCE']
 </script>
 
 <template>
-  <div class="recipe-background" v-if="!is_strange">
-    <div class="ellipse1" />
-    <div class="ellipse2" />
-    <div class="ellipse3" />
+  <div class="recipe-background">
+    <div class="ellipse1" v-if="!is_strange" />
+    <div class="ellipse2" v-if="!is_strange" />
+    <div class="ellipse3" v-if="!is_strange" />
   </div>
 </template>
 
