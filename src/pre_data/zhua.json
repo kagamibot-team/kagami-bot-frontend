@@ -3,7 +3,8 @@
   "meta": {
     "get_chip": 0,
     "own_chip": 0,
-    "remain_time": "0/0",
+    "remain_time": "0",
+    "max_time": "5",
     "need_time": "10000年",
     "field_from": 2
   },

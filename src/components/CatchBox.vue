@@ -15,7 +15,7 @@ const count = props.data.count ? '+' + props.data.count : null
     <DisplayBox
       :image="data.info.image"
       :color="data.info.color"
-      :notation_down="count"
+      :notation_down="count || '+1'"
       :new_overlay="data.is_new"
     />
     <div class="textbox">

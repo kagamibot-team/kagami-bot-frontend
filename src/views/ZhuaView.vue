@@ -25,7 +25,8 @@ axios
 
 <template>
   <div class="wrapper" v-if="data">
-    <div class="top-title">{{ data.name }}<sup class="field-notation" v-if="data.meta.field_from != 1">{{ data.meta.field_from }}号猎场</sup> 的一抓</div>
+    <div class="top-title">{{ data.name }}<sup class="field-notation" v-if="data.meta.field_from != 1">{{
+      data.meta.field_from }}号猎场</sup> 的一抓</div>
     <div class="side-title">
       本次获得
       {{ data.meta.get_chip }} 薯片，目前共有 {{ data.meta.own_chip }} 薯片。<br />剩余次数：{{
@@ -47,7 +48,7 @@ axios
   color: #63605c;
   /* '荆南波波黑' */
   font-family: '阿里妈妈数黑体', 'HarmonyOS Sans SC', var(--font-fallback);
-  font-size: 96px;
+  font-size: 72px;
   font-weight: bolder;
   width: 800px;
 }
@@ -61,7 +62,7 @@ axios
 }
 
 .field-notation {
-  font-size: 54px;
+  font-size: 48px;
   color: #a19b94;
 }
 </style>
