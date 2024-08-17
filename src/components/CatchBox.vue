@@ -7,6 +7,7 @@ const props = defineProps({
 })
 
 const color = props.is_opacity ? '#9B969099' : '#9b9690'
+const count = props.data.count ? '+' + props.data.count : null
 </script>
 
 <template>
@@ -14,7 +15,7 @@ const color = props.is_opacity ? '#9B969099' : '#9b9690'
     <DisplayBox
       :image="data.info.image"
       :color="data.info.color"
-      :notation_down="'+' + data.count"
+      :notation_down="count"
       :new_overlay="data.is_new"
     />
     <div class="textbox">

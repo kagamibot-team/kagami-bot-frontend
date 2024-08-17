@@ -3,9 +3,12 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div id="big_box">
-    <RouterView />
+  <div class="out-line">
+    <div id="big_box">
+      <RouterView />
+    </div>
   </div>
+  <div class="out-hint-text">虚线框内代表可视区域，最终输出不会包含虚线框。</div>
 </template>
 
 <style>
@@ -16,5 +19,16 @@ body {
 #big_box {
   width: fit-content;
   /* border: 1px solid black; */
+}
+
+.out-line {
+  border: 2px rgba(0, 0, 0, 0.5) dashed;
+  box-sizing: border-box;
+  width: fit-content;
+  height: fit-content;
+}
+
+.out-hint-text {
+  color: rgba(0, 0, 0, 0.5);
 }
 </style>

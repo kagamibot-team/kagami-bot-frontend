@@ -10,7 +10,7 @@ const props = defineProps({
 <template>
   <div class="display-box" :style="{ backgroundColor: props.color }">
     <img class="xiaoge-image" :src="props.image" />
-    <div class="notation-down">{{ props.notation_down }}</div>
+    <div class="notation-down" v-if="notation_down">{{ props.notation_down }}</div>
     <div class="notation-up">{{ props.notation_up }}</div>
     <img class="new-notation" v-if="props.new_overlay" :src="'./resource/new.png'" />
   </div>

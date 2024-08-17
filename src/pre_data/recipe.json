@@ -8,7 +8,8 @@
       "color": "rgb(198, 193, 191)",
       "image": "./resource/shit.png",
       "level": { "lid": 3, "display_name": "★★★", "color": "rgb(192, 232, 174)" }
-    }
+    },
+    "count": 10
   },
   "inputs": [
     { "color": "rgb(198, 193, 191)", "image": "./resource/blank_placeholder.png" },
