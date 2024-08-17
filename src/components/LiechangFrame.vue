@@ -36,6 +36,7 @@ defineProps<{ data: LiechangData }>()
   padding-right: 590px;
   padding-bottom: 20px;
   width: fit-content;
+  overflow: hidden;
 
   & > .background {
     position: absolute;
