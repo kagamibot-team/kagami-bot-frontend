@@ -102,6 +102,7 @@ defineProps<{ data: LiechangData }>()
   & > .subject {
     display: flex;
     min-width: 850px;
+    min-height: 600px;
     margin-top: 350px;
     margin-left: 100px;
   }
