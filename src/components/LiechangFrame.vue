@@ -67,6 +67,7 @@ const props = defineProps<{ data: LiechangData }>();
         padding-right: 130px;
         align-items: center;
         box-sizing: border-box;
+        justify-content: center;
     }
 
     &>.title {
