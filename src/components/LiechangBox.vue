@@ -44,16 +44,22 @@ const data_sum = props.data.award_count.map(p => p.sum_up).reduce((p, q) => p + 
     margin-right: 20px;
     box-sizing: border-box;
     position: relative;
+    padding-top: 45px;
 
     &.selecting {
         background-color: rgba(87, 78, 60, 0.489);
         border-color: rgba(217, 188, 93, 0.677);
     }
 
+    &.locked{
+        background-color: rgba(0, 0, 0, 0.553);
+    }
+
     &.locked>h1,
     &.locked>.display-box,
     &.locked>.progress-bar {
         filter: saturate(0.5) brightness(0.5) blur(5px);
+        opacity: 0.6;
     }
 
     &>.locked-hint {

@@ -32,4 +32,5 @@ type LiechangData = {
     user: UserData,
     selecting: number,
     expression: LQRExpression,
+    chips: number,
 };

@@ -34,6 +34,7 @@ const props = defineProps<{ current: number, max: number, color: string }>();
             filter: brightness(0.15) saturate(0.5);
             left: 2px;
             top: 2px;
+            opacity: 0.3;
         }
 
         &>.rect-left {
