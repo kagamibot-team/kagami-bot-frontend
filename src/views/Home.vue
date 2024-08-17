@@ -30,15 +30,15 @@ nav a {
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: 0.2s;
+}
 
-  &:hover {
-    background-color: hsla(0, 100%, 65%, 1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+nav a:hover {
+  background-color: hsla(0, 100%, 65%, 1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  &:active {
-    background-color: hsla(0, 100%, 55%, 1);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
-  }
+nav a:active {
+  background-color: hsla(0, 100%, 55%, 1);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
 }
 </style>
