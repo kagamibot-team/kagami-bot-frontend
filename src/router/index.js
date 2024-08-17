@@ -22,6 +22,11 @@ const router = createRouter({
       path: '/liechang',
       name: '猎场界面',
       component: () => import('../views/LiechangView.vue')
+    },
+    {
+      path: '/catch',
+      name: '单独条目',
+      component: () => import('../components/CatchBox.vue')
     }
   ]
 })

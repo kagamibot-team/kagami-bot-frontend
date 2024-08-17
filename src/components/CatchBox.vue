@@ -1,23 +1,37 @@
-<script setup>
+<script setup lang="ts">
 import DisplayBox from './DisplayBox.vue'
 
-const props = defineProps({
-  data: Object,
-  is_opacity: Boolean || false
+const props = withDefaults(defineProps<{
+  data: {
+    count?: number,
+    info: AwardInfo,
+    is_new?: boolean
+  },
+  is_opacity?: boolean,
+}>(), {
+  data: () => {
+    return {
+      "info": {
+        "description": "如果持续遇到此问题，请联系开发组。",
+        "display_name": "你不该在这里。",
+        "color": "rgb(198, 193, 191)",
+        "image": "./resource/shit.png",
+        "level": { "display_name": "★★★★★", "color": "rgb(192, 232, 174)" }
+      },
+      "count": 2
+    }
+  },
+  is_opacity: false
 })
 
 const color = props.is_opacity ? '#9B969099' : '#9b9690'
-const count = props.data.count ? '+' + props.data.count : null
+const count = props.data.count ? '+' + props.data.count : ""
 </script>
 
 <template>
   <div class="outbox">
-    <DisplayBox
-      :image="data.info.image"
-      :color="data.info.color"
-      :notation_down="count || '+1'"
-      :new_overlay="data.is_new"
-    />
+    <DisplayBox :image="data.info.image" :color="data.info.color" :notation_down="count || '+1'"
+      :new_overlay="data.is_new" />
     <div class="textbox">
       <div class="rightTitle">{{ props.data.info.display_name }}</div>
       <div class="rightDescription">{{ props.data.info.description }}</div>
@@ -35,7 +49,6 @@ const count = props.data.count ? '+' + props.data.count : null
   display: flex;
   padding: 18px;
   position: relative;
-  margin-top: 25px;
 }
 
 .textbox {

@@ -33,7 +33,7 @@ axios
         data.meta.remain_time
       }}/{{ data.meta.max_time }}，距下次次数恢复还要{{ data.meta.need_time }}。
     </div>
-    <CatchBox v-for="(item, index) in data.catchs" :data="item" :key="index" />
+    <CatchBox v-for="(item, index) in data.catchs" :data="item" :key="index" style="margin-top: 25px;" />
   </div>
 </template>
 
