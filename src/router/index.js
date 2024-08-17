@@ -17,6 +17,11 @@ const router = createRouter({
       path: '/recipe',
       name: '合成界面',
       component: () => import('../views/RecipeView.vue')
+    },
+    {
+      path: '/liechang',
+      name: '猎场界面',
+      component: () => import('../views/LiechangView.vue')
     }
   ]
 })
