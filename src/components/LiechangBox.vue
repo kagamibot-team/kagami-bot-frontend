@@ -4,7 +4,7 @@ import DisplayBox from './DisplayBox.vue';
 import ProgressBar from './ProgressBar.vue';
 
 const props = defineProps<{ data: SingleLiechang, selecting: boolean }>();
-const liechang_name = computed(() => ["废弃猎场", "荒野猎场", "未命名"][props.data.pack_id - 1]);
+const liechang_name = computed(() => ["废墟猎场", "荒野猎场", "未命名"][props.data.pack_id - 1]);
 
 const data_sum = props.data.award_count.map(p => p.sum_up).reduce((p, q) => p + q);
 </script>
