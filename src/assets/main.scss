@@ -8,6 +8,7 @@ main {
   padding: 40px 60px;
   max-width: 940px;
   background-color: #eeebe3;
+  width: max-content;
 }
 
 h2 {
@@ -18,7 +19,7 @@ h2 {
 }
 
 h3 {
-  color: #63605c;
+  color: #5a554d;
   font-family: '荆南俊俊体', '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
   font-size: 48px;
   font-weight: normal;
@@ -35,7 +36,7 @@ li {
   font-weight: normal;
   line-height: 32px;
   list-style-type: none;
-  color: #9b9690;
+  color: #aca49c;
   display: flex;
 }
 
@@ -52,6 +53,7 @@ com {
   display: inline-block;
   min-width: 400px;
   padding-right: 40px;
+  color: #807a73;
 }
 
 par {
