@@ -1,7 +1,12 @@
 :root {
-  --font-fallback: /* 常规黑体 */ 'HarmonyOS Sans SC', 'Source Han Sans',
+  // 听好了，绝 对 没 有 豆腐块！！！
+  // NO TO !!!
+  --font-fallback:
+  /* 常规黑体 */ 'HarmonyOS Sans SC', 'Source Han Sans',
     'Segoe UI Variable Display', sans-serif, /* MiSans 生僻字集 */ 'MiSans L3',
-    /* 天珩全字库 */ 'TH-Tshyn-P0', 'TH-Tshyn-P1', 'TH-Tshyn-P2', 'TH-Tshyn-P16';
+    /* https://github.com/MY1L/Unicode */ 'Noto Unicode', 'Monu Hani', 'Monu Han2', 'Monu Han3',
+    'Noto Serif Tangut', 'Monu Temp', /* 天珩全字库 */ 'TH-Tshyn-P0', 'TH-Tshyn-P1', 'TH-Tshyn-P2',
+    'TH-Tshyn-P16';
 }
 
 main {

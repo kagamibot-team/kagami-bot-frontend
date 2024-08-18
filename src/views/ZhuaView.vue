@@ -59,7 +59,7 @@ axios
   /* '荆南波波黑' */
   font-family: '阿里妈妈数黑体', 'HarmonyOS Sans SC', var(--font-fallback);
   font-size: 72px;
-  font-weight: bolder;
+  font-weight: bold;
   width: 800px;
   word-break: break-all;
 }
