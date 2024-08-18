@@ -101,6 +101,7 @@ axios
   gap: 35px;
 }
 .right-list {
+  margin-top: 10px;
   margin-left: 100px;
 }
 .total {
@@ -126,6 +127,7 @@ axios
 }
 
 .merge-title {
+  margin-bottom: 10px;
   font-size: 60px;
   font-family: 'HarmonyOS Sans SC', var(--font-fallback);
   color: #ffffff;
