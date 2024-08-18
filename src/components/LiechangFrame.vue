@@ -97,6 +97,7 @@ defineProps<{ data: LiechangData }>()
       8px 8px 30px #1e1e2168,
       3px 3px 0 #000000;
     max-width: 1500px;
+    word-break: break-all;
   }
 
   & > .subject {

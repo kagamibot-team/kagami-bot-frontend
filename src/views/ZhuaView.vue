@@ -25,15 +25,25 @@ axios
 
 <template>
   <div class="wrapper" v-if="data">
-    <div class="top-title">{{ data.name }}<sup class="field-notation" v-if="data.meta.field_from != 1">{{
-      data.meta.field_from }}号猎场</sup> 的一抓</div>
+    <div class="top-title">
+      {{ data.name
+      }}<sup class="field-notation" v-if="data.meta.field_from != 1"
+        >{{ data.meta.field_from }}号猎场</sup
+      >
+      的一抓
+    </div>
     <div class="side-title">
       本次获得
       {{ data.meta.get_chip }} 薯片，目前共有 {{ data.meta.own_chip }} 薯片。<br />剩余次数：{{
         data.meta.remain_time
       }}/{{ data.meta.max_time }}，距下次次数恢复还要{{ data.meta.need_time }}。
     </div>
-    <CatchBox v-for="(item, index) in data.catchs" :data="item" :key="index" style="margin-top: 25px;" />
+    <CatchBox
+      v-for="(item, index) in data.catchs"
+      :data="item"
+      :key="index"
+      style="margin-top: 25px"
+    />
   </div>
 </template>
 
@@ -51,6 +61,7 @@ axios
   font-size: 72px;
   font-weight: bolder;
   width: 800px;
+  word-break: break-all;
 }
 
 .side-title {

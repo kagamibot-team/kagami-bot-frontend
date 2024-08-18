@@ -114,6 +114,7 @@ axios
   font-size: 80px;
   font-weight: bolder;
   width: 1188px;
+  word-break: break-all;
 }
 
 .side-title {

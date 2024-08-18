@@ -1,5 +1,5 @@
 {
-  "name": "出错啦！",
+  "name": "出错啦",
   "meta": { "cost_chip": 0, "own_chip": 0, "is_strange": false, "status": "错误！" },
   "output": {
     "info": {
