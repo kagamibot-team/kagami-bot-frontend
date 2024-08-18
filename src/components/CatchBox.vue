@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PropType } from 'vue';
+import { computed, PropType } from 'vue';
 import DisplayBox from './DisplayBox.vue'
 
 type DataType = {
@@ -27,8 +27,8 @@ const props = defineProps({
   },
 })
 
-const color = props.is_opacity ? '#9B969099' : '#9b9690'
-const count = props.data.count ? '+' + props.data.count : ""
+const color = computed(() => props.is_opacity ? '#9B969099' : '#9b9690');
+const count = computed(() => props.data.count ? '+' + props.data.count : "");
 </script>
 
 <template>
