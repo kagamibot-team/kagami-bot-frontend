@@ -6,7 +6,7 @@ import ProgressBar from './ProgressBar.vue';
 const props = defineProps<{ data: SingleLiechang, selecting: boolean }>();
 const liechang_name = computed(() => ["废墟猎场", "荒野猎场", "未命名"][props.data.pack_id - 1]);
 
-const data_sum = computed(() => props.data.award_count.map(p => p.sum_up).reduce((p, q) => p + q));
+// const data_sum = computed(() => props.data.award_count.map(p => p.sum_up).reduce((p, q) => p + q));
 </script>
 
 <template>
@@ -14,7 +14,7 @@ const data_sum = computed(() => props.data.award_count.map(p => p.sum_up).reduce
         <h1>{{ data.pack_id }} 号猎场</h1>
         <h2>{{ liechang_name }}</h2>
         <DisplayBox :image="data.featured_award.image" :color="data.featured_award.color"
-            :notation_down="'共' + data_sum + '小哥'" style="display: inline-block;" class="display-box" />
+            notation_down="" style="display: inline-block;" class="display-box" />
         <ProgressBar v-for="(item, index) in data.award_count" :key="index" :current="item.collected" :max="item.sum_up"
             :color="item.level.color" class="progress-bar" />
         <div class="locked-hint" v-if="!data.unlocked">
