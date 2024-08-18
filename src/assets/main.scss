@@ -1,0 +1,59 @@
+:root {
+  --font-fallback: /* 常规黑体 */ 'HarmonyOS Sans SC', 'Source Han Sans',
+    'Segoe UI Variable Display', sans-serif, /* MiSans 生僻字集 */ 'MiSans L3',
+    /* 天珩全字库 */ 'TH-Tshyn-P0', 'TH-Tshyn-P1', 'TH-Tshyn-P2', 'TH-Tshyn-P16';
+}
+
+main {
+  padding: 40px 60px;
+  max-width: 940px;
+  background-color: #eeebe3;
+}
+
+h2 {
+  color: #63605c;
+  font-family: '荆南波波黑', var(--font-fallback);
+  font-size: 80px;
+  margin: 10px 0;
+}
+
+h3 {
+  color: #63605c;
+  font-family: '荆南俊俊体', '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
+  font-size: 48px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+li {
+  font-family: '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
+  list-style-type: none;
+  color: #9b9690;
+  display: flex;
+}
+
+si {
+  @extend li;
+  display: list-item;
+  margin-left: 25px;
+  font-size: 20px;
+  line-height: 25px;
+  opacity: 0.7;
+}
+
+com {
+  display: inline-block;
+  min-width: 400px;
+  padding-right: 40px;
+}
+
+par {
+  color: #ca892e;
+}

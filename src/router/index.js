@@ -27,6 +27,11 @@ const router = createRouter({
       path: '/catch',
       name: '单独条目',
       component: () => import('../views/DisplayView.vue')
+    },
+    {
+      path: '/help',
+      name: '帮助',
+      component: () => import('../views/HelpView.vue')
     }
   ]
 })
