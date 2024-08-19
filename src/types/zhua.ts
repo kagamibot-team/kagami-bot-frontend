@@ -1,9 +1,3 @@
-type Catch = {
-    info: AwardInfo,
-    count?: number,
-    is_new?: boolean,
-};
-
 type ZhuaMeta = {
     field_from: number,
     get_chip: number,
@@ -16,5 +10,5 @@ type ZhuaMeta = {
 type ZhuaData = {
     user: UserData,
     meta: ZhuaMeta,
-    catchs: Array<Catch>,
+    catchs: Array<GetAward>,
 };

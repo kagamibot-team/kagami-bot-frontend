@@ -4,7 +4,7 @@ import DisplayBox from './DisplayBox.vue'
 
 const props = defineProps({
   data: {
-    type: Object as PropType<Catch>,
+    type: Object as PropType<GetAward>,
     default: {
       info: {
         "description": "如果持续遇到此问题，请联系开发组。",
