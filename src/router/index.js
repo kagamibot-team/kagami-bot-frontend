@@ -32,6 +32,11 @@ const router = createRouter({
       path: '/help',
       name: '帮助',
       component: () => import('../views/HelpView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: '404 页面',
+      component: () => import('../views/default/NoViewPage.vue')
     }
   ]
 })
