@@ -2,15 +2,9 @@
 import { computed, PropType } from 'vue';
 import DisplayBox from './DisplayBox.vue'
 
-type DataType = {
-  count?: number,
-  info: AwardInfo,
-  is_new?: boolean
-};
-
 const props = defineProps({
   data: {
-    type: Object as PropType<DataType>,
+    type: Object as PropType<Catch>,
     default: {
       info: {
         "description": "如果持续遇到此问题，请联系开发组。",

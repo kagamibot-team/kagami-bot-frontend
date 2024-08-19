@@ -1,13 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import CatchBox from '../components/CatchBox.vue'
 
 import axios from 'axios'
 import { useRoute } from 'vue-router'
 import defaultData from '../pre_data/zhua.json'
-const data = ref()
+const data = ref<ZhuaData>();
 
-const route = useRoute()
+const route = useRoute();
 
 axios
   .get(`../data/${route.query.uuid}/`)
@@ -26,10 +26,8 @@ axios
 <template>
   <div class="wrapper" v-if="data">
     <div class="top-title">
-      {{ data.name
-      }}<sup class="field-notation" v-if="data.meta.field_from != 1"
-        >{{ data.meta.field_from }}号猎场</sup
-      >
+      {{ data.user.name }}<sup class="field-notation" v-if="data.meta.field_from != 1">{{ data.meta.field_from
+        }}号猎场</sup>
       的一抓
     </div>
     <div class="side-title">
@@ -38,12 +36,7 @@ axios
         data.meta.remain_time
       }}/{{ data.meta.max_time }}，距下次次数恢复还要{{ data.meta.need_time }}。
     </div>
-    <CatchBox
-      v-for="(item, index) in data.catchs"
-      :data="item"
-      :key="index"
-      style="margin-top: 25px"
-    />
+    <CatchBox v-for="(item, index) in data.catchs" :data="item" :key="index" style="margin-top: 25px" />
   </div>
 </template>
 
