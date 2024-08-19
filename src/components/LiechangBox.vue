@@ -13,8 +13,8 @@ const liechang_name = computed(() => ["废墟猎场", "荒野猎场", "未命名
     <div class="liechang-box" :class="[selecting ? 'selecting' : '', data.unlocked ? 'unlocked' : 'locked']">
         <h1>{{ data.pack_id }} 号猎场</h1>
         <h2>{{ liechang_name }}</h2>
-        <DisplayBox :image="data.featured_award.image" :color="data.featured_award.color"
-            notation_down="" style="display: inline-block;" class="display-box" />
+        <DisplayBox :image="data.featured_award.image_url" :color="data.featured_award.color" notation_down=""
+            style="display: inline-block;" class="display-box" />
         <ProgressBar v-for="(item, index) in data.award_count" :key="index" :current="item.collected" :max="item.sum_up"
             :color="item.level.color" class="progress-bar" />
         <div class="locked-hint" v-if="!data.unlocked">

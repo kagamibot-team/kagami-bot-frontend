@@ -38,7 +38,7 @@ defineProps<{ data: LiechangData }>()
   width: fit-content;
   overflow: hidden;
 
-  & > .background {
+  &>.background {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -86,7 +86,7 @@ defineProps<{ data: LiechangData }>()
     justify-content: center;
   }
 
-  & > .title {
+  &>.title {
     font-family: '阿里妈妈数黑体', 'HarmonyOS Sans SC', var(--font-fallback);
     font-size: 84px;
     font-weight: bolder;
@@ -100,7 +100,7 @@ defineProps<{ data: LiechangData }>()
     word-break: break-all;
   }
 
-  & > .subject {
+  &>.subject {
     display: flex;
     min-width: 850px;
     min-height: 600px;
@@ -108,7 +108,7 @@ defineProps<{ data: LiechangData }>()
     margin-left: 100px;
   }
 
-  & > .notation {
+  &>.notation {
     margin-top: 20px;
     margin-left: 40px;
     width: 100%;
