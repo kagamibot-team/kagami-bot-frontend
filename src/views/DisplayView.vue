@@ -4,22 +4,20 @@ import { useRoute } from 'vue-router'
 import axios from 'axios'
 import CatchBox from '../components/CatchBox.vue'
 
-type DataType = {
-  info: AwardInfo
-  count: number | undefined
-}
-
-const default_data: DataType = {
+const default_data: GetAward = {
   info: {
+    aid: 0,
+    sorting: 0,
     description: '如果持续遇到此问题，请联系开发组。',
     display_name: '你不该在这里。',
     color: 'rgb(198, 193, 191)',
-    image: './resource/shit.png',
-    level: { display_name: '★★★★★', color: 'rgb(192, 232, 174)' }
+    image_url: './resource/shit.png',
+    level: { lid: 5, display_name: '★★★★★', color: 'rgb(192, 232, 174)' }
   },
-  count: 2
+  count: 2,
+  is_new: false,
 }
-const data = ref<DataType>(default_data)
+const data = ref<GetAward>(default_data)
 const route = useRoute()
 
 axios

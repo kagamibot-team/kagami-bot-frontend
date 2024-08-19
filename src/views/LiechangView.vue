@@ -7,8 +7,8 @@ import LiechangFrame from '../components/LiechangFrame.vue'
 import LiechangBox from '../components/LiechangBox.vue'
 import default_data from '../pre_data/liechang.json'
 
-const data = ref<LiechangData>(default_data)
-const route = useRoute()
+const data = ref<LiechangData>(default_data);
+const route = useRoute();
 
 axios
   .get(`../data/${route.query.uuid}/`)
@@ -27,12 +27,8 @@ axios
 <template>
   <LiechangFrame :data="data">
     <div class="container">
-      <LiechangBox
-        v-for="(item, index) in data?.packs"
-        v-bind:key="index"
-        :data="item"
-        :selecting="item.pack_id == data?.selecting"
-      />
+      <LiechangBox v-for="(item, index) in data?.packs" v-bind:key="index" :data="item"
+        :selecting="item.pack_id == data?.selecting" />
     </div>
   </LiechangFrame>
 </template>

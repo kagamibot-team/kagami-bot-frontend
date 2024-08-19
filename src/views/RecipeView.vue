@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import CatchBox from '../components/CatchBox.vue'
 import DisplayBox from '../components/DisplayBox.vue'
@@ -6,8 +6,7 @@ import RecipeBackground from '../components/RecipeBackground.vue'
 import axios from 'axios'
 import { useRoute } from 'vue-router'
 import defaultData from '../pre_data/recipe.json'
-const data = ref()
-
+const data = ref<MergeData>()
 const route = useRoute()
 
 axios
@@ -26,15 +25,10 @@ axios
 
 <template>
   <div class="wrapper" v-if="data">
-    <div class="top-title">{{ data.name }} 的合成材料：</div>
+    <div class="top-title">{{ data.user.name }} 的合成材料：</div>
     <div class="total">
       <div class="left-list">
-        <DisplayBox
-          v-for="(item, index) in data.inputs"
-          :image="item.image"
-          :color="item.color"
-          :key="index"
-        />
+        <DisplayBox v-for="(item, index) in data.inputs" :image="item.image_url" :color="item.color" :key="index" />
       </div>
       <div class="right-list">
         <div class="ymh-text">
@@ -62,10 +56,12 @@ axios
   padding: 60px 80px 80px 80px;
   overflow: hidden;
 }
+
 .ymh-text {
   position: relative;
   height: 270px;
 }
+
 .ymh-intext {
   position: relative;
   font-size: 35px;
@@ -81,12 +77,14 @@ axios
   text-align: center;
   z-index: 1;
 }
+
 .ymh-textbox {
   position: absolute;
   top: -150px;
   left: -350px;
   z-index: 0;
 }
+
 .ymh-figure {
   position: absolute;
   width: 866px;
@@ -94,21 +92,25 @@ axios
   top: -100px;
   z-index: -1;
 }
+
 .left-list {
   display: flex;
   flex-direction: column;
   margin-top: 100px;
   gap: 35px;
 }
+
 .right-list {
   margin-top: 10px;
   margin-left: 100px;
 }
+
 .total {
   position: relative;
   display: flex;
   z-index: 0;
 }
+
 .top-title {
   color: #ffffff;
   font-family: 'HarmonyOS Sans SC', var(--font-fallback);

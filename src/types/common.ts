@@ -5,11 +5,13 @@ type LevelData = {
 };
 
 type AwardInfo = {
+    aid: number,
     description: string,
     display_name: string,
     color: string,
-    image: string,
+    image_url: string,
     level: LevelData,
+    sorting: number,
 };
 
 type UserData = { uid: number, qqid: string, name: string };

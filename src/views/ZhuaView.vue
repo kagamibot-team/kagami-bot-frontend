@@ -6,21 +6,18 @@ import axios from 'axios'
 import { useRoute } from 'vue-router'
 import defaultData from '../pre_data/zhua.json'
 const data = ref<ZhuaData>();
-
 const route = useRoute();
 
-axios
-  .get(`../data/${route.query.uuid}/`)
-  .then((response) => {
-    if (response.status == 200) {
-      data.value = response.data
-    } else {
-      data.value = defaultData
-    }
-  })
-  .catch((error) => {
-    data.value = defaultData
-  })
+axios.get(`../data/${route.query.uuid}/`).then((response) => {
+  if (response.status == 200) {
+    data.value = response.data;
+  } else {
+    data.value = defaultData;
+  }
+}).catch(_ => {
+  data.value = defaultData;
+});
+
 </script>
 
 <template>

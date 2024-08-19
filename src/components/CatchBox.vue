@@ -22,12 +22,12 @@ const props = defineProps({
 })
 
 const color = computed(() => props.is_opacity ? '#9B969099' : '#9b9690');
-const count = computed(() => props.data.count ? '+' + props.data.count : "");
+const count = computed(() => props.data.count && props.data.count >= 0 ? '+' + props.data.count : "");
 </script>
 
 <template>
   <div class="outbox">
-    <DisplayBox :image="data.info.image" :color="data.info.color" :notation_down="count || '+1'"
+    <DisplayBox :image="data.info.image_url" :color="data.info.color" :notation_down="count || '+1'"
       :new_overlay="data.is_new" />
     <div class="textbox">
       <div class="rightTitle">{{ props.data.info.display_name }}</div>

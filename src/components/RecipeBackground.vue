@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 defineProps({
-  is_strange: Boolean,
-  level: Number
+  is_strange: { type: Boolean, default: false },
+  level: { type: Number, default: 1 }
 })
 const color = ['#000000', '#2a68bc', '#2a68bc', '#2a68bc', '#7E2FCE', '#7E2FCE']
 </script>
@@ -24,6 +24,7 @@ const color = ['#000000', '#2a68bc', '#2a68bc', '#2a68bc', '#7E2FCE', '#7E2FCE']
   z-index: -1;
   background-color: v-bind('color[level]');
 }
+
 .ellipse1 {
   position: absolute;
   top: -1200px;
@@ -33,6 +34,7 @@ const color = ['#000000', '#2a68bc', '#2a68bc', '#2a68bc', '#7E2FCE', '#7E2FCE']
   border-radius: 1200px;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
 .ellipse2 {
   position: absolute;
   top: -900px;
@@ -42,6 +44,7 @@ const color = ['#000000', '#2a68bc', '#2a68bc', '#2a68bc', '#7E2FCE', '#7E2FCE']
   border-radius: 900px;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
 .ellipse3 {
   position: absolute;
   top: -600px;

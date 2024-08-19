@@ -16,23 +16,36 @@
   "catchs": [
     {
       "info": {
+        "aid": 0,
         "description": "坏￼𝍶𝍸𛀈𛀉枪𐂺𐃆Ｚ𛀁🙫🩤🚊🥆𛅦𞋈🀇🃵𰁜𮰩𰻝ꦋ갸ﬥﬨ𐃍שּׂ︻︙ﮛ𰻝𰀀𝍵𮯰𮯿𱍻꣙ꬦ面𐎛𐑝𐕝",
         "display_name": "你不该在这里。",
         "color": "rgb(198, 193, 191)",
-        "image": "./resource/shit.png",
-        "level": { "display_name": "★★★★★", "color": "rgb(192, 232, 174)" }
+        "image_url": "./resource/shit.png",
+        "level": {
+          "lid": 5,
+          "display_name": "★★★★★",
+          "color": "rgb(192, 232, 174)"
+        },
+        "sorting": 0
       },
-      "count": 2
+      "count": 2,
+      "is_new": false
     },
     {
       "info": {
+        "aid": 0,
         "description": "你不该在这里。",
         "display_name": "你不该在这里。",
-
         "color": "rgb(198, 193, 191)",
-        "image": "./resource/blank_placeholder.png",
-        "level": { "display_name": "★★★★★", "color": "rgb(192, 232, 174)" }
+        "image_url": "./resource/blank_placeholder.png",
+        "level": {
+          "lid": 5,
+          "display_name": "★★★★★",
+          "color": "rgb(192, 232, 174)"
+        },
+        "sorting": 0
       },
+      "count": 1,
       "is_new": true
     }
   ]

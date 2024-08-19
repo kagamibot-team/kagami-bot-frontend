@@ -5,6 +5,7 @@
       "award_count": [
         {
           "level": {
+            "lid": 1,
             "display_name": "★",
             "color": "#C6C1BF"
           },
@@ -13,6 +14,7 @@
         },
         {
           "level": {
+            "lid": 2,
             "display_name": "★★",
             "color": "#C0E8AE"
           },
@@ -21,6 +23,7 @@
         },
         {
           "level": {
+            "lid": 3,
             "display_name": "★★★",
             "color": "#BDDAF5"
           },
@@ -29,6 +32,7 @@
         },
         {
           "level": {
+            "lid": 4,
             "display_name": "★★★★",
             "color": "#D4BCE3"
           },
@@ -37,6 +41,7 @@
         },
         {
           "level": {
+            "lid": 5,
             "display_name": "★★★★★",
             "color": "#F1DD95"
           },
@@ -45,11 +50,14 @@
         }
       ],
       "featured_award": {
+        "aid": 0,
+        "sorting": 0,
         "description": "你不该在这里。",
         "display_name": "你不该在这里。",
         "color": "rgb(198, 193, 191)",
-        "image": "./resource/blank_placeholder.png",
+        "image_url": "./resource/blank_placeholder.png",
         "level": {
+          "lid": 5,
           "display_name": "★★★★★",
           "color": "rgb(192, 232, 174)"
         }
@@ -61,14 +69,16 @@
       "award_count": [
         {
           "level": {
+            "lid": 1,
             "display_name": "★",
             "color": "#C6C1BF"
           },
-          "collected": 10,
-          "sum_up": 20
+          "collected": 0,
+          "sum_up": 10
         },
         {
           "level": {
+            "lid": 2,
             "display_name": "★★",
             "color": "#C0E8AE"
           },
@@ -77,6 +87,7 @@
         },
         {
           "level": {
+            "lid": 3,
             "display_name": "★★★",
             "color": "#BDDAF5"
           },
@@ -85,14 +96,16 @@
         },
         {
           "level": {
+            "lid": 4,
             "display_name": "★★★★",
             "color": "#D4BCE3"
           },
-          "collected": 5,
-          "sum_up": 10
+          "collected": 10,
+          "sum_up": 20
         },
         {
           "level": {
+            "lid": 5,
             "display_name": "★★★★★",
             "color": "#F1DD95"
           },
@@ -101,11 +114,14 @@
         }
       ],
       "featured_award": {
+        "aid": 0,
+        "sorting": 0,
         "description": "你不该在这里。",
         "display_name": "你不该在这里。",
         "color": "rgb(198, 193, 191)",
-        "image": "./resource/blank_placeholder.png",
+        "image_url": "./resource/blank_placeholder.png",
         "level": {
+          "lid": 5,
           "display_name": "★★★★★",
           "color": "rgb(192, 232, 174)"
         }
@@ -117,14 +133,16 @@
       "award_count": [
         {
           "level": {
+            "lid": 1,
             "display_name": "★",
             "color": "#C6C1BF"
           },
-          "collected": 10,
-          "sum_up": 20
+          "collected": 0,
+          "sum_up": 10
         },
         {
           "level": {
+            "lid": 2,
             "display_name": "★★",
             "color": "#C0E8AE"
           },
@@ -133,6 +151,7 @@
         },
         {
           "level": {
+            "lid": 3,
             "display_name": "★★★",
             "color": "#BDDAF5"
           },
@@ -141,14 +160,16 @@
         },
         {
           "level": {
+            "lid": 4,
             "display_name": "★★★★",
             "color": "#D4BCE3"
           },
-          "collected": 5,
-          "sum_up": 10
+          "collected": 10,
+          "sum_up": 20
         },
         {
           "level": {
+            "lid": 5,
             "display_name": "★★★★★",
             "color": "#F1DD95"
           },
@@ -157,11 +178,14 @@
         }
       ],
       "featured_award": {
+        "aid": 0,
+        "sorting": 0,
         "description": "你不该在这里。",
         "display_name": "你不该在这里。",
         "color": "rgb(198, 193, 191)",
-        "image": "./resource/blank_placeholder.png",
+        "image_url": "./resource/blank_placeholder.png",
         "level": {
+          "lid": 5,
           "display_name": "★★★★★",
           "color": "rgb(192, 232, 174)"
         }
