@@ -77,7 +77,7 @@ axios.get(`../metadata/`).then(res => {
         font-size: 60px;
         text-align: center;
         margin-bottom: 30px;
-        margin-top: 40px    ;
+        margin-top: 40px;
     }
 
     ul {
