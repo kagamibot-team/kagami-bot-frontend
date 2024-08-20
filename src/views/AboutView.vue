@@ -9,11 +9,11 @@ const data = ref<{
     python_version: string,
     platform: string,
 }>({
-    app_name: "未知",
-    app_version: "未知",
-    kagami_version: "未知",
-    python_version: "未知",
-    platform: "未知",
+    app_name: "Unknown",
+    app_version: "Unknown",
+    kagami_version: "Unknown",
+    python_version: "Unknown",
+    platform: "Unknown",
 });
 
 const vite_version = __VITE_VERSION__;
