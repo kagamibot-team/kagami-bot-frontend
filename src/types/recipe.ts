@@ -7,7 +7,8 @@ type MergeMeta = {
 
 type YMHMessage = {
     text: string,
-    image: string,
+    face: string,
+    speaker: string,
 };
 
 type MergeData = {
@@ -15,5 +16,4 @@ type MergeData = {
     meta: MergeMeta,
     output: GetAward,
     inputs: Array<AwardInfo>,
-    ymh_message: YMHMessage,
 };

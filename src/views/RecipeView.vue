@@ -7,8 +7,50 @@ import axios from 'axios'
 import { useRoute } from 'vue-router'
 import defaultData from '../pre_data/recipe.json'
 
+import answers from '../pre_data/mokie/answers.json'
+
 const data = ref<MergeData>(defaultData)
 const route = useRoute()
+
+const ymh = computed<YMHMessage>(() => {
+  var pool: Array<YMHMessage>;
+  if (data.value.output.info.aid == 9) {
+    pool = answers.xiaohua;
+  } else if ([34, 98].indexOf(data.value.output.info.aid) != -1) {
+    pool = answers.love;
+  } else {
+    let max_input = Math.max(...data.value.inputs.map(i => i.level.lid));
+    let output = data.value.output.info.level.lid;
+    if ((
+      max_input == 0 ||
+      max_input == 1 ||
+      max_input == 2 ||
+      max_input == 3 ||
+      max_input == 4 ||
+      max_input == 5
+    ) && (
+        output == 0 ||
+        output == 1 ||
+        output == 2 ||
+        output == 3 ||
+        output == 4 ||
+        output == 5
+      )) {
+      let _p = answers.normal[max_input];
+      pool = _p[output];
+    } else {
+      pool = [];
+    }
+  }
+  if (pool.length == 0) {
+    return {
+      speaker: "榆木华",
+      text: "……",
+      face: "黑化"
+    };
+  }
+  return pool[Math.floor(Math.random() * pool.length)];
+});
 
 const notation = computed(() => "+" + data.value.output.count);
 
@@ -35,7 +77,7 @@ axios
       </div>
       <div class="right-list">
         <div class="ymh-text">
-          <div class="ymh-intext">{{ data.ymh_message.text }}</div>
+          <div class="ymh-intext">{{ ymh.text }}</div>
           <img class="ymh-textbox" src="../assets/image/mokie/榆木华对话框.png" />
         </div>
         <div class="merge-title">合成结果：{{ data.meta.status }}</div>
@@ -47,7 +89,7 @@ axios
           </text>
         </svg>
       </div>
-      <img class="ymh-figure" :src="`./resource/mokie/榆木华 表情 ${data.ymh_message.image}.png`" />
+      <img class="ymh-figure" :src="`./resource/mokie/${ymh.speaker} 表情 ${ymh.face}.png`" />
     </div>
     <RecipeBackground :is_strange="data.meta.is_strange" :level="data.output.info.level.lid" />
   </div>
