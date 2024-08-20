@@ -33,7 +33,8 @@ axios.get(`../data/${route.query.uuid}/`).then((response) => {
         data.meta.remain_time
       }}/{{ data.meta.max_time }}，距下次次数恢复还要{{ data.meta.need_time }}。
     </div>
-    <CatchBox v-for="(item, index) in data.catchs" :data="item" :key="index" style="margin-top: 25px" />
+    <CatchBox v-for="(item, index) in data.catchs" :info="item.info" :notation="`+${item.count}`" :is_new="item.is_new"
+      :key="index" style="margin-top: 25px" />
   </div>
 </template>
 

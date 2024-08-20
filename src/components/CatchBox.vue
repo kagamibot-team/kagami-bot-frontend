@@ -3,37 +3,41 @@ import { computed, PropType } from 'vue';
 import DisplayBox from './DisplayBox.vue'
 
 const props = defineProps({
-  data: {
-    type: Object as PropType<GetAward>,
-    default: {
-      info: {
-        "description": "如果持续遇到此问题，请联系开发组。",
-        "display_name": "你不该在这里。",
-        "color": "rgb(198, 193, 191)",
-        "image": "./resource/shit.png",
-        "level": { "display_name": "★★★★★", "color": "rgb(192, 232, 174)" }
-      }
-    },
-  },
   is_opacity: {
     type: Boolean,
     default: false,
   },
+  info: {
+    type: Object as PropType<AwardInfo>,
+    default: {
+      "description": "如果持续遇到此问题，请联系开发组。",
+      "display_name": "你不该在这里。",
+      "color": "rgb(198, 193, 191)",
+      "image": "./resource/shit.png",
+      "level": { "display_name": "★★★★★", "color": "rgb(192, 232, 174)" }
+    }
+  },
+  notation: {
+    type: String,
+    default: "",
+  },
+  is_new: {
+    type: Boolean,
+    default: false,
+  }
 })
 
 const color = computed(() => props.is_opacity ? '#9B969099' : '#9b9690');
-const count = computed(() => props.data.count && props.data.count >= 0 ? '+' + props.data.count : "");
 </script>
 
 <template>
   <div class="outbox">
-    <DisplayBox :image="data.info.image_url" :color="data.info.color" :notation_down="count || '+1'"
-      :new_overlay="data.is_new" />
+    <DisplayBox :image="info.image_url" :color="info.color" :notation_down="notation" :new_overlay="is_new" />
     <div class="textbox">
-      <div class="rightTitle">{{ props.data.info.display_name }}</div>
-      <div class="rightDescription">{{ props.data.info.description }}</div>
-      <div class="rightStar" :style="{ color: props.data.info.level.color }">
-        {{ props.data.info.level.display_name }}
+      <div class="rightTitle">{{ props.info.display_name }}</div>
+      <div class="rightDescription">{{ props.info.description }}</div>
+      <div class="rightStar" :style="{ color: props.info.level.color }">
+        {{ props.info.level.display_name }}
       </div>
     </div>
   </div>

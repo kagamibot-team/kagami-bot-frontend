@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import axios from 'axios'
 import CatchBox from '../components/CatchBox.vue'
@@ -20,6 +20,8 @@ const default_data: GetAward = {
 const data = ref<GetAward>(default_data)
 const route = useRoute()
 
+const notation = computed(() => data.value.count >= 0 ? String(data.value.count) : "");
+
 axios
   .get(`../data/${route.query.uuid}/`)
   .then((response) => {
@@ -35,5 +37,5 @@ axios
 </script>
 
 <template>
-  <CatchBox :data="data" />
+  <CatchBox :info="data.info" :is_new="data.is_new" :notation="notation" />
 </template>
