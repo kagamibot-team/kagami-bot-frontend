@@ -35,6 +35,7 @@
     <h3>其他信息</h3>
     <li><com>抓小哥帮助 (zhuahelp)</com>显示这条帮助信息</li>
     <li><com>抓小哥更新 (zhuagx)</com>显示抓小哥的更新信息</li>
-    <li><com>关于抓小哥 (zhuaabout)</com>显示抓小哥的介绍</li>
+    <!-- <li><com>关于抓小哥 (zhuaabout)</com>显示抓小哥的介绍</li> -->
+    <li><com>关于小镜bot (kagamiabout)</com>查看小镜 Bot 服务器的信息</li>
   </main>
 </template>
