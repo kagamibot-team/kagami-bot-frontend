@@ -24,15 +24,32 @@ const props = defineProps({
   is_new: {
     type: Boolean,
     default: false,
+  },
+  color_on_notation: {
+    type: Boolean,
+    default: false,
   }
 })
 
 const color = computed(() => props.is_opacity ? '#9B969099' : '#9b9690');
+const notation_color = computed(() => {
+  if (props.color_on_notation) {
+    if (props.notation == "+1") {
+      return "#FFFFFF";
+    } else if (props.notation == "+2") {
+      return "#FFFD55";
+    } else {
+      return "#8BFA84";
+    }
+  }
+  return "#FFFFFF";
+});
 </script>
 
 <template>
   <div class="outbox">
-    <DisplayBox :image="info.image_url" :color="info.color" :notation_down="notation" :new_overlay="is_new" />
+    <DisplayBox :notation_down_color="notation_color" :image="info.image_url" :color="info.color"
+      :notation_down="notation" :new_overlay="is_new" />
     <div class="textbox">
       <div class="rightTitle">{{ props.info.display_name }}</div>
       <div class="rightDescription">{{ props.info.description }}</div>

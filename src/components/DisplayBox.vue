@@ -4,13 +4,15 @@ const props = defineProps({
   color: String,
   notation_down: { type: String, default: '' },
   notation_up: { type: String, default: '' },
-  new_overlay: Boolean
+  new_overlay: Boolean,
+  notation_down_color: { type: String, default: "#FFFFFF" },
 })
 </script>
 <template>
   <div class="display-box" :style="{ backgroundColor: props.color }">
     <img class="xiaoge-image" :src="props.image" />
-    <div class="notation-down" v-if="notation_down">{{ props.notation_down }}</div>
+    <div class="notation-down" v-if="notation_down" :style="{ color: notation_down_color }">{{ props.notation_down }}
+    </div>
     <div class="notation-up">{{ props.notation_up }}</div>
     <img class="new-notation" v-if="props.new_overlay" :src="'./resource/new.png'" />
   </div>
@@ -42,15 +44,15 @@ const props = defineProps({
   position: absolute;
   width: 175px;
   padding-left: 13px;
-  font-size: 36px;
+  font-size: 48px;
   box-sizing: border-box;
   color: white;
-  text-shadow: 2px 2px 0 #000;
+  text-shadow: 3px 3px 0 #000;
   text-align: left;
 }
 
 .display-box .notation-down {
-  top: 90px;
+  top: 84px;
 }
 
 .display-box .notation-up {
