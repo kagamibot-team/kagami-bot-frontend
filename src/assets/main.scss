@@ -14,53 +14,53 @@ main {
   max-width: 940px;
   background-color: #eeebe3;
   width: max-content;
-}
 
-h2 {
-  color: #63605c;
-  font-family: '荆南波波黑', var(--font-fallback);
-  font-size: 80px;
-  margin: 10px 0;
-}
+  h2 {
+    color: #63605c;
+    font-family: '荆南波波黑', var(--font-fallback);
+    font-size: 80px;
+    margin: 10px 0;
+  }
 
-h3 {
-  color: #5a554d;
-  font-family: '荆南俊俊体', '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
-  font-size: 48px;
-  font-weight: normal;
-  margin: 10px 0;
-}
+  h3 {
+    color: #5a554d;
+    font-family: '荆南俊俊体', '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
+    font-size: 48px;
+    font-weight: normal;
+    margin: 10px 0;
+  }
 
-ul {
-  padding-inline-start: 0;
-}
+  ul {
+    padding-inline-start: 0;
+  }
 
-li {
-  font-family: '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 32px;
-  list-style-type: none;
-  color: #aca49c;
-  display: flex;
-}
+  li {
+    font-family: '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 32px;
+    list-style-type: none;
+    color: #aca49c;
+    display: flex;
+  }
 
-si {
-  @extend li;
-  display: list-item;
-  margin-left: 25px;
-  font-size: 20px;
-  line-height: 25px;
-  opacity: 0.7;
-}
+  si {
+    @extend li;
+    display: list-item;
+    margin-left: 25px;
+    font-size: 20px;
+    line-height: 25px;
+    opacity: 0.7;
+  }
 
-com {
-  display: inline-block;
-  min-width: 400px;
-  padding-right: 40px;
-  color: #807a73;
-}
+  com {
+    display: inline-block;
+    min-width: 400px;
+    padding-right: 40px;
+    color: #807a73;
+  }
 
-par {
-  color: #ca892e;
+  par {
+    color: #ca892e;
+  }
 }
