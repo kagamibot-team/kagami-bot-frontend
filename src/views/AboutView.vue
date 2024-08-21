@@ -69,7 +69,7 @@ axios.get(`../metadata/`).then(res => {
     padding: 20px 0px;
     background-color: #16151a;
     color: #eae8de;
-    width: 500px;
+    width: 480px;
     font-family: 'x12y16pxMaruMonica', 'Maple UI', var(--font-fallback);
     text-shadow: 3px 3px 0 #000;
 
