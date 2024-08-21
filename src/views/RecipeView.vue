@@ -7,13 +7,37 @@ import axios from 'axios'
 import { useRoute } from 'vue-router'
 import defaultData from '../pre_data/recipe.json'
 
-import answers from '../pre_data/mokie/answers.json'
+import _answers from '../pre_data/mokie/answers.json'
 
 const data = ref<MergeData>(defaultData)
 const route = useRoute()
 
-const ymh = computed<YMHMessage>(() => {
-  var pool: Array<YMHMessage>;
+type level = 0 | 1 | 2 | 3 | 4 | 5
+const answers: {
+  normal: {
+    [inp: number]: {
+      [out: number]: Array<string>
+    }
+  },
+  xiaohua: Array<string>,
+  love: Array<string>,
+  zero: Array<string>
+} = _answers;
+
+const ymh = computed<YMHMessage>(() => (v => {
+  let spl1 = v.substring(0, v.indexOf("："));
+  let speaker = spl1.substring(0, spl1.indexOf(" "));
+  let face = spl1.substring(spl1.indexOf(" ") + 1);
+  let text = v.substring(v.indexOf("：") + 1);
+
+  return {
+    speaker: speaker,
+    face: face,
+    text: text,
+  }
+})((() => {
+  var pool: Array<string>;
+
   if (data.value.output.info.aid == 9) {
     pool = answers.xiaohua;
   } else if ([34, 98].indexOf(data.value.output.info.aid) != -1) {
@@ -21,36 +45,15 @@ const ymh = computed<YMHMessage>(() => {
   } else {
     let max_input = Math.max(...data.value.inputs.map(i => i.level.lid));
     let output = data.value.output.info.level.lid;
-    if ((
-      max_input == 0 ||
-      max_input == 1 ||
-      max_input == 2 ||
-      max_input == 3 ||
-      max_input == 4 ||
-      max_input == 5
-    ) && (
-        output == 0 ||
-        output == 1 ||
-        output == 2 ||
-        output == 3 ||
-        output == 4 ||
-        output == 5
-      )) {
-      let _p = answers.normal[max_input];
-      pool = _p[output];
-    } else {
-      pool = [];
-    }
+    let _p = answers.normal[max_input];
+    pool = _p[output];
   }
+
   if (pool.length == 0) {
-    return {
-      speaker: "榆木华",
-      text: "……",
-      face: "黑化"
-    };
+    return "榆木华 黑化：……";
   }
   return pool[Math.floor(Math.random() * pool.length)];
-});
+})()));
 
 const notation = computed(() => "+" + data.value.output.count);
 
