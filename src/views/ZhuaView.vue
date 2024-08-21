@@ -22,11 +22,7 @@ axios.get(`../data/${route.query.uuid}/`).then((response) => {
 
 <template>
   <div class="wrapper" v-if="data">
-    <div class="top-title">
-      {{ data.user.name }}<sup class="field-notation" v-if="data.meta.field_from != 1">{{ data.meta.field_from
-        }}号猎场</sup>
-      的一抓
-    </div>
+    <div class="top-title">{{ data.user.name }} 的一抓</div>
     <div class="side-title">
       本次获得
       {{ data.meta.get_chip }} 薯片，目前共有 {{ data.meta.own_chip }} 薯片。<br />剩余次数：{{
@@ -35,6 +31,8 @@ axios.get(`../data/${route.query.uuid}/`).then((response) => {
     </div>
     <CatchBox color_on_notation v-for="(item, index) in data.catchs" :info="item.info" :notation="`+${item.count}`"
       :is_new="item.is_new" :key="index" style="margin-top: 25px" />
+    <div class="field-notation" v-if="data.meta.field_from != 1">{{ data.meta.field_from
+      }}号猎场</div>
   </div>
 </template>
 
@@ -43,6 +41,7 @@ axios.get(`../data/${route.query.uuid}/`).then((response) => {
   width: fit-content;
   padding: 60px 80px 80px 80px;
   background-color: #eeebe3;
+  position: relative;
 }
 
 .top-title {
@@ -64,7 +63,11 @@ axios.get(`../data/${route.query.uuid}/`).then((response) => {
 }
 
 .field-notation {
-  font-size: 48px;
+  font-family: '阿里妈妈数黑体', 'HarmonyOS Sans SC', var(--font-fallback);
+  font-size: 36px;
   color: #a19b94;
+  position: absolute;
+  right: 40px;
+  top: 20px;
 }
 </style>
