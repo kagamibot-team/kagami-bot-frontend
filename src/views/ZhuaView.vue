@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import CatchBox from '../components/CatchBox.vue'
+import { ref } from 'vue';
+import CatchBox from '../components/CatchBox.vue';
+import Avatar from '../components/Avatar.vue';
 
-import axios from 'axios'
-import { useRoute } from 'vue-router'
-import defaultData from '../pre_data/zhua.json'
+import axios from 'axios';
+import { useRoute } from 'vue-router';
+import defaultData from '../pre_data/zhua.json';
 const data = ref<ZhuaData>();
 const route = useRoute();
 
@@ -22,7 +23,7 @@ axios.get(`../data/${route.query.uuid}/`).then((response) => {
 
 <template>
   <div class="wrapper" v-if="data">
-    <div class="top-title">{{ data.user.name }} 的一抓</div>
+    <div class="top-title"><Avatar :qqid="data.user.qqid" style="margin-right: 20px;" />{{ data.user.name }} 的一抓</div>
     <div class="side-title">
       本次获得
       {{ data.meta.get_chip }} 薯片，目前共有 {{ data.meta.own_chip }} 薯片。<br />剩余次数：{{
@@ -52,6 +53,7 @@ axios.get(`../data/${route.query.uuid}/`).then((response) => {
   font-weight: bold;
   width: 800px;
   word-break: break-all;
+  margin-bottom: 30px;
 }
 
 .side-title {
