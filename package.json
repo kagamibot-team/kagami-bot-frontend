@@ -1,6 +1,6 @@
 {
   "name": "passthem-bot-frontend",
-  "version": "0.2.1-20240820",
+  "version": "0.2.2",
   "private": true,
   "type": "module",
   "scripts": {
