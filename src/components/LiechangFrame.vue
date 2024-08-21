@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Avatar from './Avatar.vue';
+
 defineProps<{ data: LiechangData }>()
 </script>
 
@@ -14,7 +16,9 @@ defineProps<{ data: LiechangData }>()
       <img class="lqr" :src="`./resource/猎场/LQR ${data.expression.face}.png`" />
     </div>
     <!-- end -->
-    <div class="title">{{ data.user.name }} 的猎场</div>
+    <div class="title">
+      <Avatar :qqid="data.user.qqid" style="margin-right: 30px;" />{{ data.user.name }} 的猎场
+    </div>
     <div class="subject">
       <slot />
     </div>

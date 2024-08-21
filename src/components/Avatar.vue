@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 defineProps<{
     qqid: string | number
 }>();
@@ -6,7 +8,7 @@ defineProps<{
 
 <template>
     <div class="avatar">
-        <img :src="`../file/avatar/qq/${qqid}/`" />
+        <img :src="`../file/avatar/qq/${qqid}/`" alt="" />
     </div>
 </template>
 
@@ -18,8 +20,10 @@ defineProps<{
     overflow: hidden;
     vertical-align: bottom;
     border-radius: 50%;
-    border: 2px solid #63605c;
+    // border: 2px solid #63605c;
     box-sizing: border-box;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.114);
+    background-color: white;
 
     img {
         width: 1.3em;

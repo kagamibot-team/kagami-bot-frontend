@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 import CatchBox from '../components/CatchBox.vue'
 import DisplayBox from '../components/DisplayBox.vue'
 import RecipeBackground from '../components/RecipeBackground.vue'
+import Avatar from '../components/Avatar.vue'
 import axios from 'axios'
 import { useRoute } from 'vue-router'
 import defaultData from '../pre_data/recipe.json'
@@ -73,7 +74,9 @@ axios
 
 <template>
   <div class="wrapper" v-if="data">
-    <div class="top-title">{{ data.user.name }} 的合成材料：</div>
+    <div class="top-title">
+      <Avatar :qqid="data.user.qqid" style="margin-right: 30px;" />{{ data.user.name }} 的合成材料：
+    </div>
     <div class="total">
       <div class="left-list">
         <DisplayBox v-for="(item, index) in data.inputs" :image="item.image_url" :color="item.color" :key="index" />
