@@ -13,7 +13,6 @@ import _answers from '../pre_data/mokie/answers.json'
 const data = ref<MergeData>(defaultData)
 const route = useRoute()
 
-type level = 0 | 1 | 2 | 3 | 4 | 5
 const answers: {
   normal: {
     [inp: number]: {
@@ -51,7 +50,7 @@ const ymh = computed<YMHMessage>(() => (v => {
   }
 
   if (pool.length == 0 || (data.value.output.info.level.lid == 0 && data.value.output.info.aid != 89)) {
-    return "榆木华 黑化：……";
+    pool = answers.zero;
   }
   return pool[Math.floor(Math.random() * pool.length)];
 })()));
