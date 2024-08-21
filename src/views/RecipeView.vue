@@ -50,7 +50,7 @@ const ymh = computed<YMHMessage>(() => (v => {
     pool = _p[output];
   }
 
-  if (pool.length == 0) {
+  if (pool.length == 0 || (data.value.output.info.level.lid == 0 && data.value.output.info.aid != 89)) {
     return "榆木华 黑化：……";
   }
   return pool[Math.floor(Math.random() * pool.length)];
