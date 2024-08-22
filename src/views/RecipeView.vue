@@ -74,7 +74,7 @@ axios
 <template>
   <div class="wrapper" v-if="data">
     <div class="top-title">
-      <Avatar :qqid="data.user.qqid" style="margin-right: 30px;" />{{ data.user.name }} 的合成材料：
+      <!--<Avatar :qqid="data.user.qqid" style="margin-right: 30px;" />-->{{ data.user.name }} 的合成材料：
     </div>
     <div class="total">
       <div class="left-list">

@@ -23,7 +23,8 @@ axios.get(`../data/${route.query.uuid}/`).then((response) => {
 
 <template>
   <div class="wrapper" v-if="data">
-    <div class="top-title"><Avatar :qqid="data.user.qqid" style="margin-right: 20px;" />{{ data.user.name }} 的一抓</div>
+    <div class="top-title"><!--<Avatar :qqid="data.user.qqid" style="margin-right: 20px;" />-->{{ data.user.name }} 的一抓
+    </div>
     <div class="side-title">
       本次获得
       {{ data.meta.get_chip }} 薯片，目前共有 {{ data.meta.own_chip }} 薯片。<br />剩余次数：{{

@@ -17,7 +17,7 @@ defineProps<{ data: LiechangData }>()
     </div>
     <!-- end -->
     <div class="title">
-      <Avatar :qqid="data.user.qqid" style="margin-right: 30px;" />{{ data.user.name }} 的猎场
+      <!-- <Avatar :qqid="data.user.qqid" style="margin-right: 30px;" /> -->{{ data.user.name }} 的猎场
     </div>
     <div class="subject">
       <slot />
