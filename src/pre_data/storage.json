@@ -1,74 +1,234 @@
 {
-    "user": {
-        "name": "小给"
-    },
-    "boxes": [
+  "user": {
+    "name": "小给"
+  },
+  "boxes": [
+    {
+      "title": "标签页1",
+      "elements": [
         {
-            "title": "标签页1",
-            "elements": [
-                {
-                    "display_box": {
-                        "image": "./resource/blank_placeholder.png",
-                        "color": "rgb(192, 232, 174)",
-                        "notation_down": "3"
-                    },
-                    "title1": "不存在小哥"
-                },
-                {
-                    "display_box": {
-                        "image": "./resource/blank_placeholder.png",
-                        "color": "rgb(192, 232, 174)",
-                        "notation_down": "3"
-                    },
-                    "title1": "不存在小哥"
-                },
-                {
-                    "display_box": {
-                        "image": "./resource/blank_placeholder.png",
-                        "color": "rgb(192, 232, 174)",
-                        "notation_down": "3"
-                    },
-                    "title1": "不存在小哥"
-                },
-                {
-                    "display_box": {
-                        "image": "./resource/blank_placeholder.png",
-                        "color": "rgb(192, 232, 174)",
-                        "notation_down": "3"
-                    },
-                    "title1": "不存在小哥"
-                },
-                {
-                    "display_box": {
-                        "image": "./resource/blank_placeholder.png",
-                        "color": "rgb(192, 232, 174)",
-                        "notation_down": "3"
-                    },
-                    "title1": "不存在小哥"
-                },
-                {
-                    "display_box": {
-                        "image": "./resource/blank_placeholder.png",
-                        "color": "rgb(192, 232, 174)",
-                        "notation_down": "3"
-                    },
-                    "title1": "不存在小哥"
-                }
-            ]
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "1145141919"
+          },
+          "title1": "一个名字特别长而且爱吃𰻞𰻞面的小哥"
         },
         {
-            "title": "标签页2",
-            "elements": [
-                {
-                    "display_box": {
-                        "image": "./resource/blank_placeholder.png",
-                        "color": "rgb(192, 232, 174)",
-                        "notation_down": "3"
-                    },
-                    "title1": "不存在小哥"
-                }
-            ]
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
         }
-    ],
-    "title_text": "小哥库存"
+      ]
+    },
+    {
+      "title": "标签页2",
+      "elements": [
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "一个名字特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长而且爱吃𰻞𰻞面的小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        },
+        {
+          "display_box": {
+            "image": "./resource/blank_placeholder.png",
+            "color": "rgb(192, 232, 174)",
+            "notation_down": "3"
+          },
+          "title1": "不存在小哥"
+        }
+      ]
+    }
+  ],
+  "title_text": "小哥库存"
 }

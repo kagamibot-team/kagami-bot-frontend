@@ -1,21 +1,23 @@
 <script setup lang="ts">
-import BookBox from './BookBox.vue';
+import BookBox from './BookBox.vue'
 
 defineProps({
-    items: Array<BookBoxData>,
-    line_item_count: Number,
-});
+  items: Array<BookBoxData>
+})
 </script>
 
 <template>
+  <div>
     <div class="book-box-list">
-        <BookBox v-for="(item, index) in items" v-bind="item" :key="index" />
+      <BookBox v-for="(item, index) in items" v-bind="item" :key="index" />
     </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .book-box-list {
-    display: grid;
-    grid-template-columns: repeat(v-bind("line_item_count"), 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1560px;
 }
 </style>

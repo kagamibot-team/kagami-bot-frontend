@@ -5,14 +5,15 @@ const props = defineProps({
   notation_down: { type: String, default: '' },
   notation_up: { type: String, default: '' },
   new_overlay: { type: Boolean, default: false },
-  notation_down_color: { type: String, default: "#FFFFFF" },
-  notation_up_color: { type: String, default: "#FFFFFF" },
+  notation_down_color: { type: String, default: '#FFFFFF' },
+  notation_up_color: { type: String, default: '#FFFFFF' }
 })
 </script>
 <template>
   <div class="display-box" :style="{ backgroundColor: props.color }">
     <img class="xiaoge-image" :src="props.image" />
-    <div class="notation-down" v-if="notation_down" :style="{ color: notation_down_color }">{{ props.notation_down }}
+    <div class="notation-down" v-if="notation_down" :style="{ color: notation_down_color }">
+      {{ props.notation_down }}
     </div>
     <div class="notation-up">{{ props.notation_up }}</div>
     <img class="new-notation" v-if="props.new_overlay" :src="'./resource/new.png'" />
@@ -48,11 +49,16 @@ const props = defineProps({
   font-size: 48px;
   box-sizing: border-box;
   color: white;
-  text-shadow: 1.5px 0 0 #000, -1.5px 0 0 #000, 0 1.5px 0 #000, 0 -1.5px 0 #000;
+  text-shadow:
+    1.5px 0 0 #000,
+    -1.5px 0 0 #000,
+    0 1.5px 0 #000,
+    0 -1.5px 0 #000;
   text-align: left;
 }
 
 .display-box .notation-down {
+  word-break: break-all;
   top: 84px;
 }
 
