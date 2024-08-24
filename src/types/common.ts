@@ -14,7 +14,7 @@ type AwardInfo = {
     sorting: number,
 };
 
-type UserData = { uid: number, qqid: string, name: string };
+type UserData = { name: string };
 
 type GetAward = {
     info: AwardInfo,

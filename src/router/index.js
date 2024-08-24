@@ -24,6 +24,11 @@ const router = createRouter({
       component: () => import('../views/LiechangView.vue')
     },
     {
+      path: '/storage',
+      name: '库存界面',
+      component: () => import('../views/StorageView.vue')
+    },
+    {
       path: '/catch',
       name: '单独条目',
       component: () => import('../views/DisplayView.vue')

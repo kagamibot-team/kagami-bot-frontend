@@ -4,8 +4,9 @@ const props = defineProps({
   color: String,
   notation_down: { type: String, default: '' },
   notation_up: { type: String, default: '' },
-  new_overlay: Boolean,
+  new_overlay: { type: Boolean, default: false },
   notation_down_color: { type: String, default: "#FFFFFF" },
+  notation_up_color: { type: String, default: "#FFFFFF" },
 })
 </script>
 <template>
@@ -47,7 +48,7 @@ const props = defineProps({
   font-size: 48px;
   box-sizing: border-box;
   color: white;
-  text-shadow: 3px 3px 0 #000;
+  text-shadow: 1.5px 0 0 #000, -1.5px 0 0 #000, 0 1.5px 0 #000, 0 -1.5px 0 #000;
   text-align: left;
 }
 
