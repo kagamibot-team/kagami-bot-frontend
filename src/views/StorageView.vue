@@ -21,7 +21,7 @@ axios.get(`../data/${route.query.uuid}`).then(response => {
 
 <template>
     <div class="storage-view">
-        <h1>{{ data.user.name }} 的小哥库存</h1>
+        <h1>{{ data.user.name }} 的 {{ data.title_text }}</h1>
         <BookBoxList :items="data.boxes" :line_item_count="10" />
     </div>
 </template>

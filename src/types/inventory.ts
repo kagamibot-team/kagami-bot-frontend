@@ -20,4 +20,5 @@ type BookBoxData = {
 type StorageData = {
     user: UserData,
     boxes: Array<BookBoxData>,
+    title_text?: string,
 };
