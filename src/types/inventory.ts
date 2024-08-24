@@ -16,9 +16,16 @@ type BookBoxData = {
     title2?: string,
 };
 
+// 例如抓进度界面的一个等级分类
+type StorageUnit = {
+    title?: string, // 为空则不显示标题
+    title_color?: string,
+    elements: Array<BookBoxData>,
+};
+
 // 库存界面
 type StorageData = {
     user: UserData,
-    boxes: Array<BookBoxData>,
+    boxes: Array<StorageUnit>,
     title_text?: string,
 };

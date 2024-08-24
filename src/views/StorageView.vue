@@ -22,7 +22,10 @@ axios.get(`../data/${route.query.uuid}`).then(response => {
 <template>
     <div class="storage-view">
         <h1>{{ data.user.name }} 的 {{ data.title_text }}</h1>
-        <BookBoxList :items="data.boxes" :line_item_count="10" />
+        <div v-for="(item, index) of data.boxes" :key="index">
+            <h2 v-if="item.title" :style="{ color: item.title_color || '#EEEEEE' }">{{ item.title }}</h2>
+            <BookBoxList :items="item.elements" :line_item_count="10" />
+        </div>
     </div>
 </template>
 
@@ -36,6 +39,13 @@ axios.get(`../data/${route.query.uuid}`).then(response => {
     h1 {
         margin: 0;
         font-size: 72px;
+        font-family: '荆南波波黑', var(--font-fallback);
+    }
+
+    h2 {
+        margin: 0;
+        margin-top: 50px;
+        font-size: 54px;
         font-family: '荆南波波黑', var(--font-fallback);
     }
 }
