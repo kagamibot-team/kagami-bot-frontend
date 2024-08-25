@@ -49,7 +49,7 @@ const notation_color = computed(() => {
 <template>
   <div class="outbox">
     <DisplayBox :notation_down_color="notation_color" :image="info.image_url" :color="info.color"
-      :notation_down="notation" :new_overlay="is_new" />
+      :notation_down="notation" :new_overlay="is_new" :do_glow="info.level.lid >= 4" :glow_type="0" />
     <div class="textbox">
       <div class="rightTitle">{{ props.info.display_name }}</div>
       <div class="rightDescription">{{ props.info.description }}</div>

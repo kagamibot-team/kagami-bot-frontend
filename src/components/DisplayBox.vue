@@ -1,13 +1,5 @@
 <script setup lang="ts">
-const props = defineProps({
-  image: String,
-  color: String,
-  notation_down: { type: String, default: '' },
-  notation_up: { type: String, default: '' },
-  new_overlay: { type: Boolean, default: false },
-  notation_down_color: { type: String, default: '#FFFFFF' },
-  notation_up_color: { type: String, default: '#FFFFFF' }
-})
+const props = defineProps<DisplayBoxData>()
 </script>
 <template>
   <div class="display-box" :style="{ backgroundColor: props.color }">
