@@ -1,6 +1,6 @@
 // 各种库存等的视图的定义
 
-type DisplayBoxData = {
+export type DisplayBoxData = {
     image: string,
     color: string,
     notation_up?: string,

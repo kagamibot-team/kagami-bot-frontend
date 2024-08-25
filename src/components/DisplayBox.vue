@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { DisplayBoxData } from '../types/inventory.ts';
+
 const props = defineProps<DisplayBoxData>()
 </script>
 <template>
