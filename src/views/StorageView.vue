@@ -4,7 +4,7 @@ import default_data from '../pre_data/storage.json'
 import BookBoxList from '../components/BookBoxList.vue'
 import { useRoute } from 'vue-router'
 import axios from 'axios'
-import { StorageData } from '../types/inventory';
+import { StorageData } from '../types/inventory'
 
 const data = ref<StorageData>(default_data)
 const route = useRoute()

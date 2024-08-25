@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BookBox from './BookBox.vue'
 import { BookBoxData } from '../types/inventory';
+import BookBox from './BookBox.vue'
 
 defineProps({
   items: Array<BookBoxData>
