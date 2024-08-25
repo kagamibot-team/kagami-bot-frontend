@@ -1,65 +1,83 @@
 <script setup lang="ts">
-import { computed, PropType } from 'vue';
+import { computed, PropType } from 'vue'
 import DisplayBox from './DisplayBox.vue'
+import { trans_ids } from '../script/trans_ids.js'
 
 const props = defineProps({
   is_opacity: {
     type: Boolean,
-    default: false,
+    default: false
   },
   info: {
     type: Object as PropType<AwardInfo>,
     default: {
-      "description": "如果持续遇到此问题，请联系开发组。",
-      "display_name": "你不该在这里。",
-      "color": "rgb(198, 193, 191)",
-      "image": "./resource/shit.png",
-      "level": { "display_name": "★★★★★", "color": "rgb(192, 232, 174)" }
+      description: '如果持续遇到此问题，请联系开发组。',
+      display_name: '你不该在这里。',
+      color: 'rgb(198, 193, 191)',
+      image: './resource/shit.png',
+      level: { display_name: '★★★★★', color: 'rgb(192, 232, 174)' }
     }
   },
   notation: {
     type: String,
-    default: "",
+    default: ''
   },
   is_new: {
     type: Boolean,
-    default: false,
+    default: false
   },
   color_on_notation: {
     type: Boolean,
-    default: false,
+    default: false
   }
 })
 
-const color = computed(() => props.is_opacity ? '#9B969099' : '#9b9690');
+const trans_data = computed(() => {
+  return trans_ids(props.info)
+})
+
+const color = computed(() => (props.is_opacity ? '#9B969099' : '#9b9690'))
 const notation_color = computed(() => {
   if (props.color_on_notation) {
-    if (props.notation == "+1") {
-      return "#FFFFFF";
-    } else if (props.notation == "+2") {
-      return "#FFFD55";
+    if (props.notation == '+1') {
+      return '#FFFFFF'
+    } else if (props.notation == '+2') {
+      return '#FFFD55'
     } else {
-      return "#8BFA84";
+      return '#8BFA84'
     }
   }
-  return "#FFFFFF";
-});
+  return '#FFFFFF'
+})
 </script>
 
 <template>
   <div class="outbox">
-    <DisplayBox :notation_down_color="notation_color" :image="info.image_url" :color="info.color"
-      :notation_down="notation" :new_overlay="is_new" :do_glow="info.level.lid >= 4" :glow_type="0" />
+    <DisplayBox
+      :notation_down_color="notation_color"
+      :image="info.image_url"
+      :color="info.color"
+      :notation_down="notation"
+      :new_overlay="is_new"
+      :do_glow="info.level.lid >= 4"
+      :glow_type="0"
+    />
     <div class="textbox">
-      <div class="rightTitle">{{ props.info.display_name }}</div>
-      <div class="rightDescription">{{ props.info.description }}</div>
+      <div class="rightTitle" v-html="trans_data.display_name"></div>
+      <div class="rightDescription" v-html="trans_data.description"></div>
       <div class="rightStar" :style="{ color: props.info.level.color }">
         {{ props.info.level.display_name }}
       </div>
     </div>
   </div>
 </template>
-
+<style>
+.inline-svg {
+  /* transform: translateX(-10000px); */
+  /* filter: drop-shadow(rgb(255, 255, 255) 10000px 0); */
+  filter: invert(100%);
+}
+</style>
 <style scoped>
 .outbox {
   width: 800px;

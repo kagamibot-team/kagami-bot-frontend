@@ -15,12 +15,12 @@ const default_data: GetAward = {
     level: { lid: 5, display_name: '★★★★★', color: 'rgb(192, 232, 174)' }
   },
   count: 2,
-  is_new: false,
+  is_new: false
 }
 const data = ref<GetAward>(default_data)
 const route = useRoute()
 
-const notation = computed(() => data.value.count >= 0 ? String(data.value.count) : "");
+const notation = computed(() => (data.value.count >= 0 ? String(data.value.count) : ''))
 
 axios
   .get(`../data/${route.query.uuid}/`)

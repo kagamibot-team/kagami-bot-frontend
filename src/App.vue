@@ -14,6 +14,12 @@ import { RouterView } from 'vue-router'
 </template>
 
 <style>
+.inline-svg {
+  height: 1.1em;
+  width: 1.1em;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
 body {
   font-family: var(--font-fallback);
 }

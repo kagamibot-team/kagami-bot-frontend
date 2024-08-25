@@ -47,6 +47,11 @@ const router = createRouter({
       path: '/:pathMatch(.*)*',
       name: '404 页面',
       component: () => import('../views/default/NoViewPage.vue')
+    },
+    {
+      path: '/tool',
+      name: '工具合集',
+      component: () => import('../views/ToolPage.vue')
     }
   ]
 })

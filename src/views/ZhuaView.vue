@@ -1,29 +1,35 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import CatchBox from '../components/CatchBox.vue';
-import Avatar from '../components/Avatar.vue';
+import { ref } from 'vue'
+import CatchBox from '../components/CatchBox.vue'
+import Avatar from '../components/Avatar.vue'
 
-import axios from 'axios';
-import { useRoute } from 'vue-router';
-import defaultData from '../pre_data/zhua.json';
-const data = ref<ZhuaData>();
-const route = useRoute();
+import axios from 'axios'
+import { useRoute } from 'vue-router'
+import defaultData from '../pre_data/zhua.json'
+const data = ref<ZhuaData>()
+const route = useRoute()
 
-axios.get(`../data/${route.query.uuid}/`).then((response) => {
-  if (response.status == 200) {
-    data.value = response.data;
-  } else {
-    data.value = defaultData;
-  }
-}).catch(_ => {
-  data.value = defaultData;
-});
-
+axios
+  .get(`../data/${route.query.uuid}/`)
+  .then((response) => {
+    if (response.status == 200) {
+      data.value = response.data
+    } else {
+      data.value = defaultData
+    }
+  })
+  .catch((_) => {
+    data.value = defaultData
+  })
 </script>
 
 <template>
   <div class="wrapper" v-if="data">
-    <div class="top-title"><!--<Avatar :qqid="data.user.qqid" style="margin-right: 20px;" />-->{{ data.user.name }} 的一抓
+    <div class="top-title">
+      <!--<Avatar :qqid="data.user.qqid" style="margin-right: 20px;" />-->{{
+        data.user.name
+      }}
+      的一抓
     </div>
     <div class="side-title">
       本次获得
@@ -31,10 +37,18 @@ axios.get(`../data/${route.query.uuid}/`).then((response) => {
         data.meta.remain_time
       }}/{{ data.meta.max_time }}，距下次次数恢复还要{{ data.meta.need_time }}。
     </div>
-    <CatchBox color_on_notation v-for="(item, index) in data.catchs" :info="item.info" :notation="`+${item.count}`"
-      :is_new="item.is_new" :key="index" style="margin-top: 25px" />
-    <div class="field-notation" v-if="data.meta.field_from != 1">{{ data.meta.field_from
-      }}号猎场</div>
+    <CatchBox
+      color_on_notation
+      v-for="(item, index) in data.catchs"
+      :info="item.info"
+      :notation="`+${item.count}`"
+      :is_new="item.is_new"
+      :key="index"
+      style="margin-top: 25px"
+    />
+    <div class="field-notation" v-if="data.meta.field_from != 1">
+      {{ data.meta.field_from }}号猎场
+    </div>
   </div>
 </template>
 
