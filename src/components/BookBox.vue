@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { PropType } from 'vue'
 import DisplayBox from './DisplayBox.vue'
+import { DisplayBoxData } from '../types/inventory';
 
 const props = defineProps({
-  display_box: Object as PropType<DisplayBoxData>,
+  display_box: {
+    type: Object as PropType<DisplayBoxData>,
+    default: {}
+  },
   title1: String,
   title2: {
     type: String,
