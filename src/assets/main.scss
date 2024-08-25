@@ -70,3 +70,13 @@ main {
     line-height: 36px;
   }
 }
+
+.inline-svg {
+  vertical-align: text-bottom;
+  height: 1.1em;
+  width: 1.1em;
+  display: inline-block;
+  * {
+    fill: white;
+  }
+}
