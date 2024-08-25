@@ -8,6 +8,8 @@ type DisplayBoxData = {
     new_overlay?: boolean,
     notation_down_color?: string,
     notation_up_color?: string,
+    do_glow?: boolean,
+    glow_type?: number,
 };
 
 type BookBoxData = {
