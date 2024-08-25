@@ -72,7 +72,11 @@ main {
 }
 
 .inline-svg {
-  /* transform: translateX(-10000px); */
-  /* filter: drop-shadow(rgb(255, 255, 255) 10000px 0); */
-  filter: invert(100%);
+  vertical-align: text-bottom;
+  height: 1.1em;
+  width: 1.1em;
+  display: inline-block;
+  * {
+    fill: white;
+  }
 }

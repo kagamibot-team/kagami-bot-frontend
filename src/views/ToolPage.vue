@@ -21,7 +21,7 @@ const data = ref('试着向你述说，⿺辶⿳宀珎⿲隹貝招 的 ⿰字见
         <b>{{ text }}</b>
       </p>
       <div>
-        <FormattedTexts :text="data" />
+        <FormattedTexts :invert_color="false" :text="data" />
       </div>
     </div>
   </main>
