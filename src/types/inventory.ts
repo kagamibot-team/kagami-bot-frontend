@@ -12,7 +12,7 @@ export type DisplayBoxData = {
     glow_type?: number,
 };
 
-type BookBoxData = {
+export type BookBoxData = {
     display_box: DisplayBoxData,
     title1: string,
     title2?: string,
@@ -26,7 +26,7 @@ type StorageUnit = {
 };
 
 // 库存界面
-type StorageData = {
+export type StorageData = {
     user: UserData,
     boxes: Array<StorageUnit>,
     title_text?: string,
