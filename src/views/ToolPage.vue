@@ -4,7 +4,7 @@ import { trans_ids } from '../script/trans_ids.js'
 const text = ref()
 const title = ref()
 
-const chara = trans_ids({ text: '试着向你述说，⿺辶⿳宀珎⿲隹貝招 的 ⿰字见。' })
+const chara = trans_ids({ text: '试着向你述说，⿺辶⿳宀珎⿲隹貝招的⿰字见。' })
 
 const data = ref(chara)
 </script>

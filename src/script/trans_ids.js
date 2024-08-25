@@ -22,8 +22,8 @@ function rep_str_to_ids(str) {
   let chara = ''
   let out_chara = ''
   let sub_index = 0
-  for (let chara_index in str) {
-    chara = str[chara_index]
+  for (let chara_index in [...str]) {
+    chara = [...str][chara_index]
     index += 1
     if ('⿰⿱⿸⿺⿹⿽⿵⿷⿶⿼⿴⿻㇯'.includes(chara)) {
       if (match == 0) {
@@ -45,11 +45,11 @@ function rep_str_to_ids(str) {
       match += 1
     }
     if (index - rep_index == match - 1) {
-      out_chara = query_ids_to_html(str.substring(rep_index, index + 1))
+      out_chara = query_ids_to_html([...str].slice(rep_index, index + 1))
       handle_str =
-        handle_str.substring(0, rep_index + sub_index) +
+        [...handle_str].slice(0, rep_index + sub_index).join('') +
         out_chara +
-        handle_str.substring(index + sub_index + 1)
+        [...handle_str].slice(index + sub_index + 1).join('')
       sub_index += out_chara.length - match
       match = 0
       rep_index = 0
@@ -61,7 +61,7 @@ function rep_str_to_ids(str) {
 function query_ids_to_code(ids) {
   let ids_array = []
   for (let chara_index in ids) {
-    ids_array.push('u' + ids.charCodeAt(chara_index).toString(16))
+    ids_array.push('u' + ids[chara_index].codePointAt().toString(16))
   }
   return ids_array.join('-')
 }
