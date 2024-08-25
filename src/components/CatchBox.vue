@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, PropType } from 'vue'
 import DisplayBox from './DisplayBox.vue'
-import { trans_ids } from '../script/trans_ids.js'
+import FormattedTexts from './FormattedTexts.vue';
 
 const props = defineProps({
   is_opacity: {
@@ -32,10 +32,6 @@ const props = defineProps({
   }
 })
 
-const trans_data = computed(() => {
-  return trans_ids(props.info)
-})
-
 const color = computed(() => (props.is_opacity ? '#9B969099' : '#9b9690'))
 const notation_color = computed(() => {
   if (props.color_on_notation) {
@@ -53,31 +49,21 @@ const notation_color = computed(() => {
 
 <template>
   <div class="outbox">
-    <DisplayBox
-      :notation_down_color="notation_color"
-      :image="info.image_url"
-      :color="info.color"
-      :notation_down="notation"
-      :new_overlay="is_new"
-      :do_glow="info.level.lid >= 4"
-      :glow_type="0"
-    />
+    <DisplayBox :notation_down_color="notation_color" :image="info.image_url" :color="info.color"
+      :notation_down="notation" :new_overlay="is_new" :do_glow="info.level.lid >= 4" :glow_type="0" />
     <div class="textbox">
-      <div class="rightTitle" v-html="trans_data.display_name"></div>
-      <div class="rightDescription" v-html="trans_data.description"></div>
+      <div class="rightTitle">
+        <FormattedTexts :text="info.display_name" />
+      </div>
+      <div class="rightDescription">
+        <FormattedTexts :text="info.description" />
+      </div>
       <div class="rightStar" :style="{ color: props.info.level.color }">
         {{ props.info.level.display_name }}
       </div>
     </div>
   </div>
 </template>
-<style>
-.inline-svg {
-  /* transform: translateX(-10000px); */
-  /* filter: drop-shadow(rgb(255, 255, 255) 10000px 0); */
-  filter: invert(100%);
-}
-</style>
 <style scoped>
 .outbox {
   width: 800px;
