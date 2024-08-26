@@ -20,6 +20,7 @@ const data = ref('试着向你述说，⿺辶⿳宀珎⿲隹貝招的⿰字见�
       <input v-model="data" placeholder="在此输入需要转换的IDS文字以预览输出效果。" />
       <h2>{{ title }}</h2>
       <h3>{{ title }}</h3>
+      <h4>{{ title }}</h4>
       <p>{{ text }}</p>
       <p>
         <b>{{ text }}</b>
@@ -36,5 +37,9 @@ const data = ref('试着向你述说，⿺辶⿳宀珎⿲隹貝招的⿰字见�
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+h4 {
+  font-size: 32px;
 }
 </style>
