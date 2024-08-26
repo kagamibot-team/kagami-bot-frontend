@@ -1,16 +1,11 @@
 <script async setup lang="ts">
 import { ref } from 'vue'
-import { rep_str_to_ids } from '../script/trans_ids';
-import FormattedTexts from '../components/FormattedTexts.vue';
+import FormattedTexts from '../components/FormattedTexts.vue'
 
-<<<<<<< HEAD
-const chara = trans_ids({ text: '试着向你述说，⿺辶⿳宀珎⿲隹貝招的⿰字见。' })
-=======
-const text = ref();
-const title = ref();
->>>>>>> 37827535a13a9e25d25fa9371b8619a5eb730e55
+const text = ref()
+const title = ref()
 
-const data = ref('试着向你述说，⿺辶⿳宀珎⿲隹貝招 的 ⿰字见⿰aa。');
+const data = ref('试着向你述说，⿺辶⿳宀珎⿲隹貝招 的 ⿰字见⿰aa。')
 </script>
 
 <template>

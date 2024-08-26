@@ -21,16 +21,34 @@ const svg_style = computed(() => {
 <template>
   <span>
     <span v-for="(char, index) in splitted_text" :key="index">
-      <span v-if="[...char].length == 1">{{ char }}</span>
+      <span v-if="typeof char == 'string'">{{ char }}</span>
       <object
         v-else
         class="inline-svg"
         :style="svg_style"
-        :data="`http://glyphwiki.org/glyph/${char}.svg`"
+        :data="`http://glyphwiki.org/glyph/${char.code}.svg`"
         type="image/svg+xml"
       >
-        {{ char }}
+        <span class="inline-svg-text">{{ char.ids }}</span>
       </object>
     </span>
   </span>
 </template>
+
+<style scoped>
+.inline-svg {
+  vertical-align: text-bottom;
+  height: 1.1em;
+  /* width: 1.1em; */
+  display: inline-block;
+  color: black;
+  * {
+    fill: white;
+  }
+}
+
+.inline-svg-text {
+  transform: translateY(-0.1em);
+  display: inline-block;
+}
+</style>
