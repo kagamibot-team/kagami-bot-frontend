@@ -4,7 +4,8 @@ import { rep_str_to_ids } from '../script/trans_ids'
 
 const props = defineProps({
   text: { type: String, default: '' },
-  invert_color: { type: Boolean, default: true }
+  invert_color: { type: Boolean, default: true },
+  offset: { type: String, default: '0' }
 })
 const splitted_text = computed(() => {
   return rep_str_to_ids(props.text)
@@ -19,7 +20,7 @@ const svg_style = computed(() => {
 </script>
 
 <template>
-  <span>
+  <span class="format-text">
     <span v-for="(char, index) in splitted_text" :key="index">
       <span v-if="typeof char == 'string'">{{ char }}</span>
       <object
@@ -42,13 +43,14 @@ const svg_style = computed(() => {
   /* width: 1.1em; */
   display: inline-block;
   color: black;
+  transform: translateY(v-bind(offset));
   * {
     fill: white;
   }
 }
 
 .inline-svg-text {
-  transform: translateY(-0.1em);
+  transform: translateY(-0.15em);
   display: inline-block;
 }
 </style>
