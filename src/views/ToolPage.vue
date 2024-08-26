@@ -1,11 +1,15 @@
 <script async setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import FormattedTexts from '../components/FormattedTexts.vue'
 
 const text = ref()
 const title = ref()
 
 const data = ref('试着向你述说，⿺辶⿳宀珎⿲隹貝招的⿰字见⿰aa。')
+
+// setInterval(() => {
+//   console.log()
+// }, 100)
 </script>
 
 <template>
