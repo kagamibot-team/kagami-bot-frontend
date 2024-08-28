@@ -4,7 +4,12 @@ import { useRoute } from 'vue-router'
 import axios from 'axios'
 import CatchBox from '../components/CatchBox.vue'
 
-const default_data: GetAward = {
+const default_data: {
+  info: AwardInfo,
+  count: number,
+  stats: string,
+  is_new: boolean
+} = {
   info: {
     aid: 0,
     sorting: 0,
@@ -15,7 +20,8 @@ const default_data: GetAward = {
     level: { lid: 5, display_name: '★★★★★', color: 'rgb(192, 232, 174)' }
   },
   count: 2,
-  is_new: false
+  is_new: false,
+  stats: "",
 }
 const data = ref<GetAward>(default_data)
 const route = useRoute()

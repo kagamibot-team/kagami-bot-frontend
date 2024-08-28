@@ -29,6 +29,10 @@ const props = defineProps({
   color_on_notation: {
     type: Boolean,
     default: false
+  },
+  notation2: {
+    type: String,
+    default: ''
   }
 })
 
@@ -50,7 +54,8 @@ const notation_color = computed(() => {
 <template>
   <div class="outbox">
     <DisplayBox :notation_down_color="notation_color" :image="info.image_url" :color="info.color"
-      :notation_down="notation" :new_overlay="is_new" :do_glow="info.level.lid >= 4" :glow_type="0" />
+      :notation_down="notation" :new_overlay="is_new" :do_glow="info.level.lid >= 4" :glow_type="0"
+      :notation_up="notation2" />
     <div class="textbox">
       <div class="rightTitle">
         <FormattedTexts :text="info.display_name" />
