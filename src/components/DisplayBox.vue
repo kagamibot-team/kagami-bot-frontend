@@ -42,21 +42,28 @@ const props = defineProps<DisplayBoxData>()
   padding-left: 13px;
   font-size: 48px;
   box-sizing: border-box;
-  color: white;
-  text-shadow:
-    1.5px 0 0 #000,
-    -1.5px 0 0 #000,
-    0 1.5px 0 #000,
-    0 -1.5px 0 #000;
   text-align: left;
 }
 
 .display-box .notation-down {
   word-break: break-all;
+  text-shadow:
+    1.5px 0 0 #000,
+    -1.5px 0 0 #000,
+    0 1.5px 0 #000,
+    0 -1.5px 0 #000;
+  color: white;
   top: 84px;
 }
 
 .display-box .notation-up {
+  word-break: break-all;
+  text-shadow:
+    1.5px 0 0 #fff,
+    -1.5px 0 0 #fff,
+    0 1.5px 0 #fff,
+    0 -1.5px 0 #fff;
+  color: black;
   top: 10px;
 }
 

@@ -21,9 +21,14 @@ const default_data: {
   },
   count: 2,
   is_new: false,
-  stats: "",
+  stats: "3",
 }
-const data = ref<GetAward>(default_data)
+const data = ref<{
+  info: AwardInfo,
+  count: number,
+  stats: string,
+  is_new: boolean
+}>(default_data)
 const route = useRoute()
 
 const notation = computed(() => (data.value.count >= 0 ? String(data.value.count) : ''))
@@ -43,5 +48,5 @@ axios
 </script>
 
 <template>
-  <CatchBox :info="data.info" :is_new="data.is_new" :notation="notation" />
+  <CatchBox :info="data.info" :is_new="data.is_new" :notation="notation" :notation2="data.stats" />
 </template>
