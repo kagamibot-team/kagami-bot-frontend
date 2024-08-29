@@ -8,7 +8,7 @@ import DisplayBox from '../components/DisplayBox.vue'
 import RecipeBackground from '../components/RecipeBackground.vue'
 
 import defaultData from '../pre_data/recipe.json'
-import _answers from '../pre_data/mokie/answers.json'
+import _answers from '../pre_data/合成/answers.json'
 
 const data = ref<MergeData>(defaultData)
 const route = useRoute()
@@ -27,7 +27,7 @@ const answers: {
 } = _answers;
 
 // 下面是计算需要什么对话的逻辑，是从后端搬到前端的
-const ymh = computed<YMHMessage>(() => (v => {
+const dialogue = computed<DialogueMessage>(() => (v => {
     // 这个函数将下面的语法转换成 object 以方便界面读取
     // 说话人 表情：内容
     let spl1 = v.substring(0, v.indexOf("："));
@@ -43,8 +43,11 @@ const ymh = computed<YMHMessage>(() => (v => {
 })((() => {
     // 这里是随机抽取句子
     var pool: Array<string>;
+    var rand = Math.floor(Math.random() * 2);
 
-    if (data.value.output.info.aid == 9) {
+    if (rand < 1) {
+        pool = answers.aqu;
+    } else if (data.value.output.info.aid == 9) {
         pool = answers.xiaohua;
     } else if ([34, 98].indexOf(data.value.output.info.aid) != -1) {
         pool = answers.love;
@@ -93,9 +96,9 @@ axios
                     :key="index" />
             </div>
             <div class="right-list">
-                <div class="ymh-text">
-                    <div class="ymh-intext">{{ ymh.text }}</div>
-                    <img class="ymh-textbox" src="../assets/image/mokie/榆木华对话框.png" />
+                <div class="dialogue-text">
+                    <div class="dialogue-intext">{{ dialogue.text }}</div>
+                    <img class="dialogue-textbox" src="../assets/image/合成/对话框.png" />
                 </div>
                 <div class="merge-title">合成结果：{{ data.meta.status }}</div>
                 <CatchBox color_on_notation :info="data.output.info" :is_new="data.output.is_new" :notation="notation"
@@ -106,7 +109,7 @@ axios
                     </text>
                 </svg>
             </div>
-            <img class="ymh-figure" :src="`./resource/mokie/${ymh.speaker} 表情 ${ymh.face}.png`" />
+            <img class="dialogue-figure" :src="`./resource/合成/${dialogue.speaker} 表情 ${dialogue.face}.png`" />
         </div>
         <RecipeBackground :is_strange="data.meta.is_strange" :level="data.output.info.level.lid" />
     </div>
@@ -120,12 +123,12 @@ axios
     overflow: hidden;
 }
 
-.ymh-text {
+.dialogue-text {
     position: relative;
     height: 270px;
 }
 
-.ymh-intext {
+.dialogue-intext {
     position: relative;
     font-size: 35px;
     font-family: '荆南波波黑', var(--font-fallback);
@@ -141,14 +144,14 @@ axios
     z-index: 1;
 }
 
-.ymh-textbox {
+.dialogue-textbox {
     position: absolute;
     top: -150px;
     left: -350px;
     z-index: 0;
 }
 
-.ymh-figure {
+.dialogue-figure {
     position: absolute;
     width: 866px;
     right: -170px;
