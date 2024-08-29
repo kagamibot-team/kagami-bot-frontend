@@ -23,7 +23,8 @@ const answers: {
     },
     xiaohua: Array<string>,
     love: Array<string>,
-    zero: Array<string>
+    zero: Array<string>,
+    aqu: Array<string>
 } = _answers;
 
 // 下面是计算需要什么对话的逻辑，是从后端搬到前端的
@@ -43,7 +44,7 @@ const dialogue = computed<DialogueMessage>(() => (v => {
 })((() => {
     // 这里是随机抽取句子
     var pool: Array<string>;
-    var rand = Math.floor(Math.random() * 2);
+    var rand = Math.floor(Math.random() * 10);
 
     if (rand < 1) {
         pool = answers.aqu;
@@ -155,7 +156,7 @@ axios
     position: absolute;
     width: 866px;
     right: -170px;
-    top: -100px;
+    top: -120px;
     z-index: -1;
 }
 
