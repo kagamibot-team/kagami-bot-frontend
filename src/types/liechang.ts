@@ -12,12 +12,10 @@ type SingleLiechang = {
     unlocked: boolean,
 };
 
-type LQRExpression = { text: string, face: string }
-
 type LiechangData = {
     packs: Array<SingleLiechang>,
     user: UserData,
     selecting: number,
-    expression: LQRExpression,
+    dialogue: DialogueMessage,
     chips: number,
 };

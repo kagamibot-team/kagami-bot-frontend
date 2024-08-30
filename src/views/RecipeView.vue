@@ -154,9 +154,9 @@ axios
 
 .dialogue-figure {
     position: absolute;
-    width: 866px;
-    right: -170px;
-    top: -120px;
+    width: 1600px;
+    right: -580px;
+    top: -220px;
     z-index: -1;
 }
 

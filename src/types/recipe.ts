@@ -5,12 +5,6 @@ type MergeMeta = {
     status: string,
 };
 
-type DialogueMessage = {
-    text: string,
-    face: string,
-    speaker: string,
-};
-
 type MergeData = {
     user: UserData,
     meta: MergeMeta,

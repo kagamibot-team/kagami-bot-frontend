@@ -199,9 +199,10 @@
     "name": "出错啦"
   },
   "selecting": 1,
-  "expression": {
+  "dialogue": {
     "text": "你不应该在这里！如果持续遇到此问题，请联系开发组！",
-    "face": "正常"
+    "speaker": "猎场管理员L",
+    "face": "通常"
   },
   "chips": 114514
 }
