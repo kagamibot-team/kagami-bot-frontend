@@ -7,13 +7,13 @@ defineProps<{ data: LiechangData }>()
 <template>
   <div class="liechang-interface">
     <img class="background" :src="`./resource/猎场/背景 ${data.selecting}.png`" />
-    <!-- lqr 和它的聊天框 -->
-    <div class="lqr-chat">
-      <img class="chat" :src="'./resource/猎场/对话框.png'" />
-      <div class="chat-text">
-        <span>{{ data.expression.text }}</span>
+    <!-- 猎场立绘与聊天框 -->
+    <div class="dialogue">
+      <img class="dialogue-textbox" :src="'./resource/猎场/对话框.png'" />
+      <div class="dialogue-intext">
+        <span>{{ data.dialogue.text }}</span>
       </div>
-      <img class="lqr" :src="`./resource/猎场/LQR ${data.expression.face}.png`" />
+      <img class="dialogue-figure" :src="`./resource/猎场/${data.dialogue.speaker} 表情 ${data.dialogue.face}.png`" />
     </div>
     <!-- end -->
     <div class="title">
@@ -52,27 +52,28 @@ defineProps<{ data: LiechangData }>()
     z-index: -1;
   }
 
-  .lqr-chat {
+  .dialogue {
     position: absolute;
     bottom: 1070px;
     right: 1450px;
   }
 
-  .lqr {
+  .dialogue-figure {
     position: absolute;
-    width: 1350px;
-    top: 20px;
-    left: 480px;
+    width: 1530px;
+    top: 0px;
+    left: 360px;
+    z-index: -1;
   }
 
-  .chat {
+  .dialogue-textbox {
     position: absolute;
     opacity: 80%;
     width: 1440px;
     left: -110px;
   }
 
-  .chat-text {
+  .dialogue-intext {
     position: absolute;
     font-family: '霞鹜文楷', var(--font-fallback);
     font-size: 45px;

@@ -21,3 +21,10 @@ type GetAward = {
     count: number,
     is_new: boolean,
 };
+
+type DialogueMessage = {
+    text: string,
+    speaker: string,
+    face: string,
+};
+
