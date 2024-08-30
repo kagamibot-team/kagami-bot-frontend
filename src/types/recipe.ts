@@ -5,7 +5,7 @@ type MergeMeta = {
     status: string,
 };
 
-type YMHMessage = {
+type DialogueMessage = {
     text: string,
     face: string,
     speaker: string,
