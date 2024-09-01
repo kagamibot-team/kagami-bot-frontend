@@ -7,8 +7,12 @@
         "color": "#ffffff",
         "backgroundColor": "#447bdd"
     },
-    "界面": {
+    "内核": {
         "color": "#ffffff",
         "backgroundColor": "#44aa55"
+    },
+    "界面": {
+        "color": "#ffffff",
+        "backgroundColor": "#447bdd"
     }
 }
