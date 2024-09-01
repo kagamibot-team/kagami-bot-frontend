@@ -8,7 +8,5 @@ type BuyData = {
     time: string,
     user: UserData,
     remain_chips: number,
-    qrcode_image: string
-
     records: Array<Product>,
 };

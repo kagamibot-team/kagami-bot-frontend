@@ -7,7 +7,6 @@ const data = load<BuyData>({
     remain_chips: 2024,
     date: '2024-09-01',
     time: '20:10:12',
-    qrcode_image: '',
     records: [
         {
             title: "粑粑小哥",
@@ -37,9 +36,9 @@ const qrcode_data = computed(() => JSON.stringify(data));
         <div>小镜的 Shop 销售小票</div>
         <hr />
         <div>日期：{{ data.date }}</div>
-        <div>时间：{{ data.date }}</div>
+        <div>时间：{{ data.time }}</div>
         <div>客户：{{ data.user.name }}</div>
-        <div>编号：{{ data.user.uid }}</div>
+        <div>编号：UID_{{ data.user.uid }}</div>
         <hr />
         <div>&nbsp;</div>
         <div v-for="(item, index) of data.records" :key="index">
