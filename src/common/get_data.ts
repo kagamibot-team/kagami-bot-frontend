@@ -10,7 +10,7 @@ function update_data(data: Ref<any>) {
         return;
     }
 
-    axios.get(`../data/${route.query.uuid}`).then(res => {
+    axios.get(`../data/${route.query.uuid}/`).then(res => {
         if (res.status == 200) {
             data.value = res.data;
         }
