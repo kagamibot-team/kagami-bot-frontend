@@ -49,6 +49,11 @@ const router = createRouter({
       component: () => import('../views/ZhuaUpdateView.vue')
     },
     {
+      path: '/xjshop/bought',
+      name: '小镜的shop - 购买成功',
+      component: () => import('../views/xjshop/BuyView.vue')
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: '404 页面',
       component: () => import('../views/default/NoViewPage.vue')
