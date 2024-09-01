@@ -44,6 +44,11 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
+      path: '/update',
+      name: '更新信息',
+      component: () => import('../views/ZhuaUpdateView.vue')
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: '404 页面',
       component: () => import('../views/default/NoViewPage.vue')
