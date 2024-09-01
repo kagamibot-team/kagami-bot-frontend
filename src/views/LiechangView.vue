@@ -1,27 +1,10 @@
 <script setup lang="ts">
-import axios from 'axios'
-import { ref } from 'vue'
-import { useRoute } from 'vue-router'
-
 import LiechangFrame from '../components/LiechangFrame.vue'
 import LiechangBox from '../components/LiechangBox.vue'
 import default_data from '../pre_data/liechang.json'
+import { load } from '../common/get_data'
 
-const data = ref<LiechangData>(default_data);
-const route = useRoute();
-
-axios
-  .get(`../data/${route.query.uuid}/`)
-  .then((response) => {
-    if (response.status == 200) {
-      data.value = response.data
-    } else {
-      data.value = default_data
-    }
-  })
-  .catch((_) => {
-    data.value = default_data
-  })
+const data = load<LiechangData>(default_data);
 </script>
 
 <template>

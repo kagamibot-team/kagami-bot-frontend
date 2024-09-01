@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import axios from 'axios';
-import { ref } from 'vue';
+import { load } from '../common/get_data';
 
-const data = ref<{
+const data = load<{
     app_name: string,
     app_version: string,
     kagami_version: string,
@@ -20,10 +19,6 @@ const vite_version = __VITE_VERSION__;
 const vue_version = __VUE_VERSION__;
 const frontend_version = __APP_VERSION__;
 const node_version = __NODE_VERSION__;
-
-axios.get(`../metadata/`).then(res => {
-    data.value = res.data;
-}).catch(_ => { });
 </script>
 
 <template>

@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import axios from 'axios'
-import { useRoute } from 'vue-router'
+import { computed } from 'vue'
 
 import CatchBox from '../components/CatchBox.vue'
 import DisplayBox from '../components/DisplayBox.vue'
@@ -9,9 +7,9 @@ import RecipeBackground from '../components/RecipeBackground.vue'
 
 import defaultData from '../pre_data/recipe.json'
 import _answers from '../pre_data/合成/answers.json'
+import { load } from '../common/get_data'
 
-const data = ref<MergeData>(defaultData)
-const route = useRoute()
+const data = load<MergeData>(defaultData)
 
 // 注：这里有类型注解
 // 所以如果更改了回答的数据结构，请在这里同时更改
@@ -71,19 +69,6 @@ const dialogue = computed<DialogueMessage>(() => (v => {
 })()));
 
 const notation = computed(() => "+" + data.value.output.count);
-
-axios
-    .get(`../data/${route.query.uuid}/`)
-    .then((response) => {
-        if (response.status == 200) {
-            data.value = response.data
-        } else {
-            data.value = defaultData
-        }
-    })
-    .catch(_ => {
-        data.value = defaultData
-    })
 </script>
 
 <template>

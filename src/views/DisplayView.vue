@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { useRoute } from 'vue-router'
-import axios from 'axios'
+import { computed } from 'vue'
 import CatchBox from '../components/CatchBox.vue'
+import { load } from '../common/get_data';
 
 const default_data: {
   info: AwardInfo,
@@ -23,28 +22,14 @@ const default_data: {
   is_new: false,
   stats: "3",
 }
-const data = ref<{
+const data = load<{
   info: AwardInfo,
   count: number,
   stats: string,
   is_new: boolean
 }>(default_data)
-const route = useRoute()
 
 const notation = computed(() => (data.value.count >= 0 ? String(data.value.count) : ''))
-
-axios
-  .get(`../data/${route.query.uuid}/`)
-  .then((response) => {
-    if (response.status == 200) {
-      data.value = response.data
-    } else {
-      data.value = default_data
-    }
-  })
-  .catch((_) => {
-    data.value = default_data
-  })
 </script>
 
 <template>
