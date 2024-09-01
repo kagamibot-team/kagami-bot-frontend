@@ -7,9 +7,8 @@ type BuyData = {
     date: string,
     time: string,
     user: UserData,
-    cost_chips: number,
     remain_chips: number,
-    qrcode_url: string
+    qrcode_image: string
 
     records: Array<Product>,
 };

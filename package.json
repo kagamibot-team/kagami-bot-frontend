@@ -11,13 +11,16 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vueuse/core": "^11.0.3",
     "axios": "^1.7.4",
+    "qrcode": "^1.5.4",
     "vue": "^3.4.29",
     "vue-jsonp": "^2.0.0",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
+    "@types/qrcode": "^1.5.5",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-prettier": "^9.0.0",
     "eslint": "^8.57.0",
