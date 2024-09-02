@@ -1,4 +1,6 @@
-type ZhuaMeta = {
+import { GetAward, UserData } from "./common";
+
+export type ZhuaMeta = {
     field_from: number,
     get_chip: number,
     own_chip: number,
@@ -7,7 +9,7 @@ type ZhuaMeta = {
     need_time: string,
 };
 
-type ZhuaData = {
+export type ZhuaData = {
     user: UserData,
     meta: ZhuaMeta,
     catchs: Array<GetAward>,

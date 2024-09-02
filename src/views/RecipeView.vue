@@ -8,6 +8,8 @@ import RecipeBackground from '../components/RecipeBackground.vue'
 import defaultData from '../pre_data/recipe.json'
 import _answers from '../pre_data/合成/answers.json'
 import { load } from '../common/get_data'
+import { MergeData } from '../types/recipe'
+import { DialogueMessage } from '../types/common'
 
 const data = load<MergeData>(defaultData)
 
@@ -72,14 +74,15 @@ const notation = computed(() => "+" + data.value.output.count);
 </script>
 
 <template>
-    <div class="wrapper" v-if="data">
+    <div v-if="data" class="wrapper">
         <div class="top-title">
             <!--<Avatar :qqid="data.user.qqid" style="margin-right: 30px;" />-->{{ data.user.name }} 的合成：
         </div>
         <div class="total">
             <div class="left-list">
-                <DisplayBox v-for="(item, index) in data.inputs" :image="item.image_url" :color="item.color"
-                    :key="index" />
+                <DisplayBox
+v-for="(item, index) in data.inputs" :key="index" :image="item.image_url"
+                    :color="item.color" />
             </div>
             <div class="right-list">
                 <div class="dialogue-text">
@@ -87,7 +90,8 @@ const notation = computed(() => "+" + data.value.output.count);
                     <img class="dialogue-textbox" src="../assets/image/合成/对话框.png" />
                 </div>
                 <div class="merge-title">合成结果：{{ data.meta.status }}</div>
-                <CatchBox color_on_notation :info="data.output.info" :is_new="data.output.is_new" :notation="notation"
+                <CatchBox
+color_on_notation :info="data.output.info" :is_new="data.output.is_new" :notation="notation"
                     :is_opacity="true" />
                 <svg class="merge-side-title">
                     <text x="0" y="0" alignment-baseline="text-before-edge" text-anchor="start">

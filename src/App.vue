@@ -4,22 +4,32 @@ const router = useRouter()
 </script>
 
 <template>
-    <div class="router">
-        <nav>
-            <RouterLink class="link" :class="{
-                'link-active': route.name == router.currentRoute.value.name
-            }" v-for="(route, index) in router.options.routes" :key="index" :to="route.path">
-                {{ route.name }}
-                <div class="link-target">{{ route.path }}</div>
-            </RouterLink>
-        </nav>
-    </div>
-    <div class="out-line">
-        <div id="big_box">
-            <RouterView />
+  <div class="router">
+    <nav>
+      <RouterLink
+        v-for="(route, index) in router.options.routes"
+        :key="index"
+        class="link"
+        :class="{
+          'link-active': route.name == router.currentRoute.value.name
+        }"
+        :to="route.path"
+      >
+        {{ route.name }}
+        <div class="link-target">
+          {{ route.path }}
         </div>
+      </RouterLink>
+    </nav>
+  </div>
+  <div class="out-line">
+    <div id="big_box">
+      <RouterView />
     </div>
-    <div class="out-hint-text">虚线框内代表可视区域，最终输出不会包含虚线框。</div>
+  </div>
+  <div class="out-hint-text">
+    虚线框内代表可视区域，最终输出不会包含虚线框。
+  </div>
 </template>
 
 <style lang="scss" scoped>

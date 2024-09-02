@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { load } from '../common/get_data';
 
+declare const __APP_VERSION__: string;
+declare const __VITE_VERSION__: string;
+declare const __VUE_VERSION__: string;
+declare const __NODE_VERSION__: string;
+
 const data = load<{
     app_name: string,
     app_version: string,
@@ -22,41 +27,43 @@ const node_version = __NODE_VERSION__;
 </script>
 
 <template>
-    <div class="main">
-        <div class="h2">About Kagami Bot</div>
-        <ul>
-            <li>
-                <com>KAGAMI-BACKEND</com>{{ data.kagami_version }}
-            </li>
-            <li>
-                <com>KAGAMI-FRONTEND</com>{{ frontend_version }}
-            </li>
-            <li>
-                <com>Python</com>{{ data.python_version }}
-            </li>
-            <li>
-                <com>Platform</com>{{ data.platform }}
-            </li>
-            <li>
-                <com>Protocol</com>{{ data.app_name }}
-            </li>
-            <li>
-                <com>Protocol Version</com>{{ data.app_version }}
-            </li>
-            <li>
-                <com>Vite</com>{{ vite_version }}
-            </li>
-            <li>
-                <com>Vue</com>{{ vue_version }}
-            </li>
-            <li>
-                <com>Node</com>{{ node_version }}
-            </li>
-            <li>
-                <com>Github</com>kagamibot-team
-            </li>
-        </ul>
+  <div class="main">
+    <div class="h2">
+      About Kagami Bot
     </div>
+    <ul>
+      <li>
+        <com>KAGAMI-BACKEND</com>{{ data.kagami_version }}
+      </li>
+      <li>
+        <com>KAGAMI-FRONTEND</com>{{ frontend_version }}
+      </li>
+      <li>
+        <com>Python</com>{{ data.python_version }}
+      </li>
+      <li>
+        <com>Platform</com>{{ data.platform }}
+      </li>
+      <li>
+        <com>Protocol</com>{{ data.app_name }}
+      </li>
+      <li>
+        <com>Protocol Version</com>{{ data.app_version }}
+      </li>
+      <li>
+        <com>Vite</com>{{ vite_version }}
+      </li>
+      <li>
+        <com>Vue</com>{{ vue_version }}
+      </li>
+      <li>
+        <com>Node</com>{{ node_version }}
+      </li>
+      <li>
+        <com>Github</com>kagamibot-team
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style lang="scss" scoped>

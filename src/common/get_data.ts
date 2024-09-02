@@ -2,7 +2,7 @@ import axios from "axios";
 import { ref, Ref, UnwrapRef } from "vue";
 import { useRoute } from "vue-router";
 
-function update_data(data: Ref<any>) {
+function update_data<T>(data: Ref<T>) {
     const route = useRoute();
 
     if (route.query.uuid === undefined) {

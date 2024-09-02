@@ -10,8 +10,16 @@ const data = load<StorageData>(default_data)
 <template>
   <div class="storage-view">
     <h1>{{ data.user.name }} 的 {{ data.title_text }}</h1>
-    <div v-for="(item, index) of data.boxes" :key="index">
-      <h2 v-if="item.title" :style="{ color: item.title_color || '#EEEEEE' }">{{ item.title }}</h2>
+    <div
+      v-for="(item, index) of data.boxes"
+      :key="index"
+    >
+      <h2
+        v-if="item.title"
+        :style="{ color: item.title_color || '#EEEEEE' }"
+      >
+        {{ item.title }}
+      </h2>
       <BookBoxList :items="item.elements" />
     </div>
   </div>

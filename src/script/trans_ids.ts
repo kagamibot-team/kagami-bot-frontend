@@ -7,16 +7,16 @@ type RESULT_UNIT = string | {
 };
 
 export function rep_str_to_ids(str: string): Array<RESULT_UNIT> {
-    var result: Array<RESULT_UNIT> = [];
+    const result: Array<RESULT_UNIT> = [];
 
     // 第一个出现 IDS（表意文字描述字符）的位置
-    var lpointer: number = -1;
+    let lpointer: number = -1;
 
     // 还需要匹配多少个 IDS 单元
-    var required: number = 0;
+    let required: number = 0;
 
     for (let pointer = 0; pointer < [...str].length; pointer++) {
-        let char = [...str][pointer]
+        const char = [...str][pointer]
         let met_symbol = false
 
         if ('⿰⿱⿸⿺⿹⿽⿵⿷⿶⿼⿴⿻㇯'.includes(char)) {
@@ -72,7 +72,7 @@ export function rep_str_to_ids(str: string): Array<RESULT_UNIT> {
 // 很奇怪的高位 Unicode 导致的问题，不是吗？偏偏要把字符串拆成数组才能解决了。
 // 参见 https://mathiasbynens.be/notes/javascript-unicode
 function query_ids_to_code(ids: Array<string>): string {
-    let ids_array = []
+    const ids_array = []
     for (let index = 0; index < ids.length; index++) {
         ids_array.push('u' + ids[index].codePointAt(0)!.toString(16))
     }

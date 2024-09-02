@@ -2,6 +2,7 @@
 import { computed, PropType } from 'vue'
 import DisplayBox from './DisplayBox.vue'
 import FormattedTexts from './FormattedTexts.vue';
+import { AwardInfo } from '../types/common';
 
 const props = defineProps({
   is_opacity: {
@@ -10,13 +11,15 @@ const props = defineProps({
   },
   info: {
     type: Object as PropType<AwardInfo>,
-    default: {
-      description: '如果持续遇到此问题，请联系开发组。',
-      display_name: '你不该在这里。',
-      color: 'rgb(198, 193, 191)',
-      image: './resource/shit.png',
-      level: { display_name: '★★★★★', color: 'rgb(192, 232, 174)' }
-    }
+    default: () => {
+      return {
+        description: '如果持续遇到此问题，请联系开发组。',
+        display_name: '你不该在这里。',
+        color: 'rgb(198, 193, 191)',
+        image: './resource/shit.png',
+        level: { display_name: '★★★★★', color: 'rgb(192, 232, 174)' }
+      }
+    },
   },
   notation: {
     type: String,
@@ -53,7 +56,8 @@ const notation_color = computed(() => {
 
 <template>
   <div class="outbox">
-    <DisplayBox :notation_down_color="notation_color" :image="info.image_url" :color="info.color"
+    <DisplayBox
+:notation_down_color="notation_color" :image="info.image_url" :color="info.color"
       :notation_down="notation" :new_overlay="is_new" :do_glow="info.level.lid >= 4" :glow_type="0"
       :notation_up="notation2" />
     <div class="textbox">

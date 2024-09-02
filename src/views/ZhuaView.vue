@@ -2,12 +2,16 @@
 import CatchBox from '../components/CatchBox.vue'
 import defaultData from '../pre_data/zhua.json'
 import { load } from '../common/get_data'
+import { ZhuaData } from '../types/zhua';
 
 const data = load<ZhuaData>(defaultData);
 </script>
 
 <template>
-  <div class="wrapper" v-if="data">
+  <div
+    v-if="data"
+    class="wrapper"
+  >
     <div class="top-title">
       <!--<Avatar :qqid="data.user.qqid" style="margin-right: 20px;" />-->{{
         data.user.name
@@ -16,13 +20,23 @@ const data = load<ZhuaData>(defaultData);
     </div>
     <div class="side-title">
       本次获得
-      {{ data.meta.get_chip }} 薯片，目前共有 {{ data.meta.own_chip }} 薯片。<br />剩余次数：{{
+      {{ data.meta.get_chip }} 薯片，目前共有 {{ data.meta.own_chip }} 薯片。<br>剩余次数：{{
         data.meta.remain_time
       }}/{{ data.meta.max_time }}，距下次次数恢复还要{{ data.meta.need_time }}。
     </div>
-    <CatchBox color_on_notation v-for="(item, index) in data.catchs" :info="item.info" :notation="`+${item.count}`"
-      :is_new="item.is_new" :key="index" style="margin-top: 25px" />
-    <div class="field-notation" v-if="data.meta.field_from != 1">
+    <CatchBox
+      v-for="(item, index) in data.catchs"
+      :key="index"
+      color_on_notation
+      :info="item.info"
+      :notation="`+${item.count}`"
+      :is_new="item.is_new"
+      style="margin-top: 25px"
+    />
+    <div
+      v-if="data.meta.field_from != 1"
+      class="field-notation"
+    >
       {{ data.meta.field_from }}号猎场
     </div>
   </div>

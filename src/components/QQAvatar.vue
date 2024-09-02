@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
-defineProps<{
-    qqid: string | number
-}>();
+defineProps<{ qqid: string | number }>();
 </script>
 
 <template>

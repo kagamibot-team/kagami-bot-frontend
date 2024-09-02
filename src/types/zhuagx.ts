@@ -1,15 +1,15 @@
-type UpdateContentData = {
+export type UpdateContentData = {
     content: string,
     tags?: Array<string>,
 }
 
-type VersionData = {
+export type VersionData = {
     version: string,
     time?: string,
     updates: Array<UpdateContentData>,
 }
 
-type UpdateData = {
+export type UpdateData = {
     current_page: number,
     max_page: number,
     show_pager: boolean,

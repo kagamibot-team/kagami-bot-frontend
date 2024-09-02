@@ -2,6 +2,7 @@
 import { computed } from 'vue';
 import DisplayBox from './DisplayBox.vue';
 import ProgressBar from './ProgressBar.vue';
+import { SingleLiechang } from '../types/liechang';
 
 const props = defineProps<{ data: SingleLiechang, selecting: boolean }>();
 const liechang_name = computed(() => ["废墟猎场", "荒野猎场", "未命名"][props.data.pack_id - 1]);
@@ -13,11 +14,13 @@ const liechang_name = computed(() => ["废墟猎场", "荒野猎场", "未命名
     <div class="liechang-box" :class="[selecting ? 'selecting' : '', data.unlocked ? 'unlocked' : 'locked']">
         <h1>{{ data.pack_id }} 号猎场</h1>
         <h2>{{ liechang_name }}</h2>
-        <DisplayBox :image="data.featured_award.image_url" :color="data.featured_award.color" notation_down=""
+        <DisplayBox
+:image="data.featured_award.image_url" :color="data.featured_award.color" notation_down=""
             style="display: inline-block;" class="display-box" />
-        <ProgressBar v-for="(item, index) in data.award_count" :key="index" :current="item.collected" :max="item.sum_up"
+        <ProgressBar
+v-for="(item, index) in data.award_count" :key="index" :current="item.collected" :max="item.sum_up"
             :color="item.level.color" class="progress-bar" />
-        <div class="locked-hint" v-if="!data.unlocked">
+        <div v-if="!data.unlocked" class="locked-hint">
             <div>
                 <h1>未解锁!</h1>
                 <div class="para">

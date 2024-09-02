@@ -6,6 +6,8 @@ import vue from '@vitejs/plugin-vue'
 import package_json from './package.json'
 import { version as vue_version } from 'vue'
 
+declare let process: NodeJS.Process;
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/kagami/pages/',

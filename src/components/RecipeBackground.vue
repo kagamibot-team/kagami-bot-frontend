@@ -8,9 +8,18 @@ const color = ['#000000', '#2a68bc', '#2a68bc', '#2a68bc', '#7E2FCE', '#7E2FCE']
 
 <template>
   <div class="recipe-background">
-    <div class="ellipse1" v-if="!is_strange" />
-    <div class="ellipse2" v-if="!is_strange" />
-    <div class="ellipse3" v-if="!is_strange" />
+    <div
+      v-if="!is_strange"
+      class="ellipse1"
+    />
+    <div
+      v-if="!is_strange"
+      class="ellipse2"
+    />
+    <div
+      v-if="!is_strange"
+      class="ellipse3"
+    />
   </div>
 </template>
 

@@ -3,6 +3,7 @@ import { load } from '../common/get_data';
 import FormattedTexts from '../components/FormattedTexts.vue';
 import default_data from '../pre_data/update.json';
 import _colors from '../pre_data/update_color.json';
+import { UpdateData } from '../types/zhuagx';
 
 const data = load<UpdateData>(default_data);
 const update_colors: {
@@ -27,20 +28,20 @@ function get_style_of_tag(tag: string) {
     <div class="container">
         <div class="title">小镜 Bot 更新摘要</div>
         <div class="items">
-            <div class="item" v-for="(item, index) of data.versions" :key="index">
+            <div v-for="(item, index) of data.versions" :key="index" class="item">
                 <div class="item-title">{{ item.version }}</div>
                 <div class="item-updates">
-                    <div class="item-update" v-for="(update, i) of item.updates" :key="i">
-                        <span class="tag" v-for="(tag, i2) of update.tags" :key="i2" :style="get_style_of_tag(tag)">
+                    <div v-for="(update, i) of item.updates" :key="i" class="item-update">
+                        <span v-for="(tag, i2) of update.tags" :key="i2" class="tag" :style="get_style_of_tag(tag)">
                             {{ tag }}
                         </span>
                         <FormattedTexts :text="update.content" />
                     </div>
                 </div>
-                <div class="item-time" v-if="item.time !== undefined">{{ item.time }}</div>
+                <div v-if="item.time !== undefined" class="item-time">{{ item.time }}</div>
             </div>
         </div>
-        <div class="pager" v-if="data.show_pager">
+        <div v-if="data.show_pager" class="pager">
             第 {{ data.current_page }} 页，共 {{ data.max_page }} 页
         </div>
     </div>

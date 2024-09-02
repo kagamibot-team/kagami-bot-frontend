@@ -13,5 +13,5 @@ const image = computedAsync(async () => await QRCode.toDataURL(props.data));
 </script>
 
 <template>
-    <img :src="image" />
+  <img :src="image">
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Avatar from './Avatar.vue';
+import { LiechangData } from '../types/liechang';
 
 defineProps<{ data: LiechangData }>()
 </script>

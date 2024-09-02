@@ -3,7 +3,8 @@ const props = defineProps<{ current: number, max: number, color: string }>();
 </script>
 <template>
     <div class="container">
-        <div class="rect" :style="{
+        <div
+class="rect" :style="{
             backgroundColor: props.color ?? 'white',
             gridTemplateColumns: `${props.current / props.max}fr ${1 - props.current / props.max}fr`
         }">

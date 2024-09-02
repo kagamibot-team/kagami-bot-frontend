@@ -3,7 +3,10 @@ import { BookBoxData } from '../types/inventory';
 import BookBox from './BookBox.vue'
 
 defineProps({
-  items: Array<BookBoxData>
+  items: {
+    type: Array<BookBoxData>,
+    default: [],
+  }
 })
 </script>
 

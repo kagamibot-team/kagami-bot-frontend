@@ -1,5 +1,7 @@
 // 各种库存等的视图的定义
 
+import { UserData } from "./common";
+
 export type DisplayBoxData = {
     image: string,
     color: string,
@@ -19,7 +21,7 @@ export type BookBoxData = {
 };
 
 // 例如抓进度界面的一个等级分类
-type StorageUnit = {
+export type StorageUnit = {
     title?: string, // 为空则不显示标题
     title_color?: string,
     elements: Array<BookBoxData>,

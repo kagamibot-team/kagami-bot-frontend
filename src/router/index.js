@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: '/',
       name: '主页',
-      component: () => import('../views/Home.vue')
+      component: () => import('../views/RouterHome.vue')
     },
     {
       path: '/zhua',

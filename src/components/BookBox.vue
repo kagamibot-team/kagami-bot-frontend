@@ -6,9 +6,12 @@ import { DisplayBoxData } from '../types/inventory';
 const props = defineProps({
   display_box: {
     type: Object as PropType<DisplayBoxData>,
-    default: {}
+    default: () => { return {} }
   },
-  title1: String,
+  title1: {
+    type: String,
+    default: '',
+  },
   title2: {
     type: String,
     default: ''

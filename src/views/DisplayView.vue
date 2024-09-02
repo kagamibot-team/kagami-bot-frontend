@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import CatchBox from '../components/CatchBox.vue'
 import { load } from '../common/get_data';
+import { AwardInfo } from '../types/common';
 
 const default_data: {
   info: AwardInfo,

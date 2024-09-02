@@ -1,19 +1,7 @@
 <script setup lang="ts">
-import axios from 'axios';
-import { ref } from 'vue';
-import { useRoute } from 'vue-router';
+import { load } from '../../common/get_data';
 
-const data = ref<any>(undefined);
-const route = useRoute();
-const uuid: any | null = route.query.uuid;
-
-if (uuid !== null) {
-    axios.get(`../data/${uuid}/`).then(res => {
-        if (res.status == 200) {
-            data.value = res.data;
-        }
-    }).catch(_ => { });
-}
+const data = load<unknown>(undefined);
 </script>
 
 <template>
@@ -26,5 +14,4 @@ if (uuid !== null) {
     </main>
 </template>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

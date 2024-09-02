@@ -1,10 +1,10 @@
-type LevelData = {
+export type LevelData = {
     display_name: string,
     color: string,
     lid: number,
 };
 
-type AwardInfo = {
+export type AwardInfo = {
     aid: number,
     description: string,
     display_name: string,
@@ -14,15 +14,15 @@ type AwardInfo = {
     sorting: number,
 };
 
-type UserData = { name: string, uid?: number };
+export type UserData = { name: string, uid?: number };
 
-type GetAward = {
+export type GetAward = {
     info: AwardInfo,
     count: number,
     is_new: boolean,
 };
 
-type DialogueMessage = {
+export type DialogueMessage = {
     text: string,
     speaker: string,
     face: string,

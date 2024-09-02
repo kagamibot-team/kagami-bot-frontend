@@ -5,16 +5,24 @@ console.log()
 </script>
 
 <template>
-    <div class="router">
-        <nav>
-            <RouterLink class="link" :class="{
-                'link-active': route.name == router.currentRoute.value.name
-            }" v-for="(route, index) in router.options.routes" :key="index" :to="route.path">
-                {{ route.name }}
-                <div class="link-target">{{ route.path }}</div>
-            </RouterLink>
-        </nav>
-    </div>
+  <div class="router">
+    <nav>
+      <RouterLink
+        v-for="(route, index) in router.options.routes"
+        :key="index"
+        class="link"
+        :class="{
+          'link-active': route.name == router.currentRoute.value.name
+        }"
+        :to="route.path"
+      >
+        {{ route.name }}
+        <div class="link-target">
+          {{ route.path }}
+        </div>
+      </RouterLink>
+    </nav>
+  </div>
 </template>
 
 <style lang="scss" scoped>

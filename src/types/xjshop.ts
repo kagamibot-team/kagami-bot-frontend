@@ -1,9 +1,11 @@
-type Product = {
+import { UserData } from "./common";
+
+export type Product = {
     title: string,
     price: number,
 };
 
-type BuyData = {
+export type BuyData = {
     date: string,
     time: string,
     user: UserData,
