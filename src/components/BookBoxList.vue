@@ -6,6 +6,10 @@ defineProps({
   items: {
     type: Array<BookBoxData>,
     default: [],
+  },
+  columns: {
+    type: Number,
+    default: 8,
   }
 })
 </script>
@@ -20,8 +24,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .book-box-list {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1560px;
+  display: grid;
+  grid-template-columns: repeat(v-bind(columns), 1fr);
 }
 </style>

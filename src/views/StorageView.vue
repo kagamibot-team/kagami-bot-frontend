@@ -20,7 +20,7 @@ const data = load<StorageData>(default_data)
       >
         {{ item.title }}
       </h2>
-      <BookBoxList :items="item.elements" />
+      <BookBoxList :items="item.elements" :columns="10" />
     </div>
   </div>
 </template>
