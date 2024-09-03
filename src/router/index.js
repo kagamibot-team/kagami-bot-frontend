@@ -39,6 +39,11 @@ const router = createRouter({
       component: () => import('../views/HelpView.vue')
     },
     {
+      path: '/help/detail',
+      name: '帮助详情',
+      component: () => import('../views/HelpDetailView.vue')
+    },
+    {
       path: '/about',
       name: '关于',
       component: () => import('../views/AboutView.vue')

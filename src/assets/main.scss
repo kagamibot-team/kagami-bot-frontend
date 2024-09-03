@@ -16,9 +16,9 @@ body {
 
 main {
   padding: 40px 60px;
+  width: 940px;
   max-width: 940px;
   background-color: #eeebe3;
-  width: max-content;
 
   h2 {
     color: #63605c;
@@ -49,6 +49,16 @@ main {
     display: flex;
   }
 
+  bli {
+    font-family: '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 36px;
+    list-style-type: none;
+    color: #928a82;
+    display: flex;
+  }
+
   si {
     @extend li;
     display: list-item;
@@ -65,13 +75,25 @@ main {
     color: #807a73;
   }
 
+  bcom {
+    display: inline-block;
+    min-width: 240px;
+    padding-right: 40px;
+    color: #807a73;
+  }
+
   par {
     color: #ca892e;
   }
 
   p {
-    font-size: 24px;
+    font-family: '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
+    width: 90%;
+    margin: 30px auto;
+    font-size: 32px;
+    color: #928a82;
+    text-align: justify;
     white-space: pre-wrap;
-    line-height: 36px;
+    line-height: 42px;
   }
 }
