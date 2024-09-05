@@ -18,9 +18,9 @@ const shop = load<ShopDisplay>(default_data)
         <img src="../../assets/kagami_shop.png" />
         <div class="content">
             <div class="head">
-                欢迎来到小镜商店，{{ shop.user.name }}！
+                欢迎来到小镜商店，<u>{{ shop.user.name }}</u>！
                 <br />
-                你现在有 {{ shop.chips }} 薯片，输入 <code>小镜商店 购买 商品名</code> 就可以购买商品了哦！
+                你现在有 <u>{{ shop.chips }}</u> 薯片，输入 <code>小镜商店 购买 商品名</code> 就可以购买商品了哦！
             </div>
             <div class="product-groups">
                 <div v-for="(group, index) in shop.products" :key="index" class="product-group">
