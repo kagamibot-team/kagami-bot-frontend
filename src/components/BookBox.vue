@@ -34,12 +34,19 @@ const props = defineProps({
 
   .title {
     text-align: center;
-    font-size: larger;
+    font-size: 24px;
     font-weight: bold;
+    font-family: 'HarmonyOS Sans SC', var(--font-fallback);
   }
 
   .title1 {
     margin-top: 8px;
+  }
+
+  .title2 {
+    opacity: .5;
+    font-size: 16px;
+    font-weight: 400;
   }
 }
 </style>

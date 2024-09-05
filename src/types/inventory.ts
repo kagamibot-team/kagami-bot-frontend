@@ -5,13 +5,17 @@ import { UserData } from "./common";
 export type DisplayBoxData = {
     image: string,
     color: string,
+
     notation_up?: string,
     notation_down?: string,
-    new_overlay?: boolean,
     notation_down_color?: string,
     notation_up_color?: string,
+
     do_glow?: boolean,
     glow_type?: number,
+
+    new_overlay?: boolean,
+    sold_out_overlay?: boolean,
 };
 
 export type BookBoxData = {

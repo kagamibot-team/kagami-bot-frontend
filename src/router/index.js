@@ -54,6 +54,11 @@ const router = createRouter({
       component: () => import('../views/ZhuaUpdateView.vue')
     },
     {
+      path: '/xjshop/home',
+      name: '小镜的shop - 主界面',
+      component: () => import('../views/xjshop/ShopViewDeprecated.vue')
+    },
+    {
       path: '/xjshop/bought',
       name: '小镜的shop - 购买成功',
       component: () => import('../views/xjshop/BuyView.vue')
