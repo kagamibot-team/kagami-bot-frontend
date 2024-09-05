@@ -39,7 +39,7 @@ const shop = load<ShopDisplay>(default_data)
 
 <style lang="scss" scoped>
 .page {
-    background-color: rgb(121, 113, 113);
+    background-color: #9B9690;
     color: white;
     padding-bottom: 60px;
 
