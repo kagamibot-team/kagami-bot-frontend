@@ -41,7 +41,7 @@ const shop = load<ShopDisplay>(default_data)
 .page {
     background-color: rgb(121, 113, 113);
     color: white;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
 
     /*
      * 这里可以这么搞，主要是因为有一个 img 在这里撑着页面宽度不溢出
