@@ -27,6 +27,7 @@ const data = load<StorageData>(default_data)
     padding: 50px 70px;
     background-color: #9B9690;
     color: white;
+    width: min-content;
 
     h1 {
         margin: 0;
@@ -43,7 +44,7 @@ const data = load<StorageData>(default_data)
 
     .book-box-list {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(18, 1fr);
     }
 }
 </style>
