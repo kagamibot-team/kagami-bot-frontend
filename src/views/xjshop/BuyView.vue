@@ -31,8 +31,21 @@ const cost = computed(() =>
 )
 
 const qrcode_data = ref()
+
+// 新加的全局属性
+window.loaded_qrcode_signal = false
 onMounted(() => {
-  qrcode_data.value = document.getElementById('shop_main')?.textContent
+  let timer = setInterval(() => {
+    if (data.value.load == 'true') {
+      clearInterval(timer)
+      qrcode_data.value = document.getElementById('shop_main')?.textContent
+      window.loaded_qrcode_signal = true
+    } else if (data.value.load == 'false') {
+      clearInterval(timer)
+      qrcode_data.value = document.getElementById('shop_main')?.textContent
+      window.loaded_qrcode_signal = true
+    }
+  }, 100)
 })
 </script>
 
@@ -66,7 +79,7 @@ onMounted(() => {
       <div class="right">{{ formatter.format(data.remain_chips) }} 薯片</div>
     </div>
     <div class="qrcode">
-      <QRCode :data="qrcode_data" />
+      <QRCode class="require-load" :data="qrcode_data" />
     </div>
   </div>
 </template>
