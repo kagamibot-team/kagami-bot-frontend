@@ -7,7 +7,7 @@ function update_data<T>(data: Ref<T>) {
 
   if (route.query.uuid === undefined) {
     console.warn('UUID 值为空，将使用默认数据。')
-    data.value.load = 'false'
+    window.loaded_data_signal = true
     return
   }
 
@@ -16,13 +16,13 @@ function update_data<T>(data: Ref<T>) {
     .then((res) => {
       if (res.status == 200) {
         data.value = res.data
-        data.value.load = 'true' // 为处理某些延后加载而的添加一个新属性
+        window.loaded_data_signal = true
       } else {
-        data.value.load = 'false'
+        window.loaded_data_signal = true
       }
     })
     .catch((_) => {
-      data.value.load = 'false'
+      window.loaded_data_signal = true
     })
 }
 
@@ -32,7 +32,21 @@ function update_data<T>(data: Ref<T>) {
  * @returns 一个数据的引用
  */
 export function load<T>(default_data: T): Ref<UnwrapRef<T>> {
+  window.loaded_data_signal = false
   const data = ref(default_data)
   update_data(data)
   return data
+}
+
+/**
+ * 等待数据加载完成后，再执行的函数
+ * @param func 要执行的函数
+ */
+export function afterLoad(func: () => void) {
+  const timer = setInterval(() => {
+    if (window.loaded_data_signal == true) {
+      clearInterval(timer)
+      func()
+    }
+  }, 100)
 }
