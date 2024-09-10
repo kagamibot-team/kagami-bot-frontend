@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { load } from '../../common/get_data'
+import { load, afterLoad } from '../../common/get_data'
 import QRCode from '../../components/QRCode.vue'
 import { BuyData } from '../../types/xjshop'
 import { onMounted } from 'vue'
@@ -32,20 +32,10 @@ const cost = computed(() =>
 
 const qrcode_data = ref()
 
-// 新加的全局属性
-window.loaded_qrcode_signal = false
 onMounted(() => {
-  let timer = setInterval(() => {
-    if (data.value.load == 'true') {
-      clearInterval(timer)
-      qrcode_data.value = document.getElementById('shop_main')?.textContent
-      window.loaded_qrcode_signal = true
-    } else if (data.value.load == 'false') {
-      clearInterval(timer)
-      qrcode_data.value = document.getElementById('shop_main')?.textContent
-      window.loaded_qrcode_signal = true
-    }
-  }, 100)
+  afterLoad(() => {
+    qrcode_data.value = document.getElementById('shop_main')?.textContent
+  })
 })
 </script>
 
