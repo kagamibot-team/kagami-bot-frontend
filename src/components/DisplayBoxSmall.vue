@@ -19,7 +19,7 @@ const props = defineProps<DisplayBoxData>()
 <style scoped>
 .display-box {
     width: 105px;
-    height: 90px;
+    height: 84px;
     border-radius: 10px;
     box-sizing: border-box;
     overflow: hidden;
