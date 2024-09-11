@@ -32,7 +32,7 @@ const props = defineProps<DisplayBoxData>()
 
 .display-box::before {
     width: 105px;
-    height: 90px;
+    height: 84px;
     border-radius: 10px;
     border: solid #fff4 4px;
     display: block;
@@ -76,7 +76,7 @@ const props = defineProps<DisplayBoxData>()
 
 .display-box .xiaoge-image {
     width: 105px;
-    height: 90px;
+    height: 84px;
     position: absolute;
     top: 0;
     left: 0;
