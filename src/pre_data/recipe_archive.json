@@ -1,0 +1,268 @@
+{
+  "user": {
+    "name": "出错啦出错啦1",
+    "uid": 0,
+    "qqid": "0"
+  },
+  "recipes": [
+      {
+      "inputs": [
+        {
+          "aid": 0,
+          "description": "你不该在这里。",
+          "display_name": "你不该在这里。",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/default.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        },
+        {
+          "aid": 0,
+          "description": "你不该在这里。",
+          "display_name": "你不该在这里。",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/default.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        },
+        {
+          "aid": 0,
+          "description": "你不该在这里。",
+          "display_name": "你不该在这里。",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/default.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        }
+      ],
+      "after_storages": [
+        1, 100, 10000, 7
+      ],
+      "light_off": [
+        true, true, false, true
+      ],
+      "possibility": 0.7,
+      "output": {
+        "info": {
+          "aid": 0,
+          "description": "哇哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
+          "display_name": "不小心占了两行的⿰字见小哥",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/shit.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        },
+        "is_new": true,
+        "count": 10
+      },
+      "recipe_id": 0,
+      "stat_id": 0,
+      "last_time": "000",
+      "meta": {
+        "user": {
+          "name": "出错啦出错啦1",
+          "uid": 0,
+          "qqid": "0"
+        },
+        "cost_chip": 100,
+        "own_chip": 999,
+        "is_strange": false,
+        "status": "错误！"
+      }
+    },
+    {
+      "inputs": [
+        {
+          "aid": 0,
+          "description": "你不该在这里。",
+          "display_name": "你不该在这里。",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/default.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        },
+        {
+          "aid": 0,
+          "description": "你不该在这里。",
+          "display_name": "你不该在这里。",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/default.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        },
+        {
+          "aid": 0,
+          "description": "你不该在这里。",
+          "display_name": "你不该在这里。",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/default.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        }
+      ],
+      "after_storages": [
+        1, 100, 10000, 7
+      ],
+      "light_off": [
+        true, true, false, true
+      ],
+      "possibility": 0.2,
+      "output": {
+        "info": {
+          "aid": 0,
+          "description": "哇哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
+          "display_name": "⿰字见小哥",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/shit.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        },
+        "is_new": true,
+        "count": 10
+      },
+      "recipe_id": 0,
+      "stat_id": 0,
+      "last_time": "123",
+      "meta": {
+        "user": {
+          "name": "出错啦出错啦1",
+          "uid": 0,
+          "qqid": "0"
+        },
+        "cost_chip": 100,
+        "own_chip": 999,
+        "is_strange": false,
+        "status": "错误！"
+      }
+    },
+    {
+      "inputs": [
+        {
+          "aid": 0,
+          "description": "你不该在这里。",
+          "display_name": "你不该在这里。",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/default.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        },
+        {
+          "aid": 0,
+          "description": "你不该在这里。",
+          "display_name": "你不该在这里。",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/default.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        },
+        {
+          "aid": 0,
+          "description": "你不该在这里。",
+          "display_name": "你不该在这里。",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/default.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        }
+      ],
+      "after_storages": [
+        1, 100, 10000, 7
+      ],
+      "light_off": [
+        true, true, false, true
+      ],
+      "possibility": 0.5,
+      "output": {
+        "info": {
+          "aid": 0,
+          "description": "哇哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
+          "display_name": "⿰字见小哥",
+          "color": "rgb(198, 193, 191)",
+          "image_url": "./resource/shit.png",
+          "level": {
+            "lid": 3,
+            "display_name": "★★★",
+            "color": "rgb(192, 232, 174)"
+          },
+          "sorting": 0
+        },
+        "is_new": true,
+        "count": 10
+      },
+      "recipe_id": 0,
+      "stat_id": 0,
+      "last_time": "456",
+      "meta": {
+        "user": {
+          "name": "出错啦出错啦1",
+          "uid": 0,
+          "qqid": "0"
+        },
+        "cost_chip": 100,
+        "own_chip": 999,
+        "is_strange": false,
+        "status": "错误！"
+      }
+    }
+  ],
+  "product": {
+    "aid": 0,
+    "description": "你不该在这里。",
+    "display_name": "你不该在这里。",
+    "color": "rgb(198, 193, 191)",
+    "image_url": "./resource/default.png",
+    "level": {
+      "lid": 3,
+      "display_name": "★★★",
+      "color": "rgb(192, 232, 174)"
+    },
+    "sorting": 0
+  },
+  "cost_chip": 100,
+  "own_chip": 999,
+  "good_enough": false
+}

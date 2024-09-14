@@ -4,7 +4,7 @@ import { DisplayBoxData } from '../types/inventory.ts'
 const props = defineProps<DisplayBoxData>()
 </script>
 <template>
-    <div class="display-box" :style="{ backgroundColor: props.color }" :class="{ 'sold-out': sold_out_overlay }">
+    <div class="display-box" :style="{ backgroundColor: props.color }" :class="{ 'black': props.black_overlay }">
         <img class="xiaoge-image" :src="props.image" />
         <div v-if="notation_down" class="notation-down" :style="{ color: notation_down_color }">
             {{ props.notation_down }}
@@ -14,6 +14,7 @@ const props = defineProps<DisplayBoxData>()
         <div v-if="props.sold_out_overlay" class="sold-out-overlay">
             售罄
         </div>
+        <div v-if="props.black_overlay" class="sold-out-overlay"></div>
     </div>
 </template>
 <style scoped>
@@ -26,7 +27,7 @@ const props = defineProps<DisplayBoxData>()
     position: relative;
 }
 
-.display-box.sold-out {
+.display-box.black {
     filter: grayscale(0.6);
 }
 
