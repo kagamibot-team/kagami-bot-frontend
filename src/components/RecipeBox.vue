@@ -62,7 +62,7 @@ const possible = computed(() => {
     }
 })
 const last_time = computed(() => {
-    if (props.now_merging) {
+    if (props.now_merging || props.info.last_time == "") {
         return ""
     }
     return "上回记录：" + props.info.last_time
