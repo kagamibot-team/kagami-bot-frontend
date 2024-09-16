@@ -79,7 +79,8 @@ const shop = load<ShopDisplay>(default_data)
                 .products {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
-                    margin: 0 40px;
+                    margin: 20px 40px;
+                    gap: 50px;
                 }
             }
         }
