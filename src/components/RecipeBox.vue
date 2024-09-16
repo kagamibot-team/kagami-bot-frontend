@@ -53,9 +53,9 @@ const is_new = computed(() => {
 const possible = computed(() => {
     if (props.info.possibility == -1) {
         return "成功率 未知"
-    } else if (props.info.possibility > 0.6) {
+    } else if (props.info.possibility > 0.65) {
         return "成功率：高"
-    } else if (props.info.possibility > 0.3) {
+    } else if (props.info.possibility > 0.4) {
         return "成功率：中"
     } else {
         return "成功率：低"
