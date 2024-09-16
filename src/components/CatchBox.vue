@@ -96,7 +96,7 @@ const notation_color = computed(() => {
 }
 
 .rightTitle {
-  width: 400px;
+  width: 420px;
   font-size: 43px;
   margin-bottom: 8px;
   color: #ffffff;

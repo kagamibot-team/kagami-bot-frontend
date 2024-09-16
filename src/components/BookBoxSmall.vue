@@ -29,7 +29,6 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .book-box {
-  margin: 10px 5px;
   width: min-content;
 
   .title {

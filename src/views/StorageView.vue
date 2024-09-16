@@ -45,6 +45,9 @@ const data = load<StorageData>(default_data)
     .book-box-list {
         display: grid;
         grid-template-columns: repeat(18, 1fr);
+        padding: 10px;
+        row-gap: 40px;
+        gap: 15px;
     }
 }
 </style>
