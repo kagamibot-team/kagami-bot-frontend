@@ -11,10 +11,10 @@ const props = defineProps<DisplayBoxData>()
         </div>
         <div class="notation-up">{{ props.notation_up }}</div>
         <img v-if="props.new_overlay" class="new-notation" :src="'./resource/new.png'" />
+        <div v-if="props.black_overlay" class="black-overlay"></div>
         <div v-if="props.sold_out_overlay" class="sold-out-overlay">
             售罄
         </div>
-        <div v-if="props.black_overlay" class="sold-out-overlay"></div>
     </div>
 </template>
 <style scoped>
@@ -88,9 +88,15 @@ const props = defineProps<DisplayBoxData>()
     left: 83px;
 }
 
+.display-box .black-overlay {
+    background-color: #0008;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
 .display-box .sold-out-overlay {
     text-align: center;
-    background-color: #0008;
     height: 100%;
     width: 100%;
     line-height: 140px;
