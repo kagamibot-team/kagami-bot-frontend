@@ -4,12 +4,12 @@
       "aid": 0,
       "description": "你不该在这里。",
       "display_name": "你不该在这里。",
-      "color": "rgb(198, 193, 191)",
+      "color": "#C6C1BF",
       "image_url": "./resource/blank_placeholder.png",
       "level": {
         "lid": 3,
         "display_name": "★★★",
-        "color": "rgb(192, 232, 174)"
+        "color": "#C0E8AE"
       },
       "sorting": 0
     },
@@ -17,12 +17,12 @@
       "aid": 0,
       "description": "你不该在这里。",
       "display_name": "你不该在这里。",
-      "color": "rgb(198, 193, 191)",
+      "color": "#C6C1BF",
       "image_url": "./resource/blank_placeholder.png",
       "level": {
         "lid": 3,
         "display_name": "★★★",
-        "color": "rgb(192, 232, 174)"
+        "color": "#C0E8AE"
       },
       "sorting": 0
     },
@@ -30,12 +30,12 @@
       "aid": 0,
       "description": "你不该在这里。",
       "display_name": "你不该在这里。",
-      "color": "rgb(198, 193, 191)",
+      "color": "#C6C1BF",
       "image_url": "./resource/blank_placeholder.png",
       "level": {
         "lid": 3,
         "display_name": "★★★",
-        "color": "rgb(192, 232, 174)"
+        "color": "#C0E8AE"
       },
       "sorting": 0
     }
@@ -52,12 +52,12 @@
       "aid": 0,
       "description": "1",
       "display_name": "⿰字见⿰字字⿺花⿱川戸⿺辶⿳宀珎⿲隹貝招⿱⿻𠈌丨亏小哥",
-      "color": "rgb(198, 193, 191)",
+      "color": "#C6C1BF",
       "image_url": "./resource/shit.png",
       "level": {
         "lid": 3,
         "display_name": "★★★★★",
-        "color": "rgb(192, 232, 174)"
+        "color": "#C0E8AE"
       },
       "sorting": 0
     },

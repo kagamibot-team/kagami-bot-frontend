@@ -12,7 +12,7 @@
                     "title2": "你不能购买这个商品",
                     "display_box": {
                         "image": "/kagami/pages/resource/shit.png",
-                        "color": "rgb(198, 193, 191)",
+                        "color": "#C6C1BF",
                         "notation_down": "123薯片",
                         "sold_out_overlay": true
                     }
@@ -22,7 +22,7 @@
                     "title2": "你不能购买这个商品",
                     "display_box": {
                         "image": "/kagami/pages/resource/shit.png",
-                        "color": "rgb(198, 193, 191)",
+                        "color": "#C6C1BF",
                         "notation_down": "12薯片",
                         "sold_out_overlay": true
                     }
@@ -32,7 +32,7 @@
                     "title2": "你不能购买这个商品",
                     "display_box": {
                         "image": "/kagami/pages/resource/shit.png",
-                        "color": "rgb(198, 193, 191)",
+                        "color": "#C6C1BF",
                         "notation_down": "1234薯片",
                         "sold_out_overlay": true
                     }
@@ -42,7 +42,7 @@
                     "title2": "你不能购买这个商品",
                     "display_box": {
                         "image": "/kagami/pages/resource/shit.png",
-                        "color": "rgb(198, 193, 191)",
+                        "color": "#C6C1BF",
                         "notation_down": "1薯片",
                         "sold_out_overlay": true
                     }
@@ -52,7 +52,7 @@
                     "title2": "你不能购买这个商品",
                     "display_box": {
                         "image": "/kagami/pages/resource/shit.png",
-                        "color": "rgb(198, 193, 191)",
+                        "color": "#C6C1BF",
                         "notation_down": "12345薯片",
                         "sold_out_overlay": true
                     }
@@ -67,7 +67,7 @@
                     "title2": "你不能购买这个商品",
                     "display_box": {
                         "image": "/kagami/pages/resource/shit.png",
-                        "color": "rgb(198, 193, 191)",
+                        "color": "#C6C1BF",
                         "notation_down": "1薯片",
                         "sold_out_overlay": true
                     }
@@ -77,7 +77,7 @@
                     "title2": "你能购买这个商品",
                     "display_box": {
                         "image": "/kagami/pages/resource/shit.png",
-                        "color": "rgb(198, 193, 191)",
+                        "color": "#C6C1BF",
                         "notation_down": "12345薯片"
                     }
                 }

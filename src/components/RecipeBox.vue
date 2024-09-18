@@ -80,7 +80,7 @@ const last_time = computed(() => {
                         color: item.color,
                         notation_down: notations_down[index],
                         notation_down_color: notation_color,
-                        do_glow: item.level.lid >= 4,
+                        do_glow: now_merging && item.level.lid >= 4,
                         glow_type: 0,
                         black_overlay: info.light_off[index]
                     }" :title1="item.display_name"/>
@@ -97,7 +97,7 @@ const last_time = computed(() => {
                     color: info.output.info.color,
                     notation_down: notations_down[3],
                     notation_down_color: notation_color,
-                    do_glow: info.output.info.level.lid >= 4,
+                    do_glow: now_merging && info.output.info.level.lid >= 4,
                     glow_type: 0,
                     new_overlay: is_new,
                     black_overlay: info.light_off[3]
