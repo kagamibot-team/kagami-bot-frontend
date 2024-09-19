@@ -75,17 +75,17 @@ const notation_color = computed(() => {
 <style scoped>
 .outbox {
     width: 800px;
-    background: linear-gradient(to bottom, #a19e98, rgb(133, 126, 120));
+    background: linear-gradient(to bottom, #b0aea8, rgb(147, 140, 134));
     display: flex;
     padding: 18px;
     position: relative;
-    border-radius: 28px;
+    border-radius: 16px;
     align-items: flex-start;
     padding-bottom: 22px;
 }
 
 .outbox-opacity {
-    background: linear-gradient(to bottom, #a4a4a487, rgba(36, 36, 36, 0.351));
+    background: linear-gradient(to bottom, #9f9f9fa8, rgba(45, 45, 45, 0.38));
     backdrop-filter: blur(5px);
 }
 
@@ -123,6 +123,6 @@ const notation_color = computed(() => {
 }
 
 .outbox-opacity .rightStar {
-    text-shadow: 5px 5px 15px #3e3a357e;
+    text-shadow: 5px 5px 15px #2e2b277e;
 }
 </style>
