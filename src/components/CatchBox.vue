@@ -85,7 +85,7 @@ const notation_color = computed(() => {
 }
 
 .outbox-opacity {
-    background: linear-gradient(to bottom, #9f9f9fa8, rgba(45, 45, 45, 0.38));
+    background: linear-gradient(to bottom, #6e6e6e44, rgba(0, 0, 0, 0.369));
     backdrop-filter: blur(5px);
 }
 

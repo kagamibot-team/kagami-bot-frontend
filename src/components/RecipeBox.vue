@@ -118,7 +118,7 @@ v-for="(item, index) in info.inputs" :key="index" :display_box="{
 }
 
 .outbox-opacity {
-    background: linear-gradient(to bottom, #e4e4e46f, rgba(50, 50, 50, 0.65));
+    background: linear-gradient(to bottom, #e8dcc96f, rgba(70, 63, 54, 0.518));
     backdrop-filter: blur(5px);
 }
 
