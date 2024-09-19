@@ -34,5 +34,7 @@ const notation = computed(() => (data.value.count >= 0 ? String(data.value.count
 </script>
 
 <template>
-  <CatchBox :info="data.info" :is_new="data.is_new" :notation="notation" :notation2="data.stats" />
+  <CatchBox
+style="border-radius: 0;" :info="data.info" :is_new="data.is_new" :notation="notation"
+    :notation2="data.stats" />
 </template>

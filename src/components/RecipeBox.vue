@@ -118,29 +118,34 @@ v-for="(item, index) in info.inputs" :key="index" :display_box="{
 }
 
 .outbox-opacity {
-    background: linear-gradient(to bottom, #8a868096, rgba(114, 110, 104, 0.638));
+    background: linear-gradient(to bottom, #c5c2bb4b, rgba(50, 47, 44, 0.53));
+    backdrop-filter: blur(5px);
 }
 
 .recipe {
     width: 440px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    background-color: #0003;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.183);
     border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .recipe-material {
     /* width: 560px; */
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     height: auto;
+    padding-bottom: 20px;
 }
 
 .recipe-material>div {
-    width: 100%;
+    width: min-content;
     flex-grow: 1;
+    margin: 0 5px;
 }
 
 .recipe-product {
@@ -154,8 +159,6 @@ v-for="(item, index) in info.inputs" :key="index" :display_box="{
 .recipe-info {
     display: flex;
     justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
     font-size: 20px;
     color: #ffffff;
     font-family: '凤凰点阵体 16px', 'Maple UI', var(--font-fallback);

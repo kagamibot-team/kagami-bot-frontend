@@ -5,116 +5,124 @@ import FormattedTexts from './FormattedTexts.vue';
 import { AwardInfo } from '../types/common';
 
 const props = defineProps({
-  is_opacity: {
-    type: Boolean,
-    default: false
-  },
-  info: {
-    type: Object as PropType<AwardInfo>,
-    default: () => {
-      return {
-        description: '如果持续遇到此问题，请联系开发组。',
-        display_name: '你不该在这里。',
-        color: 'rgb(198, 193, 191)',
-        image: './resource/shit.png',
-        level: { display_name: '★★★★★', color: 'rgb(192, 232, 174)' }
-      }
+    is_opacity: {
+        type: Boolean,
+        default: false
     },
-  },
-  notation: {
-    type: String,
-    default: ''
-  },
-  is_new: {
-    type: Boolean,
-    default: false
-  },
-  color_on_notation: {
-    type: Boolean,
-    default: false
-  },
-  notation2: {
-    type: String,
-    default: ''
-  }
+    info: {
+        type: Object as PropType<AwardInfo>,
+        default: () => {
+            return {
+                description: '如果持续遇到此问题，请联系开发组。',
+                display_name: '你不该在这里。',
+                color: 'rgb(198, 193, 191)',
+                image: './resource/shit.png',
+                level: { display_name: '★★★★★', color: 'rgb(192, 232, 174)' }
+            }
+        },
+    },
+    notation: {
+        type: String,
+        default: ''
+    },
+    is_new: {
+        type: Boolean,
+        default: false
+    },
+    color_on_notation: {
+        type: Boolean,
+        default: false
+    },
+    notation2: {
+        type: String,
+        default: ''
+    }
 })
 
 const notation_color = computed(() => {
-  if (props.color_on_notation) {
-    if (props.notation == '+1') {
-      return '#FFFFFF'
-    } else if (props.notation == '+2') {
-      return '#FFFD55'
-    } else {
-      return '#8BFA84'
+    if (props.color_on_notation) {
+        if (props.notation == '+1') {
+            return '#FFFFFF'
+        } else if (props.notation == '+2') {
+            return '#FFFD55'
+        } else {
+            return '#8BFA84'
+        }
     }
-  }
-  return '#FFFFFF'
+    return '#FFFFFF'
 })
 </script>
 
 <template>
-  <div class="outbox" :class="{'outbox-opacity': props.is_opacity}">
-    <DisplayBox
+    <div class="outbox" :class="{ 'outbox-opacity': props.is_opacity }">
+        <DisplayBox
 :notation_down_color="notation_color" :image="info.image_url" :color="info.color"
-      :notation_down="notation" :new_overlay="is_new" :do_glow="info.level.lid >= 4" :glow_type="0"
-      :notation_up="notation2" />
-    <div class="textbox">
-      <div class="rightTitle">
-        <FormattedTexts :text="info.display_name" />
-      </div>
-      <div class="rightDescription">
-        <FormattedTexts :text="info.description" />
-      </div>
-      <div class="rightStar" :style="{ color: props.info.level.color }">
-        {{ props.info.level.display_name }}
-      </div>
+            :notation_down="notation" :new_overlay="is_new" :do_glow="info.level.lid >= 4" :glow_type="0"
+            :notation_up="notation2" />
+        <div class="textbox">
+            <div class="rightTitle">
+                <FormattedTexts :text="info.display_name" />
+            </div>
+            <div class="rightDescription">
+                <FormattedTexts :text="info.description" />
+            </div>
+            <div class="rightStar" :style="{ color: props.info.level.color }">
+                {{ props.info.level.display_name }}
+            </div>
+        </div>
     </div>
-  </div>
 </template>
 <style scoped>
 .outbox {
-  width: 800px;
-  background: linear-gradient(to bottom, #837d78, #9b9690);
-  display: flex;
-  padding: 18px;
-  position: relative;
-  border-radius: 18px;
+    width: 800px;
+    background: linear-gradient(to bottom, #a19e98, rgb(133, 126, 120));
+    display: flex;
+    padding: 18px;
+    position: relative;
+    border-radius: 28px;
+    align-items: flex-start;
+    padding-bottom: 22px;
 }
 
 .outbox-opacity {
-  background: linear-gradient(to bottom, #8a8680c4, #9b9690c5);
+    background: linear-gradient(to bottom, #a19e985b, rgba(125, 118, 111, 0.657));
+    backdrop-filter: blur(5px);
 }
 
 .textbox {
-  margin-left: 15px;
+    margin-left: 15px;
 }
 
 .rightDescription {
-  width: 567px;
-  color: #ffffff;
-  white-space: pre-wrap;
-  font-family: '凤凰点阵体 16px', 'Maple UI', var(--font-fallback);
-  font-size: 16px;
-  line-height: 24px;
+    width: 567px;
+    color: #ffffff;
+    white-space: pre-wrap;
+    font-family: '凤凰点阵体 16px', 'Maple UI', var(--font-fallback);
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .rightTitle {
-  width: 420px;
-  font-size: 43px;
-  margin-bottom: 8px;
-  color: #ffffff;
-  font-family: '荆南俊俊体', '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
+    width: 420px;
+    font-size: 43px;
+    margin-bottom: 8px;
+    line-height: 1em;
+    color: #ffffff;
+    font-family: '荆南俊俊体', '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
 }
 
 .rightStar {
-  width: 400px;
-  font-size: 38px;
-  text-align: right;
-  font-family: 'Maple UI', var(--font-fallback);
-  position: absolute;
-  top: 10px;
-  right: 16px;
-  text-shadow: 5px 5px 15px #3e3a351e;
+    width: 400px;
+    font-size: 38px;
+    text-align: right;
+    font-family: 'Maple UI', var(--font-fallback);
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    text-shadow: 5px 5px 15px #3e3a351e;
+}
+
+.outbox-opacity .rightStar {
+    text-shadow: 5px 5px 15px #3e3a357e;
 }
 </style>
