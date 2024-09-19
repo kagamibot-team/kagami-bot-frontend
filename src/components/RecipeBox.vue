@@ -116,6 +116,7 @@ const last_time = computed(() => {
     padding: 16px;
     position: relative;
     color: #ffffff;
+    border-radius: 15px;
 }
 
 .recipe {
@@ -124,6 +125,7 @@ const last_time = computed(() => {
     flex-direction: column;
     justify-content: space-around;
     background-color: #0003;
+    border-radius: 15px;
 }
 
 .recipe-material {

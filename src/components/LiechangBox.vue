@@ -58,6 +58,7 @@ const liechang_name = computed(() => ['废墟猎场', '荒野猎场', '未命名
   position: relative;
   padding-top: 45px;
   backdrop-filter: blur(10px);
+  border-radius: 30px;
 
   &.selecting {
     background-color: rgba(110, 94, 62, 0.275);

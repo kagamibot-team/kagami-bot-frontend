@@ -80,6 +80,7 @@ const notation_color = computed(() => {
   display: flex;
   padding: 18px;
   position: relative;
+  border-radius: 20px;
 }
 
 .textbox {
