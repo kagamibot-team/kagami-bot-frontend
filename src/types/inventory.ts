@@ -17,6 +17,8 @@ export type DisplayBoxData = {
     new_overlay?: boolean,
     sold_out_overlay?: boolean,
     black_overlay?: boolean,
+
+    width?: number,
 };
 
 export type BookBoxData = {

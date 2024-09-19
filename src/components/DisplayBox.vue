@@ -2,20 +2,11 @@
 import { computed } from 'vue'
 import { DisplayBoxData } from '../types/inventory.ts'
 
-function whiteOver(hex: string): string {
-    if (!/^#([0-9A-Fa-f]{3}){1,2}$/.test(hex)) throw new Error('Invalid hex color');
-    const a = 0.5
-    const r = Math.round((1 - a) * parseInt(hex.slice(1, 3), 16) + a * 255);
-    const g = Math.round((1 - a) * parseInt(hex.slice(3, 5), 16) + a * 255);
-    const b = Math.round((1 - a) * parseInt(hex.slice(5, 7), 16) + a * 255);
-    return `rgba(${r}, ${g}, ${b}, 0.8)`;
-}
-
 const props = defineProps<DisplayBoxData>()
-const border_color = computed(() => { return whiteOver(props.color) })
-const glow_color = computed(() => { 
-    if(props.do_glow)
-        return "0 0 20px " + props.color 
+const width = computed(() => (props.width ?? 175) + "px")
+const glow_color = computed(() => {
+    if (props.do_glow)
+        return "0 0 20px " + props.color
     return "none"
 })
 </script>
@@ -35,8 +26,8 @@ const glow_color = computed(() => {
 </template>
 <style scoped>
 .display-box {
-    width: 175px;
-    height: 140px;
+    width: v-bind(width);
+    aspect-ratio: 175 / 140;
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: v-bind('glow_color');
@@ -49,15 +40,17 @@ const glow_color = computed(() => {
 }
 
 .display-box::before {
-    width: 175px;
-    height: 140px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
-    border: solid v-bind('border_color') 4px;
+    border: solid v-bind('props.color') 4px;
     display: block;
     content: '';
     position: absolute;
     box-sizing: border-box;
     z-index: 1;
+    opacity: 0.5;
+    filter: brightness(1.5);
 }
 
 .display-box .notation-down,
@@ -79,7 +72,7 @@ const glow_color = computed(() => {
         0 1.5px 0 #000,
         0 -1.5px 0 #000;
     color: white;
-    top: 84px;
+    bottom: 10px;
 }
 
 .display-box .notation-up {
@@ -94,8 +87,7 @@ const glow_color = computed(() => {
 }
 
 .display-box .xiaoge-image {
-    width: 175px;
-    height: 140px;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;

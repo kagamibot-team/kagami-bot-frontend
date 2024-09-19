@@ -8,7 +8,7 @@ import { MergeData } from '../types/recipe';
 const props = defineProps({
     info: {
         type: Object as PropType<MergeData>,
-        default: (() => {return {}}),
+        default: (() => { return {} }),
     },
     now_merging: {
         type: Boolean,
@@ -20,7 +20,6 @@ const props = defineProps({
     },
 })
 
-const color = computed(() => (props.is_opacity ? '#9B969099' : '#9b9690'))
 const notation_color = computed(() => {
     if (props.now_merging) {
         if (props.info.output.count == 1) {
@@ -70,38 +69,37 @@ const last_time = computed(() => {
 </script>
 
 <template>
-    <div class="outbox">
+    <div class="outbox" :class="{ 'outbox-opacity': props.is_opacity }">
         <div class="recipe">
             <div class="recipe-material">
                 <BookBoxSmall
-                    v-for="(item, index) in info.inputs" :key="index" 
-                    :display_box="{
-                        image: item.image_url,
-                        color: item.color,
-                        notation_down: notations_down[index],
-                        notation_down_color: notation_color,
-                        do_glow: now_merging && item.level.lid >= 4,
-                        glow_type: 0,
-                        black_overlay: info.light_off[index]
-                    }" :title1="item.display_name"/>
-                </div>
+v-for="(item, index) in info.inputs" :key="index" :display_box="{
+                    image: item.image_url,
+                    color: item.color,
+                    notation_down: notations_down[index],
+                    notation_down_color: notation_color,
+                    do_glow: now_merging && item.level.lid >= 4,
+                    glow_type: 0,
+                    black_overlay: info.light_off[index]
+                }" :title1="item.display_name" />
+            </div>
             <div class="recipe-info">
-                <FormattedTexts :text="possible"/>
-                <FormattedTexts :text="last_time"/>
+                <FormattedTexts :text="possible" />
+                <FormattedTexts :text="last_time" />
             </div>
         </div>
         <div class="recipe-product">
             <BookBox
-                :display_box="{
-                    image: info.output.info.image_url,
-                    color: info.output.info.color,
-                    notation_down: notations_down[3],
-                    notation_down_color: notation_color,
-                    do_glow: now_merging && info.output.info.level.lid >= 4,
-                    glow_type: 0,
-                    new_overlay: is_new,
-                    black_overlay: info.light_off[3]
-                }" :title1="info.output.info.display_name"/>
+:display_box="{
+                image: info.output.info.image_url,
+                color: info.output.info.color,
+                notation_down: notations_down[3],
+                notation_down_color: notation_color,
+                do_glow: now_merging && info.output.info.level.lid >= 4,
+                glow_type: 0,
+                new_overlay: is_new,
+                black_overlay: info.light_off[3]
+            }" :title1="info.output.info.display_name" />
         </div>
     </div>
 </template>
@@ -109,14 +107,18 @@ const last_time = computed(() => {
 .outbox {
     width: 640px;
     /* height: 172px; */
-    background-color: v-bind('color');
+    background: linear-gradient(to bottom, #837d78, #9b9690);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 16px;
     position: relative;
     color: #ffffff;
-    border-radius: 15px;
+    border-radius: 26px;
+}
+
+.outbox-opacity {
+    background: linear-gradient(to bottom, #8a868096, rgba(114, 110, 104, 0.638));
 }
 
 .recipe {
@@ -125,7 +127,7 @@ const last_time = computed(() => {
     flex-direction: column;
     justify-content: space-around;
     background-color: #0003;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .recipe-material {
@@ -134,6 +136,11 @@ const last_time = computed(() => {
     flex-direction: row;
     justify-content: space-around;
     height: auto;
+}
+
+.recipe-material>div {
+    width: 100%;
+    flex-grow: 1;
 }
 
 .recipe-product {
@@ -153,5 +160,4 @@ const last_time = computed(() => {
     color: #ffffff;
     font-family: '凤凰点阵体 16px', 'Maple UI', var(--font-fallback);
 }
-
 </style>

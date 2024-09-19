@@ -2,6 +2,7 @@
 import { PropType } from 'vue'
 import DisplayBoxSmall from './DisplayBoxSmall.vue'
 import { DisplayBoxData } from '../types/inventory';
+import FormattedTexts from './FormattedTexts.vue';
 
 const props = defineProps({
   display_box: {
@@ -22,14 +23,17 @@ const props = defineProps({
 <template>
   <div class="book-box">
     <DisplayBoxSmall v-bind="props.display_box" />
-    <div class="title title1">{{ props.title1 }}</div>
-    <div class="title title2">{{ props.title2 }}</div>
+    <div class="title title1"><FormattedTexts :text="props.title1" /></div>
+    <div class="title title2"><FormattedTexts :text="props.title2" /></div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .book-box {
   width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .title {
     text-align: center;

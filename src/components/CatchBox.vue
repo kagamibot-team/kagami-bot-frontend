@@ -39,7 +39,6 @@ const props = defineProps({
   }
 })
 
-const color = computed(() => (props.is_opacity ? '#9B969099' : '#9b9690'))
 const notation_color = computed(() => {
   if (props.color_on_notation) {
     if (props.notation == '+1') {
@@ -55,7 +54,7 @@ const notation_color = computed(() => {
 </script>
 
 <template>
-  <div class="outbox">
+  <div class="outbox" :class="{'outbox-opacity': props.is_opacity}">
     <DisplayBox
 :notation_down_color="notation_color" :image="info.image_url" :color="info.color"
       :notation_down="notation" :new_overlay="is_new" :do_glow="info.level.lid >= 4" :glow_type="0"
@@ -76,11 +75,15 @@ const notation_color = computed(() => {
 <style scoped>
 .outbox {
   width: 800px;
-  background-color: v-bind('color');
+  background: linear-gradient(to bottom, #837d78, #9b9690);
   display: flex;
   padding: 18px;
   position: relative;
-  border-radius: 20px;
+  border-radius: 18px;
+}
+
+.outbox-opacity {
+  background: linear-gradient(to bottom, #8a8680c4, #9b9690c5);
 }
 
 .textbox {
@@ -111,6 +114,7 @@ const notation_color = computed(() => {
   font-family: 'Maple UI', var(--font-fallback);
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 16px;
+  text-shadow: 5px 5px 15px #3e3a351e;
 }
 </style>

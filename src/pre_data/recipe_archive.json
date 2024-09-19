@@ -10,7 +10,7 @@
         {
           "aid": 0,
           "description": "你不该在这里。",
-          "display_name": "你不该在这里。",
+          "display_name": "你不该在这里。因为这个小哥的名字非常非常长",
           "color": "#C6C1BF",
           "image_url": "./resource/default.png",
           "level": {
