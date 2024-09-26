@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { load } from '../common/get_data';
 
-declare const __APP_VERSION__: string;
+// declare const __APP_VERSION__: string;
 declare const __VITE_VERSION__: string;
 declare const __VUE_VERSION__: string;
 declare const __NODE_VERSION__: string;
+declare const __COMMIT_HASH__: string;
 
 const data = load<{
     app_name: string,
@@ -22,8 +23,9 @@ const data = load<{
 
 const vite_version = __VITE_VERSION__;
 const vue_version = __VUE_VERSION__;
-const frontend_version = __APP_VERSION__;
+// const frontend_version = __APP_VERSION__;
 const node_version = __NODE_VERSION__;
+const commit_hash = __COMMIT_HASH__;
 </script>
 
 <template>
@@ -35,8 +37,11 @@ const node_version = __NODE_VERSION__;
       <li>
         <com>KAGAMI-BACKEND</com>{{ data.kagami_version }}
       </li>
-      <li>
+      <!-- <li>
         <com>KAGAMI-FRONTEND</com>{{ frontend_version }}
+      </li> -->
+      <li>
+        <com>KAGAMI-FRONTEND</com>{{ commit_hash }}
       </li>
       <li>
         <com>Python</com>{{ data.python_version }}
