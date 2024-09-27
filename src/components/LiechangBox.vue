@@ -6,6 +6,7 @@ import { SingleLiechang } from '../types/liechang'
 
 const props = defineProps<{ data: SingleLiechang; selecting: boolean }>()
 const liechang_name = computed(() => ['废墟猎场', '荒野猎场', '学园猎场'][props.data.pack_id - 1])
+const price = [0, 0 , 1000, 3000]
 
 // const data_sum = computed(() => props.data.award_count.map(p => p.sum_up).reduce((p, q) => p + q));
 </script>
@@ -38,7 +39,7 @@ const liechang_name = computed(() => ['废墟猎场', '荒野猎场', '学园猎
         <div class="para">
           <div class="p1">输入指令</div>
           <div class="p2">购买猎场 {{ data.pack_id }}</div>
-          <div class="p3">花费 1000 薯片解锁</div>
+          <div class="p3">花费 {{ price[props.data.pack_id] }} 薯片解锁</div>
         </div>
       </div>
     </div>
