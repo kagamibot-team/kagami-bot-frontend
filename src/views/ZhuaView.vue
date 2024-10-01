@@ -2,25 +2,20 @@
 import CatchBox from '../components/CatchBox.vue'
 import defaultData from '../pre_data/zhua.json'
 import { load } from '../common/get_data'
-import { ZhuaData } from '../types/zhua';
+import { ZhuaData } from '../types/zhua'
 
-const data = load<ZhuaData>(defaultData);
+const data = load<ZhuaData>(defaultData)
 </script>
 
 <template>
-  <div
-    v-if="data"
-    class="wrapper"
-  >
+  <div v-if="data" class="wrapper">
     <div class="top-title">
-      <!--<Avatar :qqid="data.user.qqid" style="margin-right: 20px;" />-->{{
-        data.user.name
-      }}
+      <!--<Avatar :qqid="data.user.qqid" style="margin-right: 20px;" />-->{{ data.user.name }}
       的一抓
     </div>
     <div class="side-title">
       本次获得
-      {{ data.meta.get_chip }} 薯片，目前共有 {{ data.meta.own_chip }} 薯片。<br>剩余次数：{{
+      {{ data.meta.get_chip }} 薯片，目前共有 {{ data.meta.own_chip }} 薯片。<br />剩余次数：{{
         data.meta.remain_time
       }}/{{ data.meta.max_time }}，距下次次数恢复还要{{ data.meta.need_time }}。
     </div>
@@ -33,10 +28,7 @@ const data = load<ZhuaData>(defaultData);
       :is_new="item.is_new"
       style="margin-top: 25px"
     />
-    <div
-      v-if="data.meta.field_from != 1"
-      class="field-notation"
-    >
+    <div v-if="data.meta.field_from != 1" class="field-notation">
       {{ data.meta.field_from }}号猎场
     </div>
   </div>

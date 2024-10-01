@@ -5,7 +5,7 @@
     "qqid": "0"
   },
   "recipes": [
-      {
+    {
       "inputs": [
         {
           "aid": 0,
@@ -47,12 +47,8 @@
           "sorting": 0
         }
       ],
-      "after_storages": [
-        1, 100, 10000, 7
-      ],
-      "light_off": [
-        true, true, false, true
-      ],
+      "after_storages": [1, 100, 10000, 7],
+      "light_off": [true, true, false, true],
       "possibility": 0.7,
       "output": {
         "info": {
@@ -128,12 +124,8 @@
           "sorting": 0
         }
       ],
-      "after_storages": [
-        1, 100, 10000, 7
-      ],
-      "light_off": [
-        true, true, false, true
-      ],
+      "after_storages": [1, 100, 10000, 7],
+      "light_off": [true, true, false, true],
       "possibility": 0.2,
       "output": {
         "info": {
@@ -209,12 +201,8 @@
           "sorting": 0
         }
       ],
-      "after_storages": [
-        1, 100, 10000, 7
-      ],
-      "light_off": [
-        true, true, false, true
-      ],
+      "after_storages": [1, 100, 10000, 7],
+      "light_off": [true, true, false, true],
       "possibility": 0.5,
       "output": {
         "info": {

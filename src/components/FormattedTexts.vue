@@ -19,11 +19,11 @@ const svg_style = computed(() => {
 })
 
 function replace_img_to_ids(e: Event) {
-  let rep_span = document.createElement("span");
-  let target = e.target as HTMLImageElement;
-  rep_span.innerHTML = target.alt;
-  target.parentNode!.insertBefore(rep_span, target);
-  target.remove();
+  let rep_span = document.createElement('span')
+  let target = e.target as HTMLImageElement
+  rep_span.innerHTML = target.alt
+  target.parentNode!.insertBefore(rep_span, target)
+  target.remove()
 }
 </script>
 
@@ -32,8 +32,13 @@ function replace_img_to_ids(e: Event) {
     <span v-for="(char, index) in splitted_text" :key="index">
       <span v-if="typeof char == 'string'">{{ char }}</span>
       <img
-v-else class="inline-svg" :style="svg_style" :src="`http://glyphwiki.org/glyph/${char.code}.svg`"
-        :alt="char.ids" @error="replace_img_to_ids" />
+        v-else
+        class="inline-svg"
+        :style="svg_style"
+        :src="`http://glyphwiki.org/glyph/${char.code}.svg`"
+        :alt="char.ids"
+        @error="replace_img_to_ids"
+      />
     </span>
   </span>
 </template>

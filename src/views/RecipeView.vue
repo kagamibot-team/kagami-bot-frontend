@@ -17,189 +17,206 @@ const data = load<MergeData>(defaultData)
 // 注：这里有类型注解
 // 所以如果更改了回答的数据结构，请在这里同时更改
 const answers: {
-    normal: {
-        [inp: number]: {
-            [out: number]: Array<string>
-        }
-    },
-    xiaohua: Array<string>,
-    love: Array<string>,
-    zero: Array<string>,
-    aqu: Array<string>
-} = _answers;
+  normal: {
+    [inp: number]: {
+      [out: number]: Array<string>
+    }
+  }
+  xiaohua: Array<string>
+  love: Array<string>
+  zero: Array<string>
+  aqu: Array<string>
+} = _answers
 
 // 下面是计算需要什么对话的逻辑，是从后端搬到前端的
-const dialogue = computed<DialogueMessage>(() => (v => {
+const dialogue = computed<DialogueMessage>(() =>
+  ((v) => {
     // 这个函数将下面的语法转换成 object 以方便界面读取
     // 说话人 表情：内容
-    let spl1 = v.substring(0, v.indexOf("："));
-    let speaker = spl1.substring(0, spl1.indexOf(" "));
-    let face = spl1.substring(spl1.indexOf(" ") + 1);
-    let text = v.substring(v.indexOf("：") + 1);
+    let spl1 = v.substring(0, v.indexOf('：'))
+    let speaker = spl1.substring(0, spl1.indexOf(' '))
+    let face = spl1.substring(spl1.indexOf(' ') + 1)
+    let text = v.substring(v.indexOf('：') + 1)
 
     return {
-        speaker: speaker,
-        face: face,
-        text: text,
+      speaker: speaker,
+      face: face,
+      text: text
     }
-})((() => {
-    // 这里是随机抽取句子
-    var pool: Array<string>;
-    var rand = Math.floor(Math.random() * 10);
+  })(
+    (() => {
+      // 这里是随机抽取句子
+      var pool: Array<string>
+      var rand = Math.floor(Math.random() * 10)
 
-    if (rand < 1) {
-        pool = answers.aqu;
-    } else if (data.value.output.info.aid == 9) {
-        pool = answers.xiaohua;
-    } else if ([34, 98].indexOf(data.value.output.info.aid) != -1) {
-        pool = answers.love;
-    } else {
-        let max_input = Math.max(...data.value.inputs.map(i => i.level.lid));
-        let output = data.value.output.info.level.lid;
-        let _p = answers.normal[max_input];
-        pool = _p[output];
-    }
+      if (rand < 1) {
+        pool = answers.aqu
+      } else if (data.value.output.info.aid == 9) {
+        pool = answers.xiaohua
+      } else if ([34, 98].indexOf(data.value.output.info.aid) != -1) {
+        pool = answers.love
+      } else {
+        let max_input = Math.max(...data.value.inputs.map((i) => i.level.lid))
+        let output = data.value.output.info.level.lid
+        let _p = answers.normal[max_input]
+        pool = _p[output]
+      }
 
-    if (pool.length == 0
-        || (data.value.output.info.level.lid == 0 && data.value.output.info.aid != 89)
-        || (data.value.inputs[0].level.lid == 0 && data.value.inputs[0].aid != 89)
-        || (data.value.inputs[1].level.lid == 0 && data.value.inputs[1].aid != 89)
-        || (data.value.inputs[2].level.lid == 0 && data.value.inputs[2].aid != 89)
-    ) {
-        pool = answers.zero;
-    }
-    return pool[Math.floor(Math.random() * pool.length)];
-})()));
+      if (
+        pool.length == 0 ||
+        (data.value.output.info.level.lid == 0 && data.value.output.info.aid != 89) ||
+        (data.value.inputs[0].level.lid == 0 && data.value.inputs[0].aid != 89) ||
+        (data.value.inputs[1].level.lid == 0 && data.value.inputs[1].aid != 89) ||
+        (data.value.inputs[2].level.lid == 0 && data.value.inputs[2].aid != 89)
+      ) {
+        pool = answers.zero
+      }
+      return pool[Math.floor(Math.random() * pool.length)]
+    })()
+  )
+)
 </script>
 
 <template>
-    <div v-if="data" class="wrapper">
-        <div class="top-title">
-            <!--<Avatar :qqid="data.user.qqid" style="margin-right: 30px;" />-->{{ data.meta?.user.name }} 的合成：
-        </div>
-        <div class="total">
-            <div class="left-list">
-                <DisplayBox
-v-for="(item, index) in data.inputs" :key="index" :image="item.image_url"
-                    :color="item.color" :notation_down="'→' + data.after_storages[index]" />
-            </div>
-            <div class="right-list">
-                <div class="dialogue-text">
-                    <div class="dialogue-intext">{{ dialogue.text }}</div>
-                    <img class="dialogue-textbox" :src="`./resource/合成/对话框.png`" />
-                </div>
-                <div class="merge-title">合成结果：{{ data.meta?.status }}</div>
-                <CatchBox
-color_on_notation :info="data.output.info" :is_new="data.output.is_new"
-                    :notation="'+' + data.output.count" :is_opacity="true" />
-                <svg class="merge-side-title">
-                    <text x="0" y="0" alignment-baseline="text-before-edge" text-anchor="start">
-                        本次合成花费了你 {{ data.meta?.cost_chip }} 薯片，你还有 {{ data.meta?.own_chip }} 薯片。
-                    </text>
-                </svg>
-            </div>
-            <img
-class="dialogue-figure" :class="{ 'dialogue-figure-aquko': dialogue.speaker == '研究员水瓶子' }"
-                :src="image_map[dialogue.speaker][dialogue.face]" />
-        </div>
-        <RecipeBackground :is_strange="data.meta?.is_strange" :level="data.output.info.level.lid" />
+  <div v-if="data" class="wrapper">
+    <div class="top-title">
+      <!--<Avatar :qqid="data.user.qqid" style="margin-right: 30px;" />-->{{ data.meta?.user.name }}
+      的合成：
     </div>
+    <div class="total">
+      <div class="left-list">
+        <DisplayBox
+          v-for="(item, index) in data.inputs"
+          :key="index"
+          :image="item.image_url"
+          :color="item.color"
+          :notation_down="'→' + data.after_storages[index]"
+        />
+      </div>
+      <div class="right-list">
+        <div class="dialogue-text">
+          <div class="dialogue-intext">{{ dialogue.text }}</div>
+          <img class="dialogue-textbox" :src="`./resource/合成/对话框.png`" />
+        </div>
+        <div class="merge-title">合成结果：{{ data.meta?.status }}</div>
+        <CatchBox
+          color_on_notation
+          :info="data.output.info"
+          :is_new="data.output.is_new"
+          :notation="'+' + data.output.count"
+          :is_opacity="true"
+        />
+        <svg class="merge-side-title">
+          <text x="0" y="0" alignment-baseline="text-before-edge" text-anchor="start">
+            本次合成花费了你 {{ data.meta?.cost_chip }} 薯片，你还有
+            {{ data.meta?.own_chip }} 薯片。
+          </text>
+        </svg>
+      </div>
+      <img
+        class="dialogue-figure"
+        :class="{ 'dialogue-figure-aquko': dialogue.speaker == '研究员水瓶子' }"
+        :src="image_map[dialogue.speaker][dialogue.face]"
+      />
+    </div>
+    <RecipeBackground :is_strange="data.meta?.is_strange" :level="data.output.info.level.lid" />
+  </div>
 </template>
 
 <style scoped>
 .wrapper {
-    position: relative;
-    width: fit-content;
-    padding: 60px 80px 80px 80px;
-    overflow: hidden;
+  position: relative;
+  width: fit-content;
+  padding: 60px 80px 80px 80px;
+  overflow: hidden;
 }
 
 .dialogue-text {
-    position: relative;
-    height: 270px;
+  position: relative;
+  height: 270px;
 }
 
 .dialogue-intext {
-    position: relative;
-    font-size: 35px;
-    font-family: '荆南波波黑', var(--font-fallback);
-    color: #333333;
-    width: 410px;
-    height: 200px;
-    left: -30px;
-    top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    z-index: 1;
+  position: relative;
+  font-size: 35px;
+  font-family: '荆南波波黑', var(--font-fallback);
+  color: #333333;
+  width: 410px;
+  height: 200px;
+  left: -30px;
+  top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
 }
 
 .dialogue-textbox {
-    position: absolute;
-    top: -150px;
-    left: -350px;
-    z-index: 0;
+  position: absolute;
+  top: -150px;
+  left: -350px;
+  z-index: 0;
 }
 
 .dialogue-figure {
-    position: absolute;
-    width: 1600px;
-    right: -580px;
-    top: -220px;
-    z-index: -1;
+  position: absolute;
+  width: 1600px;
+  right: -580px;
+  top: -220px;
+  z-index: -1;
 }
 
 .dialogue-figure-aquko {
-    top: -320px;
+  top: -320px;
 }
 
 .left-list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    gap: 35px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 35px;
 }
 
 .right-list {
-    margin-top: 10px;
-    margin-left: 100px;
+  margin-top: 10px;
+  margin-left: 100px;
 }
 
 .total {
-    position: relative;
-    display: flex;
-    z-index: 0;
+  position: relative;
+  display: flex;
+  z-index: 0;
 }
 
 .top-title {
-    color: #ffffff;
-    font-family: 'HarmonyOS Sans SC', var(--font-fallback);
-    font-size: 80px;
-    font-weight: bolder;
-    width: 1188px;
-    word-break: break-all;
+  color: #ffffff;
+  font-family: 'HarmonyOS Sans SC', var(--font-fallback);
+  font-size: 80px;
+  font-weight: bolder;
+  width: 1188px;
+  word-break: break-all;
 }
 
 .merge-title {
-    margin-bottom: 10px;
-    font-size: 60px;
-    font-family: 'HarmonyOS Sans SC', var(--font-fallback);
-    color: #ffffff;
-    font-weight: bolder;
+  margin-bottom: 10px;
+  font-size: 60px;
+  font-family: 'HarmonyOS Sans SC', var(--font-fallback);
+  color: #ffffff;
+  font-weight: bolder;
 }
 
 .merge-side-title {
-    width: 100%;
-    height: 32px;
-    font-family: 'HarmonyOS Sans SC', var(--font-fallback);
-    fill: #ffffff;
-    font-weight: bolder;
-    font-size: 24px;
-    margin-top: 12px;
-    paint-order: stroke;
-    stroke: black;
-    stroke-width: 4px;
-    overflow: visible;
+  width: 100%;
+  height: 32px;
+  font-family: 'HarmonyOS Sans SC', var(--font-fallback);
+  fill: #ffffff;
+  font-weight: bolder;
+  font-size: 24px;
+  margin-top: 12px;
+  paint-order: stroke;
+  stroke: black;
+  stroke-width: 4px;
+  overflow: visible;
 }
 </style>

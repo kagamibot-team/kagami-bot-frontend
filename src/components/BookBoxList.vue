@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { BookBoxData } from '../types/inventory';
+import { BookBoxData } from '../types/inventory'
 import BookBox from './BookBox.vue'
 
 defineProps({
   items: {
     type: Array<BookBoxData>,
-    default: [],
+    default: []
   },
   columns: {
     type: Number,
-    default: 8,
+    default: 8
   }
 })
 </script>

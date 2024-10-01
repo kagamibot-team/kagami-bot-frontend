@@ -40,12 +40,8 @@
       "sorting": 0
     }
   ],
-  "after_storages": [
-    1, 100, 10000, 7
-  ],
-  "light_off": [
-    true, true, false, true
-  ],
+  "after_storages": [1, 100, 10000, 7],
+  "light_off": [true, true, false, true],
   "possibility": 1,
   "output": {
     "info": {

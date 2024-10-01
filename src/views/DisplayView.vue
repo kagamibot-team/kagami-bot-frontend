@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import CatchBox from '../components/CatchBox.vue'
-import { load } from '../common/get_data';
-import { AwardInfo } from '../types/common';
+import { load } from '../common/get_data'
+import { AwardInfo } from '../types/common'
 
 const default_data: {
-  info: AwardInfo,
-  count: number,
-  stats: string,
+  info: AwardInfo
+  count: number
+  stats: string
   is_new: boolean
 } = {
   info: {
@@ -21,12 +21,12 @@ const default_data: {
   },
   count: 2,
   is_new: false,
-  stats: "3",
+  stats: '3'
 }
 const data = load<{
-  info: AwardInfo,
-  count: number,
-  stats: string,
+  info: AwardInfo
+  count: number
+  stats: string
   is_new: boolean
 }>(default_data)
 
@@ -35,6 +35,10 @@ const notation = computed(() => (data.value.count >= 0 ? String(data.value.count
 
 <template>
   <CatchBox
-style="border-radius: 0;" :info="data.info" :is_new="data.is_new" :notation="notation"
-    :notation2="data.stats" />
+    style="border-radius: 0"
+    :info="data.info"
+    :is_new="data.is_new"
+    :notation="notation"
+    :notation2="data.stats"
+  />
 </template>

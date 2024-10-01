@@ -39,7 +39,8 @@ export default tseslint.config(
         ],
         rules: {
             'vue/prop-name-casing': ["error", "snake_case"],
-        }
+            'vue/first-attribute-linebreak': ["off"],
+        },
     },
     eslintConfigPrettier,
 );

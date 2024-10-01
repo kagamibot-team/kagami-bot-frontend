@@ -1,26 +1,26 @@
-import { UserData } from "./common";
-import { BookBoxData } from "./inventory";
+import { UserData } from './common'
+import { BookBoxData } from './inventory'
 
 export type Product = {
-    title: string,
-    price: number,
-};
+  title: string
+  price: number
+}
 
 export type ProductGroup = {
-    group_name: string;
-    products: BookBoxData[];
-};
+  group_name: string
+  products: BookBoxData[]
+}
 
 export type BuyData = {
-    date: string,
-    time: string,
-    user: UserData,
-    remain_chips: number,
-    records: Array<Product>,
-};
+  date: string
+  time: string
+  user: UserData
+  remain_chips: number
+  records: Array<Product>
+}
 
 export type ShopDisplay = {
-    user: UserData;
-    chips: number;
-    products: ProductGroup[];
-};
+  user: UserData
+  chips: number
+  products: ProductGroup[]
+}

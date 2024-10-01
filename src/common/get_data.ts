@@ -21,7 +21,7 @@ function update_data<T>(data: Ref<T>) {
         window.loaded_data_signal = true
       }
     })
-    .catch((_) => {
+    .catch(() => {
       window.loaded_data_signal = true
     })
 }

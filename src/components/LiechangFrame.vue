@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { LiechangData } from '../types/liechang';
-import image_map from '../pre_data/image_map';
+import { LiechangData } from '../types/liechang'
+import image_map from '../pre_data/image_map'
 
 defineProps<{ data: LiechangData }>()
 </script>
@@ -14,11 +14,14 @@ defineProps<{ data: LiechangData }>()
       <div class="dialogue-intext">
         <span>{{ data.dialogue.text }}</span>
       </div>
-      <img class="dialogue-figure" :src="image_map[data.dialogue.speaker][data.dialogue.face]" />
+      <img class="dialogue-figure" :class="{
+        'dialogue-figure-pigeon': data.dialogue.speaker == '猎场老板鸽'
+      }" :src="image_map[data.dialogue.speaker][data.dialogue.face]" />
     </div>
     <!-- end -->
     <div class="title">
-      <!-- <Avatar :qqid="data.user.qqid" style="margin-right: 30px;" /> -->{{ data.user.name }} 的猎场
+      <!-- <Avatar :qqid="data.user.qqid" style="margin-right: 30px;" /> -->{{ data.user.name }}
+      的猎场
     </div>
     <div class="subject">
       <slot />
@@ -65,6 +68,11 @@ defineProps<{ data: LiechangData }>()
     top: 0px;
     left: 360px;
     z-index: -1;
+
+    &.dialogue-figure-pigeon {
+      top: -10px;
+      left: 410px;
+    }
   }
 
   .dialogue-textbox {

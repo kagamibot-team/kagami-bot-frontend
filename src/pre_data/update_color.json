@@ -1,18 +1,18 @@
 {
-    "修复": {
-        "color": "#ffffff",
-        "backgroundColor": "#dd4444"
-    },
-    "功能": {
-        "color": "#ffffff",
-        "backgroundColor": "#447bdd"
-    },
-    "内核": {
-        "color": "#ffffff",
-        "backgroundColor": "#44aa55"
-    },
-    "界面": {
-        "color": "#ffffff",
-        "backgroundColor": "#447bdd"
-    }
+  "修复": {
+    "color": "#ffffff",
+    "backgroundColor": "#dd4444"
+  },
+  "功能": {
+    "color": "#ffffff",
+    "backgroundColor": "#447bdd"
+  },
+  "内核": {
+    "color": "#ffffff",
+    "backgroundColor": "#44aa55"
+  },
+  "界面": {
+    "color": "#ffffff",
+    "backgroundColor": "#447bdd"
+  }
 }

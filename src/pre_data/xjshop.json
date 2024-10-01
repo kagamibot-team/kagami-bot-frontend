@@ -1,87 +1,87 @@
 {
-    "user": {
-        "name": "小名"
-    },
-    "chips": 31415,
-    "products": [
+  "user": {
+    "name": "小名"
+  },
+  "chips": 31415,
+  "products": [
+    {
+      "group_name": "测试组1",
+      "products": [
         {
-            "group_name": "测试组1",
-            "products": [
-                {
-                    "title1": "不可用",
-                    "title2": "你不能购买这个商品",
-                    "display_box": {
-                        "image": "/kagami/pages/resource/shit.png",
-                        "color": "#C6C1BF",
-                        "notation_down": "123薯片",
-                        "sold_out_overlay": true
-                    }
-                },
-                {
-                    "title1": "不可用",
-                    "title2": "你不能购买这个商品",
-                    "display_box": {
-                        "image": "/kagami/pages/resource/shit.png",
-                        "color": "#C6C1BF",
-                        "notation_down": "12薯片",
-                        "sold_out_overlay": true
-                    }
-                },
-                {
-                    "title1": "不可用",
-                    "title2": "你不能购买这个商品",
-                    "display_box": {
-                        "image": "/kagami/pages/resource/shit.png",
-                        "color": "#C6C1BF",
-                        "notation_down": "1234薯片",
-                        "sold_out_overlay": true
-                    }
-                },
-                {
-                    "title1": "不可用",
-                    "title2": "你不能购买这个商品",
-                    "display_box": {
-                        "image": "/kagami/pages/resource/shit.png",
-                        "color": "#C6C1BF",
-                        "notation_down": "1薯片",
-                        "sold_out_overlay": true
-                    }
-                },
-                {
-                    "title1": "不可用",
-                    "title2": "你不能购买这个商品",
-                    "display_box": {
-                        "image": "/kagami/pages/resource/shit.png",
-                        "color": "#C6C1BF",
-                        "notation_down": "12345薯片",
-                        "sold_out_overlay": true
-                    }
-                }
-            ]
+          "title1": "不可用",
+          "title2": "你不能购买这个商品",
+          "display_box": {
+            "image": "/kagami/pages/resource/shit.png",
+            "color": "#C6C1BF",
+            "notation_down": "123薯片",
+            "sold_out_overlay": true
+          }
         },
         {
-            "group_name": "测试组2",
-            "products": [
-                {
-                    "title1": "不可用",
-                    "title2": "你不能购买这个商品",
-                    "display_box": {
-                        "image": "/kagami/pages/resource/shit.png",
-                        "color": "#C6C1BF",
-                        "notation_down": "1薯片",
-                        "sold_out_overlay": true
-                    }
-                },
-                {
-                    "title1": "可用",
-                    "title2": "你能购买这个商品",
-                    "display_box": {
-                        "image": "/kagami/pages/resource/shit.png",
-                        "color": "#C6C1BF",
-                        "notation_down": "12345薯片"
-                    }
-                }
-            ]
+          "title1": "不可用",
+          "title2": "你不能购买这个商品",
+          "display_box": {
+            "image": "/kagami/pages/resource/shit.png",
+            "color": "#C6C1BF",
+            "notation_down": "12薯片",
+            "sold_out_overlay": true
+          }
+        },
+        {
+          "title1": "不可用",
+          "title2": "你不能购买这个商品",
+          "display_box": {
+            "image": "/kagami/pages/resource/shit.png",
+            "color": "#C6C1BF",
+            "notation_down": "1234薯片",
+            "sold_out_overlay": true
+          }
+        },
+        {
+          "title1": "不可用",
+          "title2": "你不能购买这个商品",
+          "display_box": {
+            "image": "/kagami/pages/resource/shit.png",
+            "color": "#C6C1BF",
+            "notation_down": "1薯片",
+            "sold_out_overlay": true
+          }
+        },
+        {
+          "title1": "不可用",
+          "title2": "你不能购买这个商品",
+          "display_box": {
+            "image": "/kagami/pages/resource/shit.png",
+            "color": "#C6C1BF",
+            "notation_down": "12345薯片",
+            "sold_out_overlay": true
+          }
         }
-    ]
+      ]
+    },
+    {
+      "group_name": "测试组2",
+      "products": [
+        {
+          "title1": "不可用",
+          "title2": "你不能购买这个商品",
+          "display_box": {
+            "image": "/kagami/pages/resource/shit.png",
+            "color": "#C6C1BF",
+            "notation_down": "1薯片",
+            "sold_out_overlay": true
+          }
+        },
+        {
+          "title1": "可用",
+          "title2": "你能购买这个商品",
+          "display_box": {
+            "image": "/kagami/pages/resource/shit.png",
+            "color": "#C6C1BF",
+            "notation_down": "12345薯片"
+          }
+        }
+      ]
+    }
+  ]
 }

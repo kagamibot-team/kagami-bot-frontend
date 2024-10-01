@@ -1,17 +1,19 @@
 <script setup lang="ts">
 import { PropType } from 'vue'
 import DisplayBoxSmall from './DisplayBoxSmall.vue'
-import { DisplayBoxData } from '../types/inventory';
-import FormattedTexts from './FormattedTexts.vue';
+import { DisplayBoxData } from '../types/inventory'
+import FormattedTexts from './FormattedTexts.vue'
 
 const props = defineProps({
   display_box: {
     type: Object as PropType<DisplayBoxData>,
-    default: () => { return {} }
+    default: () => {
+      return {}
+    }
   },
   title1: {
     type: String,
-    default: '',
+    default: ''
   },
   title2: {
     type: String,
@@ -48,7 +50,7 @@ const props = defineProps({
   }
 
   .title2 {
-    opacity: .5;
+    opacity: 0.5;
     font-size: 16px;
     font-weight: 400;
   }
