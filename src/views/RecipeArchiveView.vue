@@ -8,6 +8,7 @@ import _answers from '../pre_data/dialogue/recipe_archive.json'
 import { load } from '../common/get_data'
 import { RecipeArchiveData } from '../types/recipe'
 import { DialogueMessage } from '../types/common'
+import image_map from '../pre_data/image_map'
 
 const data = load<RecipeArchiveData>(defaultData)
 
@@ -78,7 +79,7 @@ const dialogue = computed<DialogueMessage>(() => (v => {
                     本次查询花费了你 {{ data.cost_chip }} 薯片，你还有 {{ data.own_chip }} 薯片。
                 </text>
             </svg>
-            <img class="dialogue-figure" :src="`./resource/合成/${dialogue.speaker} 表情 ${dialogue.face}.png`" />
+            <img class="dialogue-figure" :src="image_map[dialogue.speaker][dialogue.face]" />
         </div>
         <img class="background" :src="`./resource/合成/背景 合成档案.png`" />
     </div>

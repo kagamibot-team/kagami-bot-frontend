@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { LiechangData } from '../types/liechang';
+import image_map from '../pre_data/image_map';
 
 defineProps<{ data: LiechangData }>()
 </script>
@@ -13,7 +14,7 @@ defineProps<{ data: LiechangData }>()
       <div class="dialogue-intext">
         <span>{{ data.dialogue.text }}</span>
       </div>
-      <img class="dialogue-figure" :src="`./resource/猎场/${data.dialogue.speaker} 表情 ${data.dialogue.face}.png`" />
+      <img class="dialogue-figure" :src="image_map[data.dialogue.speaker][data.dialogue.face]" />
     </div>
     <!-- end -->
     <div class="title">

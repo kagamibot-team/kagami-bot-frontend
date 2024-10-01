@@ -31,3 +31,6 @@ coverage
 *.tsbuildinfo
 
 dist.zip
+
+# 隐藏未压缩文件
+/public/resource/立绘/待压缩
