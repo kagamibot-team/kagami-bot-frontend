@@ -76,13 +76,8 @@ const dialogue = computed<DialogueMessage>(() =>
         <img class="dialogue-textbox" :src="`./resource/合成/对话框.png`" />
       </div>
       <div class="archive-list">
-        <RecipeBox
-          v-for="(item, index) in data.recipes"
-          :key="index"
-          :info="item"
-          :now_merging="false"
-          :is_opacity="true"
-        />
+        <RecipeBox v-for="(item, index) in data.recipes" :key="index" :info="item" :now_merging="false"
+          :is_opacity="true" />
       </div>
       <svg class="merge-side-title">
         <text x="0" y="0" alignment-baseline="text-before-edge" text-anchor="start">
@@ -95,14 +90,14 @@ const dialogue = computed<DialogueMessage>(() =>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .wrapper {
   position: relative;
   width: fit-content;
   padding: 60px 80px 60px 80px;
   overflow: hidden;
 
-  & > .background {
+  &>.background {
     position: absolute;
     width: 100%;
     height: 100%;

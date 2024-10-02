@@ -1,4 +1,4 @@
-import { AwardInfo, GetAward, UserData } from './common'
+import { AwardInfo, DialogueMessage, GetAward, UserData } from './common'
 
 export type MergeMeta = {
   user: UserData
@@ -18,6 +18,7 @@ export type MergeData = {
   stat_id: number
   last_time: string
   meta?: MergeMeta
+  dialog?: DialogueMessage
 }
 
 export type RecipeArchiveData = {
@@ -27,4 +28,5 @@ export type RecipeArchiveData = {
   cost_chip: number
   own_chip: number
   good_enough: boolean
+  dialog?: DialogueMessage
 }
