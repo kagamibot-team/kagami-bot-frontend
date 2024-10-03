@@ -34,6 +34,10 @@ export default defineConfig({
                 target: 'http://localhost:21333',
                 changeOrigin: true,
             },
+            "/kagami-res": {
+                target: 'http://localhost:21333',
+                changeOrigin: true,
+            },
         },
     },
     define: {
