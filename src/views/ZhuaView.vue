@@ -28,7 +28,7 @@ const data = load<ZhuaData>(defaultData)
       :is_new="item.is_new"
       style="margin-top: 25px"
     />
-    <div v-if="data.meta.field_from != 1" class="field-notation">
+    <div class="field-notation">
       {{ data.meta.field_from }}号猎场
     </div>
   </div>
