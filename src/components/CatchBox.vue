@@ -114,7 +114,7 @@ const notation_color = computed(() => {
   margin-bottom: 8px;
   line-height: 1em;
   color: #ffffff;
-  font-family: '荆南俊俊体', '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
+  font-family: maokenzajin, '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
 }
 
 .rightStar {
