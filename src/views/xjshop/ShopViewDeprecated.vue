@@ -79,7 +79,7 @@ const shop = load<ShopDisplay>(default_data)
       .product-group {
         .title {
           font-size: 45px;
-          font-family: '荆南俊俊体', '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
+          font-family: maokenzajin, '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
           margin-top: 30px;
         }
 

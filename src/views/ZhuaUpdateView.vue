@@ -60,7 +60,7 @@ function get_style_of_tag(tag: string) {
 
   > .title {
     font-size: 36px;
-    font-family: '荆南俊俊体', '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
+    font-family: maokenzajin, '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
   }
 
   > .items {

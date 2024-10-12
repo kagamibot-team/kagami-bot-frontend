@@ -3,6 +3,11 @@ body {
   background-color: transparent;
 }
 
+@font-face {
+  font-family: maokenzajin;
+  src: url('/kagami/pages/resource/fonts/MaokenAssortedSans.ttf');
+}
+
 :root {
   // 听好了，绝 对 没 有 豆腐块！！！
   // NO TO !!!
@@ -29,7 +34,7 @@ main {
 
   h3 {
     color: #5a554d;
-    font-family: '荆南俊俊体', '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
+    font-family: maokenzajin, '阿里妈妈数黑体', 'Maple UI', var(--font-fallback);
     font-size: 48px;
     font-weight: normal;
     margin: 10px 0;
