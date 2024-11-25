@@ -30,15 +30,11 @@ function replace_img_to_ids(e: Event) {
 <template>
   <span class="format-text">
     <span v-for="(char, index) in splitted_text" :key="index">
-      <span v-if="typeof char == 'string'">{{ char }}</span>
-      <img
-        v-else
-        class="inline-svg"
-        :style="svg_style"
-        :src="`http://glyphwiki.org/glyph/${char.code}.svg`"
-        :alt="char.ids"
-        @error="replace_img_to_ids"
-      />
+      <br v-if="char == '\n'" />
+      <span v-else-if="char == ' '">&nbsp;</span>
+      <span v-else-if="typeof char == 'string'" :class="'text-char-' + char">{{ char }}</span>
+      <img v-else class="inline-svg" :style="svg_style" :src="`http://glyphwiki.org/glyph/${char.code}.svg`"
+        :alt="char.ids" @error="replace_img_to_ids" />
     </span>
   </span>
 </template>
@@ -60,5 +56,10 @@ function replace_img_to_ids(e: Event) {
 .inline-svg-text {
   transform: translateY(-0.15em);
   display: inline-block;
+}
+
+.text-char-✿ {
+  color: #f272ae;
+  text-shadow: 0 0 2px #f3a3c87b;
 }
 </style>
