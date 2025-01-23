@@ -10,45 +10,45 @@ const data = load<SkinShop>({
     },
     biscuits: 10,
     chips: 1000,
-    skinPackPrice: 160,
+    skin_pack_price: 160,
     skins: [
         {
-            doUserHave: false,
+            do_user_have: false,
             image: "./resource/shit.png",
             level: 1,
-            isDrawable: true,
+            is_drawable: true,
             name: "粑粑小皮",
             price: 2
         },
         {
-            doUserHave: false,
+            do_user_have: false,
             image: "./resource/shit.png",
             level: 2,
-            isDrawable: false,
+            is_drawable: false,
             name: "粑粑中皮",
             price: 4
         },
         {
-            doUserHave: false,
+            do_user_have: false,
             image: "./resource/shit.png",
             level: 3,
-            isDrawable: false,
+            is_drawable: false,
             name: "粑粑大皮",
             price: 8
         },
         {
-            doUserHave: false,
+            do_user_have: false,
             image: "./resource/shit.png",
             level: 4,
-            isDrawable: true,
+            is_drawable: true,
             name: "粑粑超大皮",
             price: 16
         },
         {
-            doUserHave: true,
+            do_user_have: true,
             image: "./resource/shit.png",
             level: 4,
-            isDrawable: true,
+            is_drawable: true,
             name: "粑粑超大皮2",
             price: 16
         },
@@ -82,7 +82,7 @@ const face_img = computed(() => {
                                 <span>促销</span> 皮肤盲盒
                             </div>
                             <div class="product-price">
-                                {{ data.skinPackPrice }}<span>薯片</span>
+                                {{ data.skin_pack_price }}<span>薯片</span>
                                 <div class="price-notation">价格每周刷新</div>
                             </div>
                         </div>
@@ -91,11 +91,11 @@ const face_img = computed(() => {
                         <div v-for="(item, index) in data.skins" v-bind="item" :key="index" class="product">
                             <div class="product-img" :class="'product-img-' + item.level">
                                 <img :src="item.image" alt="皮肤盲盒">
-                                <div v-if="item.doUserHave" class="sold-out-mark"><span>售罄</span></div>
+                                <div v-if="item.do_user_have" class="sold-out-mark"><span>售罄</span></div>
                             </div>
                             <div class="product-text">
                                 <div class="product-name">
-                                    {{ item.name }}<span v-if="!item.isDrawable">✿</span>
+                                    {{ item.name }}<span v-if="!item.is_drawable">✿</span>
                                 </div>
                                 <div class="product-price">
                                     {{ item.price }}<span>饼干</span>

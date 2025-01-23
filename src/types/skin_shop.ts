@@ -4,9 +4,9 @@ export type SkinBook = {
     image: string
     level: number
     name: string
-    isDrawable: boolean
+    is_drawable: boolean
     price: number
-    doUserHave: boolean
+    do_user_have: boolean
 }
 
 export type SkinShop = {
@@ -14,6 +14,6 @@ export type SkinShop = {
     chips: number
     biscuits: number
     skins: SkinBook[]
-    skinPackPrice: number
+    skin_pack_price: number
     dialog: DialogueMessage
 }
