@@ -1,4 +1,4 @@
-import { AwardInfo, DialogueMessage, SkinData, UserData } from './common';
+import { DialogueMessage, UserData } from './common';
 
 export type SkinBook = {
     image: string
