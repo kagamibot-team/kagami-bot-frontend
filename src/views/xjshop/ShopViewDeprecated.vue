@@ -83,7 +83,7 @@ const shop = load<ShopDisplay>(default_data)
           margin-top: 30px;
         }
 
-        .products {
+        .products-frame {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           margin: 20px 40px;

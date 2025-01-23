@@ -43,6 +43,7 @@ async function compressImages() {
                 .webp({ quality: 85 }) // 调整质量参数
                 .toFile(outputFilePath);
         }
+        console.log(`Compressed: ${file}`);
     }
 
     console.log('Image compression completed.');

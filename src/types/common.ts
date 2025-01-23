@@ -27,3 +27,16 @@ export type DialogueMessage = {
   speaker: string
   face: string
 }
+
+export type SkinData = {
+  sid: number;
+  aid: number;
+  name: string;
+  description: string;
+  deprecatedPrice: number;
+  biscuitPrice: number;
+  level: number;
+  canDraw: boolean;
+  canBuy: boolean;
+};
+
