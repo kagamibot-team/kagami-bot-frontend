@@ -40,7 +40,7 @@ const data = load<SkinShopBought>({
                     {{ data.rest_money }} {{ data.unit }}。
                 </p>
                 <p v-if="data.from_award_name !== undefined">
-                    该皮肤是 {{ data.from_award_name }} 的皮肤。你可以输入 <u>切换皮肤 {{ data.name }} 以切换至当前皮肤</u>
+                    该皮肤是 {{ data.from_award_name }} 的皮肤。你可以输入 <u>切换皮肤 {{ data.name }}</u> 以切换至当前皮肤
                 </p>
                 <p v-else>
                     你可以输入 <u>使用 皮肤盲盒</u> 抽取一个随机皮肤。
