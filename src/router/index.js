@@ -74,6 +74,11 @@ const router = createRouter({
       component: () => import('../views/SkinShopView.vue')
     },
     {
+      path: '/skin_shop_buy',
+      name: '皮肤商店 - 购买成功',
+      component: () => import('../views/SkinShopBuyView.vue')
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: '404 页面',
       component: () => import('../views/default/NoViewPage.vue')

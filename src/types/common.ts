@@ -14,7 +14,7 @@ export type AwardInfo = {
   sorting: number
 }
 
-export type UserData = { name: string; uid?: number }
+export type UserData = { name: string; uid?: number, qqid?: string }
 
 export type GetAward = {
   info: AwardInfo
