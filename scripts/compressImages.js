@@ -9,6 +9,7 @@ const __dirname = path.dirname(__filename);
 const inputDir = path.join(__dirname, '../public/resource/立绘/待压缩');
 const outputDir = path.join(__dirname, '../public/resource/立绘');
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function clearWebpFiles() {
     const files = await fs.readdir(outputDir);
 

@@ -1,9 +1,13 @@
 {
     "服装学徒驹草": {
+        "凝重": "/kagami/pages/resource/立绘/服装学徒驹草 表情 凝重.webp",
+        "开心": "/kagami/pages/resource/立绘/服装学徒驹草 表情 开心.webp",
         "通常": "/kagami/pages/resource/立绘/服装学徒驹草 表情 通常.webp"
     },
     "服装店主塩": {
-        "通常": "/kagami/pages/resource/立绘/服装店主塩 表情 通常.webp"
+        "犯困": "/kagami/pages/resource/立绘/服装店主塩 表情 犯困.webp",
+        "通常": "/kagami/pages/resource/立绘/服装店主塩 表情 通常.webp",
+        "邪恶": "/kagami/pages/resource/立绘/服装店主塩 表情 邪恶.webp"
     },
     "猎场管理员L": {
         "兴奋": "/kagami/pages/resource/立绘/猎场管理员L 表情 兴奋.webp",
