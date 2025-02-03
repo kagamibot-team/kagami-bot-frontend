@@ -27,8 +27,8 @@ async function clearWebpFiles() {
 }
 
 async function compressImages() {
-    await clearWebpFiles();
-    console.log('Existing .webp files cleared.');
+    // await clearWebpFiles();
+    // console.log('Existing .webp files cleared.');
     const files = await fs.readdir(inputDir);
 
     for (const file of files) {

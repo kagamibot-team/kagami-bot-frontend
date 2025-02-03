@@ -79,6 +79,11 @@ const router = createRouter({
       component: () => import('../views/SkinShopBuyView.vue')
     },
     {
+      path: '/skin_pack',
+      name: '皮肤盲盒',
+      component: () => import('../views/SkinPackView.vue'),
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: '404 页面',
       component: () => import('../views/default/NoViewPage.vue')
@@ -87,7 +92,7 @@ const router = createRouter({
       path: '/tool',
       name: '工具合集',
       component: () => import('../views/ToolPage.vue')
-    }
+    },
   ]
 })
 

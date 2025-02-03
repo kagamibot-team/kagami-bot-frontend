@@ -29,3 +29,16 @@ export type SkinShopBought = {
     from_award_name?: string
     level?: number
 }
+
+export type SkinPackOpen = {
+    user: UserData
+    biscuit_delta?: {
+        delta: number
+        after: number
+    }
+    image: string
+    level: number
+    dialog: DialogueMessage
+    skin_name: string
+    skin_award_name: string
+}
