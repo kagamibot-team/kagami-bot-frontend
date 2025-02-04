@@ -5,8 +5,8 @@ import ProgressBar from './ProgressBar.vue'
 import { SingleLiechang } from '../types/liechang'
 
 const props = defineProps<{ data: SingleLiechang; selecting: boolean }>()
-const liechang_name = computed(() => ['废墟猎场', '荒野猎场', '学园猎场'][props.data.pack_id - 1])
-const price = [0, 0, 1000, 3000]
+const liechang_name = computed(() => ['废墟猎场', '荒野猎场', '学园猎场', '旧乐园猎场'][props.data.pack_id - 1])
+const price = [0, 0, 1000, 3000, 4500]
 
 // const data_sum = computed(() => props.data.award_count.map(p => p.sum_up).reduce((p, q) => p + q));
 </script>
