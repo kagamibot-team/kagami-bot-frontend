@@ -18,10 +18,9 @@ const data = load<SkinPackOpen>({
   level: 2,
   skin_award_name: "某小哥",
   skin_name: "皮肤名字",
-  biscuit_delta: {
-    delta: 4,
-    after: 100
-  }
+  biscuit_after: 100,
+  biscuit_return: 10,
+  do_user_have_before: true,
 });
 
 const dialog_img = computed(() => {
@@ -45,10 +44,10 @@ const dialog_img = computed(() => {
         </p>
         <p class="line-2">恭喜你！</p>
         <p class="line-3">
-          你刚才打开了皮肤盲盒，<span v-if="data.biscuit_delta" class="chongfu">又</span>得到了 <u>{{ data.skin_award_name }}</u> 的
+          你刚才打开了皮肤盲盒，<span v-if="data.do_user_have_before" class="chongfu">又</span>得到了 <u>{{ data.skin_award_name }}</u> 的
           <span v-for="index in data.level" :key="index" class="heart"></span>
-          {{ data.level }} 心的皮肤，<span v-if="data.biscuit_delta" class="chongfu">
-            因重复，得到了 {{ data.biscuit_delta.delta }} 饼干。
+          {{ data.level }} 心的皮肤，<span class="chongfu">
+            得到了 {{ data.biscuit_return }} 饼干。
           </span>被称作：
         </p>
         <div class="xgname">{{ data.skin_name }}</div>

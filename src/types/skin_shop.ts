@@ -32,10 +32,13 @@ export type SkinShopBought = {
 
 export type SkinPackOpen = {
     user: UserData
-    biscuit_delta?: {
-        delta: number
-        after: number
-    }
+    // biscuit_delta?: {
+    //     delta: number
+    //     after: number
+    // }
+    biscuit_return: number,
+    biscuit_after: number,
+    do_user_have_before: boolean,
     image: string
     level: number
     dialog: DialogueMessage
