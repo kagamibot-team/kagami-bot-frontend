@@ -27,10 +27,10 @@ const data = load<SkinShopBought>({
                 <div class="texts">交易成功</div>
             </div>
             <div class="content">
-                <div class="image" :class="data.level !== undefined ? 'image-' + data.level : ''">
+                <div class="image" :class="data.level ? 'image-' + data.level : ''">
                     <img v-if="data.image" :src="data.image" />
                     <img v-else src="../assets/皮肤盲盒350.png" />
-                    <div v-if="data.current_count !== undefined" class="count-notation">
+                    <div v-if="data.current_count" class="count-notation">
                         {{ data.current_count }}
                     </div>
                 </div>
@@ -39,7 +39,7 @@ const data = load<SkinShopBought>({
                     {{ data.user.name }} ({{ data.user.qqid }}) 在<b>服装店</b>购买了一件 <b>{{ data.name }}</b>，花费了 {{ data.cost }} {{ data.unit }}。您目前还剩余
                     {{ data.rest_money }} {{ data.unit }}。
                 </p>
-                <p v-if="data.from_award_name !== undefined">
+                <p v-if="data.from_award_name">
                     该皮肤是 {{ data.from_award_name }} 的皮肤。你可以输入 <u>切换皮肤 {{ data.name }}</u> 以切换至当前皮肤
                 </p>
                 <p v-else>
