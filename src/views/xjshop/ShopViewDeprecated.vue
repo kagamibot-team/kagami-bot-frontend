@@ -18,8 +18,7 @@ const shop = load<ShopDisplay>(default_data)
     <img src="../../assets/kagami_shop.png" />
     <div class="content">
       <div class="head">
-        欢迎来到小镜商店，<u>{{ shop.user.name }}</u
-        >！
+        欢迎来到小镜商店，<u>{{ shop.user.name }}</u>！
         <br />
         你现在有 <u>{{ shop.chips }}</u> 薯片，输入
         <code>小镜商店 购买 商品名</code> 就可以购买商品了哦！
@@ -29,14 +28,8 @@ const shop = load<ShopDisplay>(default_data)
           <div class="title">{{ group.group_name }}</div>
           <div class="products">
             <!-- eslint-disable-next-line vue/first-attribute-linebreak -->
-            <BookBox
-              v-for="(product, index2) in group.products"
-              :key="index2"
-              :display_box="product.display_box"
-              :title1="product.title1"
-              :title2="product.title2"
-              class="product"
-            />
+            <BookBox v-for="(product, index2) in group.products" :key="index2" :display_box="product.display_box"
+              :title1="product.title1" :title2="product.title2" class="product" />
           </div>
         </div>
       </div>
@@ -92,5 +85,12 @@ const shop = load<ShopDisplay>(default_data)
       }
     }
   }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+  row-gap: 30px;
 }
 </style>
