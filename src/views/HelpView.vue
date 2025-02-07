@@ -19,6 +19,7 @@
     <h3>商店与皮肤</h3>
     <ul>
       <li><com>小镜商店（xjshop）</com>进入小镜的商店</li>
+      <li><com>皮肤商店（pfsd）</com>进入皮肤商店</li>
       <li><com>我有多少薯片（mysp）</com>告诉你你有多少薯片</li>
       <li><com>我有多少哥度（mygd）</com>告诉你你有多少哥度</li>
       <li><com>皮肤进度（pfjd）</com>展示目前收集小哥皮肤的进度</li>
