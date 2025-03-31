@@ -23,4 +23,5 @@ export type ShopDisplay = {
   user: UserData
   chips: number
   products: ProductGroup[]
+  is_april_fool: boolean
 }

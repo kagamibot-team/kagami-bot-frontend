@@ -16,8 +16,8 @@ const data = load<MergeData>(defaultData)
 // 下面是计算需要什么对话的逻辑，是从后端搬到前端的
 const dialogue = computed<DialogueMessage>(() => {
   return data.value.dialog ?? {
-    face: "惶恐",
-    speaker: "研究员华",
+    face: "吐舌",
+    speaker: "纸板华",
     text: "后端没有传入对话数据，请联系 PT 修复"
   }
 })
@@ -35,7 +35,9 @@ const dialogue = computed<DialogueMessage>(() => {
           :notation_down="'→' + data.after_storages[index]" />
       </div>
       <div class="right-list">
-        <div class="dialogue-text">
+        <div class="dialogue-text" :class="{
+          'hidden': dialogue.speaker == '纸板华'
+        }">
           <div class="dialogue-intext">{{ dialogue.text }}</div>
           <img class="dialogue-textbox" :src="`./resource/合成/对话框.png`" />
         </div>
@@ -49,14 +51,16 @@ const dialogue = computed<DialogueMessage>(() => {
           </text>
         </svg>
       </div>
-      <img class="dialogue-figure" :class="{ 'dialogue-figure-aquko': dialogue.speaker == '研究员水瓶子' }"
-        :src="image_map[dialogue.speaker][dialogue.face]" />
+      <img class="dialogue-figure" :class="{
+        'dialogue-figure-aquko': dialogue.speaker == '研究员水瓶子',
+        'dialogue-figure-paper': dialogue.speaker == '纸板华'
+      }" :src="image_map[dialogue.speaker][dialogue.face]" />
     </div>
     <RecipeBackground :is_strange="data.meta?.is_strange" :level="data.output.info.level.lid" />
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .wrapper {
   position: relative;
   width: fit-content;
@@ -67,6 +71,10 @@ const dialogue = computed<DialogueMessage>(() => {
 .dialogue-text {
   position: relative;
   height: 270px;
+
+  &.hidden {
+    opacity: 0;
+  }
 }
 
 .dialogue-intext {
@@ -102,6 +110,13 @@ const dialogue = computed<DialogueMessage>(() => {
 
 .dialogue-figure-aquko {
   top: -320px;
+}
+
+.dialogue-figure-paper {
+  transform: scale(.4);
+  top: -780px;
+  right: -550px;
+  filter: drop-shadow(0 6rem 10rem rgba(0, 0, 0, 0.405));
 }
 
 .left-list {

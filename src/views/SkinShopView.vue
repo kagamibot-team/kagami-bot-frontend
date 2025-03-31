@@ -54,10 +54,12 @@ const data = load<SkinShop>({
         },
     ],
     dialog: {
-        speaker: "服装店主塩",
+        // speaker: "服装店主塩",
         // speaker: "服装学徒驹草",
-        face: "通常",
-        text: "小孩，饭做好了吗——"
+        speaker: "大驹草",
+        // face: "通常",
+        face: "正常",
+        text: "师傅已经走了十五年了……我想她了。"
     }
 })
 
@@ -67,7 +69,10 @@ const face_img = computed(() => {
 </script>
 
 <template>
-    <div class="skin-shop" :class="{ 'skin-shop-jx': data.dialog.speaker == '服装学徒驹草' }">
+    <div class="skin-shop" :class="{
+        'skin-shop-jx': data.dialog.speaker == '服装学徒驹草',
+        'skin-shop-jx-big': data.dialog.speaker == '大驹草',
+    }">
         <div class="products-box-container">
             <div class="products-frame">
                 <div class="products-frame-bg-deco1"></div>
@@ -133,26 +138,93 @@ const face_img = computed(() => {
 </template>
 
 <style lang="scss" scoped>
+$shop-bg1-light: rgb(233, 237, 241);
+$shop-bg1-dark: rgb(45, 49, 54);
+$shop-bg2-light: rgb(226, 232, 238);
+$shop-bg2-dark: rgb(43, 45, 50);
+$shop-bg2-shadow-ul-light: #bbc4d048;
+$shop-bg2-shadow-ul-dark: #0f0f1048;
+$shop-bg2-shadow-br-light: rgba(255, 255, 255, 0.304);
+$shop-bg2-shadow-br-dark: rgba(22, 25, 27, 0.304);
+
+$shop-shadow-product-light: #414b572b;
+$shop-shadow-product-dark: #00000051;
+$shop-background-product-light: white;
+$shop-background-product-dark: rgb(45, 47, 49);
+
+$shop-title-light: rgb(58, 69, 78);
+$shop-title-dark: rgb(196, 203, 220);
+
+$shop-dialog-border-light: rgb(51, 51, 54);
+$shop-dialog-border-dark: rgba(77, 77, 86, 0);
+$shop-dialog-background-light: white;
+$shop-dialog-background-dark: rgb(66, 73, 80);
+$shop-dialog-text-light: black;
+$shop-dialog-text-dark: white;
+$shop-price-notation-light: #d0d0d0;
+$shop-price-notation-dark: #696969;
+
 $shop-decorator-wall-shio: #bfd8e4;
 $shop-hint-shio: rgb(173, 248, 252);
 
 $shop-decorator-wall-jx: #bac2d8;
 $shop-hint-jx: rgb(193, 210, 244);
 
+$shop-decorator-wall-jx-big: #383b46;
+$shop-hint-jx-big: rgb(148, 152, 238);
+
 .skin-shop {
     --shop-decorator-wall: #{$shop-decorator-wall-shio};
     --shop-hint: #{$shop-hint-shio};
+    --shop-bg1: #{$shop-bg1-light};
+    --shop-bg2: #{$shop-bg2-light};
+    --shop-bg2-shadow-ul: #{$shop-bg2-shadow-ul-light};
+    --shop-bg2-shadow-br: #{$shop-bg2-shadow-br-light};
+    --shop-title: #{$shop-title-light};
+    --shop-dialog-border: #{$shop-dialog-border-light};
+    --shop-dialog-background: #{$shop-dialog-background-light};
+    --shop-dialog-text: #{$shop-dialog-text-light};
+    --shop-shadow-product: #{$shop-shadow-product-light};
+    --shop-background-product: #{$shop-background-product-light};
+    --shop-price-notation: #{$shop-price-notation-light};
 }
 
 .skin-shop.skin-shop-jx {
     --shop-decorator-wall: #{$shop-decorator-wall-jx};
     --shop-hint: #{$shop-hint-jx};
+    --shop-bg1: #{$shop-bg1-light};
+    --shop-bg2: #{$shop-bg2-light};
+    --shop-bg2-shadow-ul: #{$shop-bg2-shadow-ul-light};
+    --shop-bg2-shadow-br: #{$shop-bg2-shadow-br-light};
+    --shop-title: #{$shop-title-light};
+    --shop-dialog-border: #{$shop-dialog-border-light};
+    --shop-dialog-background: #{$shop-dialog-background-light};
+    --shop-dialog-text: #{$shop-dialog-text-light};
+    --shop-shadow-product: #{$shop-shadow-product-light};
+    --shop-background-product: #{$shop-background-product-light};
+    --shop-price-notation: #{$shop-price-notation-light};
+}
+
+.skin-shop.skin-shop-jx-big {
+    --shop-decorator-wall: #{$shop-decorator-wall-jx-big};
+    --shop-hint: #{$shop-hint-jx-big};
+    --shop-bg1: #{$shop-bg1-dark};
+    --shop-bg2: #{$shop-bg2-dark};
+    --shop-bg2-shadow-ul: #{$shop-bg2-shadow-ul-dark};
+    --shop-bg2-shadow-br: #{$shop-bg2-shadow-br-dark};
+    --shop-title: #{$shop-title-dark};
+    --shop-dialog-border: #{$shop-dialog-border-dark};
+    --shop-dialog-background: #{$shop-dialog-background-dark};
+    --shop-dialog-text: #{$shop-dialog-text-dark};
+    --shop-shadow-product: #{$shop-shadow-product-dark};
+    --shop-background-product: #{$shop-background-product-dark};
+    --shop-price-notation: #{$shop-price-notation-dark};
 }
 
 .skin-shop {
     min-width: 1300px;
     min-height: 940px;
-    background-color: rgb(233, 237, 241);
+    background-color: var(--shop-bg1);
     position: relative;
 }
 
@@ -174,14 +246,11 @@ $shop-hint-jx: rgb(193, 210, 244);
     width: 100%;
     height: 100%;
     border-radius: 30px;
-    background-color: rgb(226, 232, 238);
+    background-color: var(--shop-bg2);
     box-sizing: border-box;
-    // border: solid 4px rgb(244, 246, 248);
     box-shadow:
-        // 12px 12px 12px rgba(70, 81, 88, 0.046),
-        // -12px -12px 12px rgba(255, 255, 255, 0.304),
-        20px 20px 30px #bbc4d048 inset,
-        -12px -12px 12px rgba(255, 255, 255, 0.304) inset;
+        20px 20px 30px var(--shop-bg2-shadow-ul) inset,
+        -12px -12px 12px var(--shop-bg2-shadow-br) inset;
     position: relative;
     overflow: hidden;
 }
@@ -218,6 +287,12 @@ $shop-hint-jx: rgb(193, 210, 244);
     .skin-shop-jx & {
         right: -350px;
     }
+
+    .skin-shop-jx-big & {
+        transform: scale(1.2);
+        bottom: 60px;
+        right: -300px;
+    }
 }
 
 .figure img {
@@ -236,9 +311,10 @@ $shop-hint-jx: rgb(193, 210, 244);
     font-family: "霞鹜文楷", var(--font-fallback);
     font-size: 32px;
     padding: 20px 40px;
-    background-color: white;
+    background-color: var(--shop-dialog-background);
     max-width: 22.2em;
-    border: solid 3px rgb(51, 51, 54);
+    border: solid 3px var(--shop-dialog-border);
+    color: var(--shop-dialog-text);
     filter: drop-shadow(10px 10px 20px #414b5746);
     border-radius: 40px 40px 0 40px;
 }
@@ -258,7 +334,7 @@ $shop-hint-jx: rgb(193, 210, 244);
     font-size: 64px;
     margin-top: 50px;
     margin-left: 35px;
-    color: rgb(58, 69, 78);
+    color: var(--shop-title);
 }
 
 .ui-lower {
@@ -300,10 +376,11 @@ $shop-hint-jx: rgb(193, 210, 244);
 }
 
 .products-left {
-    background-color: white;
+    background-color: var(--shop-background-product);
+    color: var(--shop-dialog-text);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 10px 10px 30px #414b572b;
+    box-shadow: 10px 10px 30px var(--shop-shadow-product);
     display: grid;
     grid-template-rows: auto 1fr;
     height: 100%;
@@ -349,7 +426,7 @@ $shop-hint-jx: rgb(193, 210, 244);
         & .price-notation {
             float: right;
             font-weight: 300;
-            color: #d0d0d0;
+            color: var(--shop-price-notation);
         }
     }
 }
@@ -364,10 +441,11 @@ $shop-hint-jx: rgb(193, 210, 244);
     & .product {
         writing-mode: horizontal-tb;
         width: 175px;
-        background-color: white;
+        background-color: var(--shop-background-product);
+        color: var(--shop-dialog-text);
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 5px 5px 15px #414b572b;
+        box-shadow: 5px 5px 15px var(--shop-shadow-product);
         display: grid;
         grid-template-rows: auto 1fr;
 

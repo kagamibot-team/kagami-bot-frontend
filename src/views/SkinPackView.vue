@@ -10,8 +10,10 @@ const data = load<SkinPackOpen>({
   },
   dialog: {
     // speaker: "服装店主塩",
-    speaker: "服装学徒驹草",
-    face: "通常",
+    // speaker: "服装学徒驹草",
+    speaker: "大驹草",
+    // face: "通常",
+    face: "正常",
     text: "对话没有传进来诶……"
   },
   image: "./resource/shit.png",
@@ -44,7 +46,8 @@ const dialog_img = computed(() => {
         </p>
         <p class="line-2">恭喜你！</p>
         <p class="line-3">
-          你刚才打开了皮肤盲盒，<span v-if="data.do_user_have_before" class="chongfu">又</span>得到了 <u>{{ data.skin_award_name }}</u> 的
+          你刚才打开了皮肤盲盒，<span v-if="data.do_user_have_before" class="chongfu">又</span>得到了 <u>{{ data.skin_award_name }}</u>
+          的
           <span v-for="index in data.level" :key="index" class="heart"></span>
           {{ data.level }} 心的皮肤，<span class="chongfu">
             得到了 {{ data.biscuit_return }} 饼干。
@@ -69,7 +72,10 @@ const dialog_img = computed(() => {
         <img :src="data.image" />
       </div>
     </div>
-    <div class="npc-container" :class="data.dialog.speaker == '服装学徒驹草' ? `npc-container-cao` : ''">
+    <div class="npc-container" :class="{
+      'npc-container-cao': data.dialog.speaker == '服装学徒驹草',
+      'npc-container-jx-big': data.dialog.speaker == '大驹草',
+    }">
       <img :src="dialog_img" width="900" />
     </div>
     <div class="dialog-container">
@@ -84,7 +90,7 @@ const dialog_img = computed(() => {
 @use 'sass:math';
 @use 'sass:color';
 
-$screen-width: 800px;
+$screen-width: 850px;
 $screen-height: 600px;
 
 @mixin kagami-themes($level, $color-primary) {
@@ -107,8 +113,8 @@ $screen-height: 600px;
 
     .background {
       position: absolute;
-      width: 800px;
-      height: 600px;
+      width: $screen-width;
+      height: $screen-height;
       top: 0;
       left: 0;
       overflow: hidden;
@@ -142,7 +148,7 @@ $screen-height: 600px;
 
     .poster {
       position: absolute;
-      left: math.div($screen-width - $poster-width, 2);
+      left: math.div($screen-width - $poster-width, 2) - 50px;
       top: math.div($screen-height - $poster-height, 2) - 30px;
       width: $poster-width;
       height: $poster-height;
@@ -271,7 +277,7 @@ $screen-height: 600px;
 
     .npc-container {
       position: absolute;
-      left: 0;
+      left: 30px;
       top: 0;
       overflow: hidden;
       width: $screen-width;
@@ -287,6 +293,11 @@ $screen-height: 600px;
 
       &.npc-container-cao img {
         top: 60px;
+      }
+
+      &.npc-container-jx-big img {
+        top: 40px;
+        transform: scale(1.2);
       }
     }
 

@@ -34,6 +34,13 @@ const dialogue = computed<DialogueMessage>(() =>
     let face = spl1.substring(spl1.indexOf(' ') + 1)
     let text = v.substring(v.indexOf('：') + 1)
 
+    if (data.value.is_april_fool) {
+      return {
+        speaker: "小宇月儿",
+        face: "正常",
+        text: text
+      }
+    }
     return {
       speaker: speaker,
       face: face,
@@ -71,7 +78,7 @@ const dialogue = computed<DialogueMessage>(() =>
       的查询：
     </div>
     <div class="total">
-      <div class="dialogue-text">
+      <div class="dialogue-text" :class='`dialogue-text-${dialogue.speaker}`'>
         <div class="dialogue-intext">{{ dialogue.text }}</div>
         <img class="dialogue-textbox" :src="`./resource/合成/对话框.png`" />
       </div>
@@ -84,7 +91,8 @@ const dialogue = computed<DialogueMessage>(() =>
           本次查询花费了你 {{ data.cost_chip }} 薯片，你还有 {{ data.own_chip }} 薯片。
         </text>
       </svg>
-      <img class="dialogue-figure" :src="image_map[dialogue.speaker][dialogue.face]" />
+      <img class="dialogue-figure" :class='`dialogue-figure-${dialogue.speaker}`'
+        :src="image_map[dialogue.speaker][dialogue.face]" />
     </div>
     <img class="background" :src="`./resource/合成/背景 合成档案.png`" />
   </div>
@@ -113,6 +121,12 @@ const dialogue = computed<DialogueMessage>(() =>
   height: 180px;
   left: 150px;
   top: -20px;
+  z-index: 0;
+
+  &.dialogue-text-小宇月儿 {
+    top: 200px;
+    left: 190px;
+  }
 }
 
 .dialogue-intext {
@@ -146,6 +160,10 @@ const dialogue = computed<DialogueMessage>(() =>
   right: -560px;
   top: -200px;
   z-index: -1;
+
+  &.dialogue-figure-小宇月儿 {
+    transform: scale(.9);
+  }
 }
 
 .archive-list {

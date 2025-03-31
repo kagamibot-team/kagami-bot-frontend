@@ -252,5 +252,6 @@
   },
   "cost_chip": 100,
   "own_chip": 999,
-  "good_enough": false
+  "good_enough": false,
+  "is_april_fool": true
 }

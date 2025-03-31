@@ -29,4 +29,5 @@ export type RecipeArchiveData = {
   own_chip: number
   good_enough: boolean
   dialog?: DialogueMessage
+  is_april_fool: boolean
 }

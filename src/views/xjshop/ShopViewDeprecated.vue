@@ -16,6 +16,9 @@ const shop = load<ShopDisplay>(default_data)
 <template>
   <div class="page">
     <img src="../../assets/kagami_shop.png" />
+    <div v-if="shop.is_april_fool" class="april-fool">
+      <img src="../../../public/resource/停梯.png" />
+    </div>
     <div class="content">
       <div class="head">
         欢迎来到小镜商店，<u>{{ shop.user.name }}</u>！
@@ -51,6 +54,7 @@ const shop = load<ShopDisplay>(default_data)
 
   .content {
     padding: 0 40px;
+    transform: translate(0px);
 
     .head {
       font-size: 24px;
@@ -92,5 +96,18 @@ const shop = load<ShopDisplay>(default_data)
   grid-template-columns: 1fr 1fr 1fr;
   padding: 20px;
   row-gap: 30px;
+}
+
+.april-fool {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  z-index: 0;
+  text-align: center;
+
+  img {
+    width: 700px;
+    filter: drop-shadow(0 2rem 4rem rgba(0, 0, 0, 0.435));
+  }
 }
 </style>

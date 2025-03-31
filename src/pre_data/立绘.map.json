@@ -1,4 +1,13 @@
 {
+    "大驹草": {
+        "正常": "/kagami/pages/resource/立绘/大驹草 表情 正常.webp"
+    },
+    "小宇月儿": {
+        "正常": "/kagami/pages/resource/立绘/小宇月儿 表情 正常.webp"
+    },
+    "小糖兽": {
+        "思考": "/kagami/pages/resource/立绘/小糖兽 表情 思考.webp"
+    },
     "服装学徒驹草": {
         "凝重": "/kagami/pages/resource/立绘/服装学徒驹草 表情 凝重.webp",
         "开心": "/kagami/pages/resource/立绘/服装学徒驹草 表情 开心.webp",
@@ -58,5 +67,8 @@
         "说话": "/kagami/pages/resource/立绘/研究员水瓶子 表情 说话.webp",
         "通常": "/kagami/pages/resource/立绘/研究员水瓶子 表情 通常.webp",
         "门牙": "/kagami/pages/resource/立绘/研究员水瓶子 表情 门牙.webp"
+    },
+    "纸板华": {
+        "吐舌": "/kagami/pages/resource/立绘/纸板华 表情 吐舌.webp"
     }
 }
