@@ -65,8 +65,8 @@ const dialog_img = computed(() => {
             <path d='M0,0 V3 L4,1.5 Z' fill="red" />
           </marker>
         </defs>
-        <line stroke="red" marker-end='url(#head)' stroke-width="6" x1="30" y1="190" x2="140" y2="110" />
-        <ellipse cx="220" cy="70" rx="100" ry="50" fill="transparent" stroke="red" stroke-width="4" />
+        <line stroke="red" marker-end='url(#head)' stroke-width="6" x1="30" y1="190" x2="120" y2="120" />
+        <ellipse cx="200" cy="80" rx="100" ry="50" fill="transparent" stroke="red" stroke-width="4" />
       </svg>
       <div class="img">
         <img :src="data.image" />
@@ -154,7 +154,7 @@ $screen-height: 600px;
       height: $poster-height;
       background-color: $poster-background;
       filter: drop-shadow(40px 40px 90px $color-shadow-tint);
-      transform: rotate3d(2, -1, 0, 20deg);
+      transform: rotate3d(2, -1, 0, 0deg);
       user-select: none;
 
       & .frame-1 {
